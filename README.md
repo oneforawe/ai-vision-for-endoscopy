@@ -1,13 +1,13 @@
-# Insight_Project_Framework
-Framework for machine learning projects at Insight Data Science.
+# Object Detection in Endoscopy Images
+This software uses machine learning (neural networks for computer vision object detection) to identify and highlight gastrointestinal abnormalities in endoscopy images.
 
-## Motivation for this project format:
-- **Insight_Project_Framework** : Put all source code for production within structured directory
-- **tests** : Put all source code for testing in an easy to find location
-- **configs** : Enable modification of all preset variables within single directory (consisting of one or many config files for separate tasks)
-- **data** : Include example a small amount of data in the Github repository so tests can be run to validate installation
-- **build** : Include scripts that automate building of a standalone environment
-- **static** : Any images or content to include in the README or web framework if part of the pipeline
+## Contents of this repo
+- **source** : includes all source code for production
+- **build** : includes scripts that automate building of a standalone environment
+- **configs** : includes configurations / modifications of all preset variables
+- **data** : includes sample data so tests can be run to validate installation
+- **tests** : includes all source code for testing production code
+- **static** : (doesn't exist here yet) Any images or content to include in the README or web framework if part of the pipeline
 
 ## Setup
 Clone repository and update python path
@@ -30,10 +30,10 @@ git checkout -b $branch_name
 Lets start with a blank slate: remove `.git` and re initialize the repo
 ```
 cd $repo_name
-rm -rf .git   
-git init   
+rm -rf .git
+git init
 git status
-```  
+```
 You'll see a list of file, these are files that git doesn't recognize. At this point, feel free to change the directory names to match your project. i.e. change the parent directory Insight_Project_Framework and the project directory Insight_Project_Framework:
 Now commit these:
 ```
