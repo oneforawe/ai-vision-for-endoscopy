@@ -1,5 +1,5 @@
-# Object Detection in Endoscopy Images
-This software uses machine learning (neural networks for computer vision object detection) to identify and highlight gastrointestinal abnormalities in endoscopy images.
+# Automated Analysis of Endoscopy Images
+This software uses machine learning (neural networks for computer vision object detection) to analyze endoscopy images.  It classifies images as being "normal" or "abnormal" (that is, containing a gastrointestinal abnormality such as blood, a polyp, or a lesion).  (Later classifications: recognize the various kinds of abnormalities.  Later analysis: identify and highlight the location of the abnormality within the image.)
 
 ## Contents of this repo
 - **source** : includes all source code for production
