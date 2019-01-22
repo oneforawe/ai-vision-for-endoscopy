@@ -3,7 +3,7 @@ This software uses machine learning (neural networks for computer vision object 
 
 ## Contents of this repo
 - **source** : includes all source code for production
-- **explain** : includes explanatory material, including slide show presentations and EDA (exploratory data analysis) jupyter notebooks
+- **explain** : includes explanatory material, including slide show presentations and EDA (exploratory data analysis)
 - **build** : includes scripts that automate building of a standalone environment
 - **configs** : includes configurations / modifications of all preset variables
 - **data** : includes sample data so tests can be run to validate installation
