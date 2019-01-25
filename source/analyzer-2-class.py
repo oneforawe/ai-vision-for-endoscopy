@@ -42,7 +42,3 @@ def build_model():
 
     return model
 
-
-
-build_model()
-
