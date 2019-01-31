@@ -109,3 +109,8 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+
+# Mac Desktop Services Store customization files
+.DS_Store
+
