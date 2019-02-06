@@ -20,7 +20,7 @@ def main():
     #############
     # Load Data #
     #############
-    train_set, train_files, train_label,  test_set, test_files  =  dl.load_data()
+    train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data()
 
 
     ####################
