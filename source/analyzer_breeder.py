@@ -20,7 +20,11 @@ def main():
     #############
     # Load Data #
     #############
-    train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data()
+    #path = '../data/1-pre-processed/A'
+    #data_folder = "data_A"
+    path = '../data/1-pre-processed/C'
+    data_folder = "data_C"
+    train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(path)
 
 
     ####################
@@ -55,10 +59,10 @@ def main():
 
     # (Find) run number
     run = 1
-    while os.path.isdir(f'./chkpts/{model.name}/{file_version}/Run_{run:02d}'):
+    while os.path.isdir(f'./chkpts/{model.name}/{file_version}/{data_folder}/Run_{run:02d}'):
         run += 1
 
-    os.makedirs(f'./outputs/{model.name}/{file_version}',exist_ok=True)
+    os.makedirs(f'./outputs/{model.name}/{file_version}/{data_folder}',exist_ok=True)
     file = open(f'./outputs/{model.name}/{file_version}/train_params_Run_{run:02d}.txt',"w")
     file.write(f'batch_size = {batch_size}\n'+
                f'epochs = {epochs}\n'+

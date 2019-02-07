@@ -31,9 +31,8 @@ from sklearn.utils import shuffle
 # Load Data #
 #############
 
-def load_data():
+def load_data(path):
 
-    path = '../data/1-pre-processed/C'
     colon_normal   = glob.glob(path+'/Normal/*.jpg')
     colon_abnormal = glob.glob(path+'/Abnormal/*.jpg')
     dfn = pd.DataFrame()
