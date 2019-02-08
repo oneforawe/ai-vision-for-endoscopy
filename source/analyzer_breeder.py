@@ -100,8 +100,13 @@ def main():
 
     end_time = datetime.datetime.now()
     elapsed = end_time - start_time
+    days = elapsed.days
+    secs = elapsed.seconds
+    hrs  = secs//3600
+    mins = (secs-hrs*3600)//60
+    secs = secs-hrs*3600-mins*60
     file = open(f'./outputs/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}_time.txt',"w")
-    file.write(f'Run train-and-test time (duration) = {elapsed.days} days, {elapsed.seconds} seconds, {elapsed.microseconds} microseconds.\n')
+    file.write(f'Run train-and-test time (duration) = {days} days, {hrs} hours, {mins} minutes, {secs} seconds, {elapsed.microseconds} microseconds.\n')
     file.close()
 
 
