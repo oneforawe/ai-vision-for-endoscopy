@@ -66,7 +66,7 @@ def main():
     batch_size = 4
     #batch_size = 20
     epochs = 50
-    n_fold = 2
+    n_fold = 4
     #n_fold = 5
     histories = []
 
