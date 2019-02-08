@@ -37,7 +37,7 @@ def load_data(path):
 
     # Split into train and test sets.
     # (train will be further split into train and validation using KFold)
-    splitPoint = int(0.8*len(colon_abnormal))
+    splitPoint = int(0.8*len(abnormalImgFiles))
     n_train = dfn[:splitPoint]
     n_test  = dfn[splitPoint:]
     a_train = dfa[:splitPoint]
