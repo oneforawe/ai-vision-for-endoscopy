@@ -92,7 +92,7 @@ def main():
     end_time = datetime.datetime.now()
     elapsed = end_time - start_time
     file = open(f'./outputs/{model.name}/{breeder_version}/train_params_Run_{run:02d}_time.txt',"w")
-    file.write(f'Run train-and-test time= {batch_size}\n')
+    file.write(f'Run train-and-test time = {elapsed.days} days, {elapsed.seconds} seconds, {elapsed.microseconds} microseconds.\n')
     file.close()
 
 
