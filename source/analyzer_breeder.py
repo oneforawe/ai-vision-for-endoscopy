@@ -26,11 +26,11 @@ def main():
     #path = '../data/1-pre-processed/A'
     #data_folder = "data_A"
     # B: 26 images
-    path = '../data/1-pre-processed/B'
-    data_folder = "data_B"
+    #path = '../data/1-pre-processed/B'
+    #data_folder = "data_B"
     # C: 200 images (Abnormal=Blood)
-    #path = '../data/1-pre-processed/C'
-    #data_folder = "data_C"
+    path = '../data/1-pre-processed/C'
+    data_folder = "data_C"
     # D: 2000 images
     #path = '../data/1-pre-processed/D'
     #data_folder = "data_D"
@@ -63,9 +63,9 @@ def main():
     model = a2c.mobilenet_v2_a(img_shape)
 
     # Prepare for training
-    batch_size = 2
+    batch_size = 4
     epochs = 50
-    n_fold = 3
+    n_fold = 5
     histories = []
 
     # (Find) run number
@@ -74,7 +74,7 @@ def main():
         run += 1
 
     os.makedirs(f'./outputs/{model.name}/{breeder_version}/{data_folder}',exist_ok=True)
-    file = open(f'./outputs/{model.name}/{breeder_version}/{data_folder}/train_params_Run_{run:02d}.txt',"w")
+    file = open(f'./outputs/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}_train_params.txt',"w")
     file.write(f'batch_size = {batch_size}\n'+
                f'epochs = {epochs}\n'+
                f'n_fold = {n_fold}\n')
@@ -98,8 +98,8 @@ def main():
 
     end_time = datetime.datetime.now()
     elapsed = end_time - start_time
-    file = open(f'./outputs/{model.name}/{breeder_version}/{data_folder}/train_params_Run_{run:02d}_time.txt',"w")
-    file.write(f'Run train-and-test time = {elapsed.days} days, {elapsed.seconds} seconds, {elapsed.microseconds} microseconds.\n')
+    file = open(f'./outputs/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}_time.txt',"w")
+    file.write(f'Run train-and-test time (duration) = {elapsed.days} days, {elapsed.seconds} seconds, {elapsed.microseconds} microseconds.\n')
     file.close()
 
 
