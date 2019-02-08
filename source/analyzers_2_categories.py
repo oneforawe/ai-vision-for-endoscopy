@@ -26,6 +26,11 @@ import matplotlib.image as mpimg
 from sklearn.utils import shuffle
 
 
+#matts guess how tro fix
+#config=tf.ConfigProto(device_count={'GPU':1,'CPU':8})
+#sess=tf.Session(config=config)
+#keras.backend.set_session(sess)
+
 ################
 # Define Model #
 ################
@@ -186,6 +191,7 @@ def train_model(input_model, batch_size, epochs, img_size,
         model.compile(optimizer=Adam(lr=1e-4), loss='binary_crossentropy',
                       metrics = ['accuracy'])
 
+        #
         history = model.fit_generator(train_generator(), train_steps, epochs=epochs, verbose=1,
                                       callbacks=callbacks, validation_data=valid_generator(),
                                       validation_steps=valid_steps)
@@ -203,7 +209,7 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         valid_score = roc_auc(y_valid, preds_valid)
         train_score = roc_auc(y_train, preds_train)
-        print('Val Score:{} for fold {}'.format(valid_score, i))
+        print('Val Score:   {} for fold {}'.format(valid_score, i))
         print('Train Score: {} for fold {}'.format(train_score, i))
 
         valid_scores.append(valid_score)
