@@ -24,8 +24,10 @@ def main():
     #############
     #path = '../data/1-pre-processed/A'
     #data_folder = "data_A"
-    path = '../data/1-pre-processed/C'
-    data_folder = "data_C"
+    path = '../data/1-pre-processed/B'
+    data_folder = "data_B"
+    #path = '../data/1-pre-processed/C'
+    #data_folder = "data_C"
     #path = '../data/1-pre-processed/D'
     #data_folder = "data_D"
     train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(path)
