@@ -9,21 +9,6 @@ import numpy as np
 import pandas as pd
 import cv2
 import h5py
-import tensorflow as tf
-import keras
-from keras.models import Model, model_from_json
-from keras.optimizers import Adam
-from keras.applications.mobilenet_v2 import MobileNetV2
-from keras.layers import Dense, Input, Flatten, Dropout, GlobalAveragePooling2D
-from keras.layers.normalization import BatchNormalization
-from keras.callbacks import TensorBoard, ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
-from sklearn.model_selection import KFold
-from sklearn import metrics
-import matplotlib
-from matplotlib import pylab, mlab
-from matplotlib import pyplot as plt
-from IPython.core.pylabtools import figsize, getfigs
-import matplotlib.image as mpimg
 from sklearn.utils import shuffle
 
 
