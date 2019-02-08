@@ -69,7 +69,7 @@ def main():
         run += 1
 
     os.makedirs(f'./outputs/{model.name}/{breeder_version}/{data_folder}',exist_ok=True)
-    file = open(f'./outputs/{model.name}/{breeder_version}/train_params_Run_{run:02d}.txt',"w")
+    file = open(f'./outputs/{model.name}/{breeder_version}/{data_folder}/train_params_Run_{run:02d}.txt',"w")
     file.write(f'batch_size = {batch_size}\n'+
                f'epochs = {epochs}\n'+
                f'n_fold = {n_fold}\n')
@@ -84,7 +84,7 @@ def main():
                                        run)
 
     test_set['abnormality_pred'] = test_pred
-    test_set.to_csv(f'./outputs/{model.name}/{breeder_version}/output_Run_{run:02d}.csv', index=None)
+    test_set.to_csv(f'./outputs/{model.name}/{breeder_version}/{data_folder}/output_Run_{run:02d}.csv', index=None)
 
     os.makedirs(f'./for_plots/{model.name}/{breeder_version}',exist_ok=True)
     f = open(f'for_plots/{model.name}/{breeder_version}/histories_Run_{run:02d}.pckl', 'wb')
@@ -93,7 +93,7 @@ def main():
 
     end_time = datetime.datetime.now()
     elapsed = end_time - start_time
-    file = open(f'./outputs/{model.name}/{breeder_version}/train_params_Run_{run:02d}_time.txt',"w")
+    file = open(f'./outputs/{model.name}/{breeder_version}/{data_folder}/train_params_Run_{run:02d}_time.txt',"w")
     file.write(f'Run train-and-test time = {elapsed.days} days, {elapsed.seconds} seconds, {elapsed.microseconds} microseconds.\n')
     file.close()
 
