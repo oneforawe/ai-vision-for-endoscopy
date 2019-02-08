@@ -233,10 +233,10 @@ def train_model(input_model, batch_size, epochs, img_size,
     print('Finished training!')
 
     # Save
-    model.save(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/ModelWhole_trained_{model.name}_{breeder_v}/{dat_folder}_Run_{j:02d}.hdf5')
+    model.save(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/ModelWhole_trained_{model.name}_{breeder_v}_{dat_folder}_Run_{j:02d}.hdf5')
     #model = load_model('my_model.hdf5')
     model_json_string = model.to_json()
-    with open(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/ModelArch_{model.name}_.json', "w") as json_file:
+    with open(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/ModelArch_{model.name}_{breeder_v}_{dat_folder}_Run_{j:02d}.json', "w") as json_file:
         json_file.write(model_json_string)
     #model = model_from_json(json_string)
     model.save_weights(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/ModelWeights_trained_{model.name}_{breeder_v}_{dat_folder}_Run_{j:02d}.hdf5')

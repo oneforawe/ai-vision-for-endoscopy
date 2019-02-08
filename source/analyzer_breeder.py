@@ -7,9 +7,11 @@ import cv2
 import data_loader as dl
 import analyzers_2_categories as a2c
 from sklearn.model_selection import KFold
+import datetime
 
 
 def main():
+    start_time = datetime.datetime.now()
 
     ################
     # File Version #
@@ -86,6 +88,12 @@ def main():
     f = open(f'for_plots/{model.name}/{breeder_version}/histories_Run_{run:02d}.pckl', 'wb')
     pickle.dump(f'for_plots/{model.name}/{breeder_version}/hist.histories', f)
     f.close()
+
+    end_time = datetime.datetime.now()
+    elapsed = end_time - start_time
+    file = open(f'./outputs/{model.name}/{breeder_version}/train_params_Run_{run:02d}_time.txt',"w")
+    file.write(f'Run train-and-test time= {batch_size}\n')
+    file.close()
 
 
 if __name__ == '__main__':
