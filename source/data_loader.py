@@ -20,11 +20,11 @@ def load_data(path):
 
     normalImgFiles   = []
     abnormalImgFiles = []
-    for dirPath, subDirs, files in os.walk('./Normal'):
+    for dirPath, subDirs, files in os.walk(path+'/Normal'):
         for file in files:
             if file.endswith(".jpg"):
                 normalImgFiles.append( os.path.join(dirPath, file) )
-    for dirPath, subDirs, files in os.walk('./Abnormal'):
+    for dirPath, subDirs, files in os.walk(path+'/Abnormal'):
         for file in files:
             if file.endswith(".jpg"):
                 abnormalImgFiles.append( os.path.join(dirPath, file) )
