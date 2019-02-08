@@ -30,9 +30,10 @@ from sklearn.utils import shuffle
 # Prepare for GPU usage #
 #########################
 
-config=tf.ConfigProto(device_count={'GPU':1,'CPU':8})
-sess=tf.Session(config=config)
-keras.backend.set_session(sess)
+# No need for this.
+#config=tf.ConfigProto(device_count={'GPU':1,'CPU':8})
+#sess=tf.Session(config=config)
+#keras.backend.set_session(sess)
 
 
 ################

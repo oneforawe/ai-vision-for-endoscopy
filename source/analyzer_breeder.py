@@ -22,14 +22,19 @@ def main():
     #############
     # Load Data #
     #############
+    # A: Full data set in original file structure.
     #path = '../data/1-pre-processed/A'
     #data_folder = "data_A"
+    # B: 26 images
     path = '../data/1-pre-processed/B'
     data_folder = "data_B"
+    # C: 200 images (Abnormal=Blood)
     #path = '../data/1-pre-processed/C'
     #data_folder = "data_C"
+    # D: 2000 images
     #path = '../data/1-pre-processed/D'
     #data_folder = "data_D"
+    # Full data set in original file structure.
     train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(path)
 
 
@@ -58,9 +63,9 @@ def main():
     model = a2c.mobilenet_v2_a(img_shape)
 
     # Prepare for training
-    batch_size = 4
+    batch_size = 2
     epochs = 50
-    n_fold = 4
+    n_fold = 3
     histories = []
 
     # (Find) run number
