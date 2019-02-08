@@ -18,12 +18,20 @@ from sklearn.utils import shuffle
 
 def load_data(path):
 
-    colon_normal   = glob.glob(path+'/Normal/*.jpg')
-    colon_abnormal = glob.glob(path+'/Abnormal/*.jpg')
+    normalImgFiles   = []
+    abnormalImgFiles = []
+    for dirPath, subDirs, files in os.walk('./Normal'):
+        for file in files:
+            if file.endswith(".jpg"):
+                normalImgFiles.append( os.path.join(dirPath, file) )
+    for dirPath, subDirs, files in os.walk('./Abnormal'):
+        for file in files:
+            if file.endswith(".jpg"):
+                abnormalImgFiles.append( os.path.join(dirPath, file) )
     dfn = pd.DataFrame()
     dfa = pd.DataFrame()
-    dfn['filepath'] = colon_normal
-    dfa['filepath'] = colon_abnormal
+    dfn['filepath'] = normalImgFiles
+    dfa['filepath'] = abnormalImgFiles
     dfn['abnormality'] = 0
     dfa['abnormality'] = 1
 

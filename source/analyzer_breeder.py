@@ -29,11 +29,11 @@ def main():
     #path = '../data/1-pre-processed/B'
     #data_folder = "data_B"
     # C: 200 images (Abnormal=Blood)
-    path = '../data/1-pre-processed/C'
-    data_folder = "data_C"
+    #path = '../data/1-pre-processed/C'
+    #data_folder = "data_C"
     # D: 2000 images
-    #path = '../data/1-pre-processed/D'
-    #data_folder = "data_D"
+    path = '../data/1-pre-processed/D'
+    data_folder = "data_D"
     # Full data set in original file structure.
     train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(path)
 
@@ -63,7 +63,7 @@ def main():
     model = a2c.mobilenet_v2_a(img_shape)
 
     # Prepare for training
-    batch_size = 4
+    batch_size = 20
     epochs = 50
     n_fold = 5
     histories = []
@@ -89,7 +89,7 @@ def main():
                                        run)
 
     test_set['abnormality_pred'] = test_pred
-    test_set.to_csv(f'./outputs/{model.name}/{breeder_version}/{data_folder}/output_Run_{run:02d}.csv', index=None)
+    test_set.to_csv(f'./outputs/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}_output_scores.csv', index=None)
 
     os.makedirs(f'./for_plots/{model.name}/{breeder_version}',exist_ok=True)
     f = open(f'for_plots/{model.name}/{breeder_version}/histories_Run_{run:02d}.pckl', 'wb')
