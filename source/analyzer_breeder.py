@@ -14,7 +14,7 @@ def main():
     ################
     # File Version #
     ################
-    file_version = "breeder_01"
+    breeder_version = "breeder_01"
 
 
     #############
@@ -24,6 +24,8 @@ def main():
     #data_folder = "data_A"
     path = '../data/1-pre-processed/C'
     data_folder = "data_C"
+    #path = '../data/1-pre-processed/D'
+    #data_folder = "data_D"
     train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(path)
 
 
@@ -59,11 +61,11 @@ def main():
 
     # (Find) run number
     run = 1
-    while os.path.isdir(f'./chkpts/{model.name}/{file_version}/{data_folder}/Run_{run:02d}'):
+    while os.path.isdir(f'./chkpts/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}'):
         run += 1
 
-    os.makedirs(f'./outputs/{model.name}/{file_version}/{data_folder}',exist_ok=True)
-    file = open(f'./outputs/{model.name}/{file_version}/train_params_Run_{run:02d}.txt',"w")
+    os.makedirs(f'./outputs/{model.name}/{breeder_version}/{data_folder}',exist_ok=True)
+    file = open(f'./outputs/{model.name}/{breeder_version}/train_params_Run_{run:02d}.txt',"w")
     file.write(f'batch_size = {batch_size}\n'+
                f'epochs = {epochs}\n'+
                f'n_fold = {n_fold}\n')
@@ -74,14 +76,15 @@ def main():
     # Train model: compile (configure for training), train, test, save
     histories, test_pred = a2c.train_model(model, batch_size, epochs, img_size,
                                        train_set, train_labels, test_files,
-                                       n_fold, kf, file_version, run)
+                                       n_fold, kf, breeder_version, data_folder,
+                                       run)
 
     test_set['abnormality_pred'] = test_pred
-    test_set.to_csv(f'./outputs/{model.name}/{file_version}/output_Run_{run:02d}.csv', index=None)
+    test_set.to_csv(f'./outputs/{model.name}/{breeder_version}/output_Run_{run:02d}.csv', index=None)
 
-    os.makedirs(f'./for_plots/{model.name}/{file_version}',exist_ok=True)
-    f = open(f'for_plots/{model.name}/{file_version}/histories_Run_{run:02d}.pckl', 'wb')
-    pickle.dump(f'for_plots/{model.name}/{file_version}/hist.histories', f)
+    os.makedirs(f'./for_plots/{model.name}/{breeder_version}',exist_ok=True)
+    f = open(f'for_plots/{model.name}/{breeder_version}/histories_Run_{run:02d}.pckl', 'wb')
+    pickle.dump(f'for_plots/{model.name}/{breeder_version}/hist.histories', f)
     f.close()
 
 

@@ -73,7 +73,7 @@ def mobilenet_v2_a(img_dim):
 ################################
 
 def train_model(input_model, batch_size, epochs, img_size,
-                x, y, test, n_fold, kf, breeder_v, j):
+                x, y, test, n_fold, kf, breeder_v, dat_folder, j):
 
     roc_auc      = metrics.roc_auc_score
     preds_train  = np.zeros(len(x), dtype = np.float)
@@ -82,14 +82,14 @@ def train_model(input_model, batch_size, epochs, img_size,
 
     model = input_model
 
-    os.makedirs(f'./chkpts/{model.name}/{breeder_v}', exist_ok=True)
-    os.makedirs(f'./tb_logs/{model.name}/{breeder_v}',exist_ok=True)
+    os.makedirs(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}', exist_ok=True)
+    os.makedirs(f'./tb_logs/{model.name}/{breeder_v}/{dat_folder}',exist_ok=True)
 
     print(f'\n')
     print(f'Training: Run {j:02d}')
     print(f'----------------\n\n')
-    os.makedirs(f'./chkpts/{model.name}/{breeder_v}/Run_{j:02d}', exist_ok=True)  # for /weights_fold_{str(i)}.hdf5
-    os.makedirs(f'./tb_logs/{model.name}/{breeder_v}/Run_{j:02d}',exist_ok=True)  # for /tb_fold_{str(i)}/etcetera
+    os.makedirs(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}', exist_ok=True)  # for /weights_fold_{str(i)}.hdf5
+    os.makedirs(f'./tb_logs/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}',exist_ok=True)  # for /tb_fold_{str(i)}/etcetera
 
     # "Fold" counter
     i = 0
@@ -179,7 +179,7 @@ def train_model(input_model, batch_size, epochs, img_size,
         valid_steps = len(x_valid) / batch_size
         test_steps = len(test) / batch_size
 
-        os.makedirs(f'./tb_logs/{model.name}/{breeder_v}/Run_{j:02d}/tb_fold_{str(i)}',exist_ok=True)
+        os.makedirs(f'./tb_logs/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/tb_fold_{str(i)}',exist_ok=True)
         # for /tb_fold_{str(i)}/logfiles
         # and /weights_fold_{str(i)}.hdf5
 
@@ -187,9 +187,9 @@ def train_model(input_model, batch_size, epochs, img_size,
                      ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=1, cooldown=1,
                                        verbose=1, min_lr=1e-7),
                      ModelCheckpoint(filepath =
-                                     f'./chkpts/{model.name}/{breeder_v}/Run_{j:02d}/weights_fold_{str(i)}.hdf5',
+                                     f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/weights_fold_{str(i)}.hdf5',
                                      verbose=1, save_best_only=True, save_weights_only=True, mode='auto'),
-                     TensorBoard(log_dir = f'./tb_logs/{model.name}/{breeder_v}/Run_{j:02d}/tb_fold_{str(i)}/' )
+                     TensorBoard(log_dir = f'./tb_logs/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/tb_fold_{str(i)}/' )
                     ]
 
         model.compile(optimizer=Adam(lr=1e-4), loss='binary_crossentropy',
@@ -201,7 +201,7 @@ def train_model(input_model, batch_size, epochs, img_size,
                                       validation_steps=valid_steps)
         histories_.append(history)
 
-        model.load_weights(filepath = f'./chkpts/{model.name}/{breeder_v}/Run_{j:02d}/weights_fold_{str(i)}.hdf5' )
+        model.load_weights(filepath = f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/weights_fold_{str(i)}.hdf5' )
 
         print('Running validation predictions on fold {}'.format(i))
         preds_valid = model.predict_generator(generator=valid_generator(),
@@ -233,13 +233,13 @@ def train_model(input_model, batch_size, epochs, img_size,
     print('Finished training!')
 
     # Save
-    model.save(f'./chkpts/{model.name}/{breeder_v}/Run_{j:02d}/ModelWhole_trained_{model.name}_{breeder_v}_Run_{j:02d}.hdf5')
+    model.save(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/ModelWhole_trained_{model.name}_{breeder_v}/{dat_folder}_Run_{j:02d}.hdf5')
     #model = load_model('my_model.hdf5')
     model_json_string = model.to_json()
-    with open(f'./chkpts/{model.name}/{breeder_v}/Run_{j:02d}/ModelArch_{model.name}_.json', "w") as json_file:
+    with open(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/ModelArch_{model.name}_.json', "w") as json_file:
         json_file.write(model_json_string)
     #model = model_from_json(json_string)
-    model.save_weights(f'./chkpts/{model.name}/{breeder_v}/Run_{j:02d}/ModelWeights_trained_{model.name}_{breeder_v}_Run_{j:02d}.hdf5')
+    model.save_weights(f'./chkpts/{model.name}/{breeder_v}/{dat_folder}/Run_{j:02d}/ModelWeights_trained_{model.name}_{breeder_v}_{dat_folder}_Run_{j:02d}.hdf5')
     #model.load_weights('my_model_weights.h5')
     # compare with last fold weights (should be same)
 
