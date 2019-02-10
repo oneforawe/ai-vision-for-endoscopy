@@ -23,16 +23,16 @@ def main():
     # Load Data #
     #############
     # A: Full data set in original file structure.
-    #data_path = '../data/1-pre-processed/A'
+    #data_path = '../input-data/1-pre-processed/A'
     #data_name = "data_A"
     # B: 26 images
-    #data_path = '../data/1-pre-processed/B'
+    #data_path = '../input-data/1-pre-processed/B'
     #data_name = "data_B"
     # C: 200 images (Abnormal=Blood)
     #data_path = '../input-data/1-pre-processed/C'
     #data_name = "data_C"
     # D: 2000 images
-    data_path = '../data/1-pre-processed/D'
+    data_path = '../input-data/1-pre-processed/D'
     data_name = "data_D"
     # Full data set in original file structure.
     train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(data_path)
