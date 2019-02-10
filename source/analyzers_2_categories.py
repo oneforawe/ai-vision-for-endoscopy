@@ -26,16 +26,6 @@ import matplotlib.image as mpimg
 from sklearn.utils import shuffle
 
 
-#########################
-# Prepare for GPU usage #
-#########################
-
-# No need for this.
-#config=tf.ConfigProto(device_count={'GPU':1,'CPU':8})
-#sess=tf.Session(config=config)
-#keras.backend.set_session(sess)
-
-
 ################
 # Define Model #
 ################

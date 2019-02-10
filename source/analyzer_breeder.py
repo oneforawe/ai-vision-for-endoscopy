@@ -29,11 +29,11 @@ def main():
     #data_path = '../data/1-pre-processed/B'
     #data_name = "data_B"
     # C: 200 images (Abnormal=Blood)
-    #data_path = '../input-data/1-pre-processed/C'
-    #data_name = "data_C"
+    data_path = '../input-data/1-pre-processed/C'
+    data_name = "data_C"
     # D: 2000 images
-    data_path = '../data/1-pre-processed/D'
-    data_name = "data_D"
+    #data_path = '../data/1-pre-processed/D'
+    #data_name = "data_D"
     # Full data set in original file structure.
     train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(data_path)
 
@@ -67,18 +67,18 @@ def main():
     output_base = output_root+f'{model.name}/{breeder_version}/{data_name}/'
 
     # Prepare for training
-    #batch_size = 4  # C
-    batch_size = 20 # D
+    batch_size = 4  # C
+    #batch_size = 20 # D
     epochs = 50
-    #n_fold = 4 # C
-    n_fold = 5 # D
+    n_fold = 4 # C
+    #n_fold = 5 # D
     histories = []
 
     # (Find) run number
     run = 1
-    while os.path.isfile(output_base+f'/Run_{run:02d}/run_duration.txt'):
+    while os.path.isfile(output_base+f'Run_{run:02d}/run_duration.txt'):
         run += 1
-    run_path = output_base+f'/Run_{run:02d}/'
+    run_path = output_base+f'Run_{run:02d}/'
 
     os.makedirs(run_path,exist_ok=True)
     file = open(run_path+f'train_params.txt',"w")
@@ -101,7 +101,7 @@ def main():
 
     os.makedirs(run_path+f'for_plots',exist_ok=True)
     f = open(run_path+f'for_plots/histories_Run_{run:02d}.pckl', 'wb')
-    pickle.dump(run_path+f'for_plots/hist.histories', f)
+    pickle.dump(histories, f)
     f.close()
 
     end_time = datetime.datetime.now()
