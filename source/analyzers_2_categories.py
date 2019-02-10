@@ -107,13 +107,13 @@ def train_model(input_model, batch_size, epochs, img_size,
                 # Rotate 90
                 src = np.rot90(src, 1)
             if choice == 1:
-                # flip vertically
+                # Flip vertically
                 src = np.flipud(src)
             if choice == 2:
                 # Rotate 180
                 src = np.rot90(src, 2)
             if choice == 3:
-                # flip horizontally
+                # Flip horizontally
                 src = np.fliplr(src)
             if choice == 4:
                 # Rotate 90 counter-clockwise
@@ -192,7 +192,7 @@ def train_model(input_model, batch_size, epochs, img_size,
         model.compile(optimizer=Adam(lr=1e-4), loss='binary_crossentropy',
                       metrics = ['accuracy'])
 
-        #
+        # Train and record fold history.
         history = model.fit_generator(train_generator(), train_steps, epochs=epochs, verbose=1,
                                       callbacks=callbacks, validation_data=valid_generator(),
                                       validation_steps=valid_steps)
@@ -230,6 +230,7 @@ def train_model(input_model, batch_size, epochs, img_size,
     print('Finished training!')
 
     # Save
+    print('Now saving trained model.')
     model.save(run_path_+f'chkpts/ModelWhole_trained.hdf5')
     #model = load_model('my_model.hdf5')
     model_json_string = model.to_json()
