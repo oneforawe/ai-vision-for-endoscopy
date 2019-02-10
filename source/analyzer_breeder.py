@@ -23,19 +23,19 @@ def main():
     # Load Data #
     #############
     # A: Full data set in original file structure.
-    #path = '../data/1-pre-processed/A'
-    #data_folder = "data_A"
+    #data_path = '../data/1-pre-processed/A'
+    #data_name = "data_A"
     # B: 26 images
-    #path = '../data/1-pre-processed/B'
-    #data_folder = "data_B"
+    #data_path = '../data/1-pre-processed/B'
+    #data_name = "data_B"
     # C: 200 images (Abnormal=Blood)
-    #path = '../data/1-pre-processed/C'
-    #data_folder = "data_C"
+    #data_path = '../data/1-pre-processed/C'
+    #data_name = "data_C"
     # D: 2000 images
-    path = '../data/1-pre-processed/D'
-    data_folder = "data_D"
+    data_path = '../data/1-pre-processed/D'
+    data_name = "data_D"
     # Full data set in original file structure.
-    train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(path)
+    train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(data_path)
 
 
     ####################
@@ -62,6 +62,10 @@ def main():
     # Initialize model
     model = a2c.mobilenet_v2_a(img_shape)
 
+    # Output location
+    output_root = '../output/'
+    output_base = output_root+'{model.name}/{breeder_version}/{data_name}/'
+
     # Prepare for training
     #batch_size = 4  # C
     batch_size = 20 # D
@@ -72,11 +76,12 @@ def main():
 
     # (Find) run number
     run = 1
-    while os.path.isdir(f'./chkpts/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}'):
+    while os.path.isfile(output_base+'/Run_{run:02d}/run_duration.txt'):
         run += 1
+    run_path = output_base+'/Run_{run:02d}/'
 
-    os.makedirs(f'./outputs/{model.name}/{breeder_version}/{data_folder}',exist_ok=True)
-    file = open(f'./outputs/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}_train_params.txt',"w")
+    os.makedirs(run_path,exist_ok=True)
+    file = open(run_path+f'train_params.txt',"w")
     file.write(f'batch_size = {batch_size}\n'+
                f'epochs = {epochs}\n'+
                f'n_fold = {n_fold}\n')
@@ -87,15 +92,15 @@ def main():
     # Train model: compile (configure for training), train, test, save
     histories, test_pred = a2c.train_model(model, batch_size, epochs, img_size,
                                        train_set, train_labels, test_files,
-                                       n_fold, kf, breeder_version, data_folder,
-                                       run)
+                                       n_fold, kf, run_path, run)
 
     test_set['abnormality_pred'] = test_pred
-    test_set.to_csv(f'./outputs/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}_output_scores.csv', index=None)
+    os.makedirs(run_path+f'results',exist_ok=True)
+    test_set.to_csv(run_path+f'results/output_scores.csv', index=None)
 
-    os.makedirs(f'./for_plots/{model.name}/{breeder_version}/{data_folder}',exist_ok=True)
-    f = open(f'for_plots/{model.name}/{breeder_version}/{data_folder}/histories_Run_{run:02d}.pckl', 'wb')
-    pickle.dump(f'for_plots/{model.name}/{breeder_version}/hist.histories', f)
+    os.makedirs(run_path+f'for_plots',exist_ok=True)
+    f = open(run_path+f'for_plots/histories_Run_{run:02d}.pckl', 'wb')
+    pickle.dump(run_path+f'for_plots/hist.histories', f)
     f.close()
 
     end_time = datetime.datetime.now()
@@ -105,8 +110,10 @@ def main():
     hrs  = secs//3600
     mins = (secs-hrs*3600)//60
     secs = secs-hrs*3600-mins*60
-    file = open(f'./outputs/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}_time.txt',"w")
-    file.write(f'Run train-and-test time (duration) = {days} days, {hrs} hours, {mins} minutes, {secs} seconds, {elapsed.microseconds} microseconds.\n')
+    file = open(run_path+f'run_duration.txt',"w")
+    file.write(f'Run train-and-test time (duration) = '
+               +'{days} days, {hrs} hours, {mins} minutes, {secs} seconds, '
+               +'{elapsed.microseconds} microseconds.\n')
     file.close()
 
 
