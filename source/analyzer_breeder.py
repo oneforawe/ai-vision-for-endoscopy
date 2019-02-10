@@ -29,7 +29,7 @@ def main():
     #data_path = '../data/1-pre-processed/B'
     #data_name = "data_B"
     # C: 200 images (Abnormal=Blood)
-    data_path = '../data/1-pre-processed/C'
+    data_path = '../input-data/1-pre-processed/C'
     data_name = "data_C"
     # D: 2000 images
     #data_path = '../data/1-pre-processed/D'
