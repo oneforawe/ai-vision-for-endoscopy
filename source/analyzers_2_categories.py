@@ -230,6 +230,7 @@ def train_model(input_model, batch_size, epochs, img_size,
     print('Finished training!')
 
     # Save
+    print('Now saving trained model.')
     model.save(run_path_+f'chkpts/ModelWhole_trained.hdf5')
     #model = load_model('my_model.hdf5')
     model_json_string = model.to_json()

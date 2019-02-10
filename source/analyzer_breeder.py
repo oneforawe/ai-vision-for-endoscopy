@@ -94,6 +94,7 @@ def main():
                                        train_set, train_labels, test_files,
                                        n_fold, kf, run_path, run)
 
+    print("Now saving results.")
     test_set['abnormality_pred'] = test_pred
     os.makedirs(run_path+f'results',exist_ok=True)
     test_set.to_csv(run_path+f'results/output_scores.csv', index=None)
