@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+# filename: file_counter_by_walk.py
+
+import os
+
+filePathList = []
+for dirPath, subDirs, files in os.walk('./Abnormal'):
+    for file in files:
+        if file.endswith(".jpg"):
+            filePathList.append( os.path.join(dirPath, file) )
+print(len(filePathList))
+print('')
+print(filePathList)
+
