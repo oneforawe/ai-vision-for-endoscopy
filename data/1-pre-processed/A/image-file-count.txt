@@ -1,3 +1,0 @@
-Number of .jpg  files:   138062
-Number of .jpeg files:        0
-Number of .mpg  files:       32
