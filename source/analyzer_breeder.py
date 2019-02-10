@@ -60,9 +60,10 @@ def main():
     ##################
 
     # Initialize model
-    #model = a2c.mobilenet_v2_a(img_shape)
-    model = a2c.mobilenet_v2_b(img_shape)
-    #model = a2c.xception_a(img_shape)   ERROR
+    #model = a2c.mobilenet_v2_a(img_shape) # without "fine-tuning"
+    #model = a2c.mobilenet_v2_b(img_shape) # with shallow "fine-tuning"
+    model = a2c.mobilenet_v2_c(img_shape) # with deep "fine-tuning"
+    #model = a2c.xception_a(img_shape)     # halts with an ERROR
 
     # Output location
     output_root = '../output/'
