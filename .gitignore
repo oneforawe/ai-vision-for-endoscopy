@@ -111,6 +111,9 @@ venv.bak/
 dmypy.json
 
 
+# text-editor backup files
+*~
+
 # Mac Desktop Services Store customization files
 .DS_Store
 
@@ -123,4 +126,6 @@ input-data/1-pre-processed/E
 input-data/1-pre-processed/F
 input-data/1-pre-processed/G
 output/old
+source/configs/
+source/build/examples/
 
