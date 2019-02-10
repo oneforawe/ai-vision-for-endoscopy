@@ -14,6 +14,7 @@ import keras
 from keras.models import Model, model_from_json
 from keras.optimizers import Adam
 from keras.applications.mobilenet_v2 import MobileNetV2
+from keras.applications.xception import Xception
 from keras.layers import Dense, Input, Flatten, Dropout, GlobalAveragePooling2D
 from keras.layers.normalization import BatchNormalization
 from keras.callbacks import TensorBoard, ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
@@ -26,20 +27,11 @@ import matplotlib.image as mpimg
 from sklearn.utils import shuffle
 
 
-#########################
-# Prepare for GPU usage #
-#########################
+#################
+# Define Models #
+#################
 
-# No need for this.
-#config=tf.ConfigProto(device_count={'GPU':1,'CPU':8})
-#sess=tf.Session(config=config)
-#keras.backend.set_session(sess)
-
-
-################
-# Define Model #
-################
-
+# Without "fine-tuning"
 def mobilenet_v2_a(img_dim):
     # base network to be built around:
     base_model = MobileNetV2(input_shape=None,
@@ -66,6 +58,118 @@ def mobilenet_v2_a(img_dim):
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_a')
+    return model
+
+# With "fine-tuning" (shallow)
+def mobilenet_v2_b(img_dim):
+    # base network to be built around:
+    base_model = MobileNetV2(input_shape=None,
+                             #input_shape=img_dim,
+                             alpha=1.0,
+                             depth_multiplier=1,
+                             include_top=False,
+                             weights='imagenet',
+                             input_tensor=None,
+                             pooling=None
+                             #classes=1000
+                            )
+    #for layer in base_model.layers:
+    #    layer.trainable = False
+    for layer in base_model.layers[:-3]: # All but ~last three layers
+        layer.trainable = False          #  are no trainable.
+    for layer in base_model.layers[-3:]: # ~Last three layers
+        layer.trainable = True           #  are trainable.
+
+    xi = Input(shape=img_dim)              # input tensor
+    x  = BatchNormalization()(xi)          # next layer
+    x  = base_model(x)                     # Each x on the right refers to
+    x  = Dropout(0.5)(x)                   #  the previous x on the left.
+    x  = Flatten()(x)                      #
+    xo = Dense(1, activation='sigmoid')(x) # output tensor
+    model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_b')
+    return model
+
+# With "fine-tuning" (deep)
+def mobilenet_v2_c(img_dim):
+    # base network to be built around:
+    base_model = MobileNetV2(input_shape=None,
+                             #input_shape=img_dim,
+                             alpha=1.0,
+                             depth_multiplier=1,
+                             include_top=False,
+                             weights='imagenet',
+                             input_tensor=None,
+                             pooling=None
+                             #classes=1000
+                            )
+    #for layer in base_model.layers:
+    #    layer.trainable = False
+    for layer in base_model.layers[:-50]: # All but ~last three layers
+        layer.trainable = False           #  are no trainable.
+    for layer in base_model.layers[-50:]: # ~Last three layers
+        layer.trainable = True            #  are trainable.
+
+    xi = Input(shape=img_dim)              # input tensor
+    x  = BatchNormalization()(xi)          # next layer
+    x  = base_model(x)                     # Each x on the right refers to
+    x  = Dropout(0.5)(x)                   #  the previous x on the left.
+    x  = Flatten()(x)                      #
+    xo = Dense(1, activation='sigmoid')(x) # output tensor
+    model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_c')
+    return model
+
+# larger than mobilenet_v2, without "fine-tuning"
+def xception_a(img_dim):
+    # base network to be built around:
+    base_model = Xception(input_shape=None,
+                          include_top=True,
+                          weights='imagenet',
+                          input_tensor=None,
+                          pooling=None
+                          #classes=1000
+                         )
+
+    for layer in base_model.layers:
+        layer.trainable = False
+    #for layer in base_model.layers[:-3]: # All but ~last three layers
+    #    layer.trainable = False          #  are no trainable.
+    #for layer in base_model.layers[-3:]: # ~Last three layers
+    #    layer.trainable = True           #  are trainable.
+
+    xi = Input(shape=img_dim)              # input tensor
+    x  = BatchNormalization()(xi)          # next layer
+    x  = base_model(x)                     # Each x on the right refers to
+    x  = Dropout(0.5)(x)                   #  the previous x on the left.
+    x  = Flatten()(x)                      #
+    xo = Dense(1, activation='sigmoid')(x) # output tensor
+    model = Model(inputs=xi, outputs=xo, name='xception_a')
+    return model
+
+# larger than mobilenet_v2, with "fine-tuning"
+def xception_a(img_dim):
+    # base network to be built around:
+    base_model = Xception(input_shape=None,
+                          include_top=True,
+                          weights='imagenet',
+                          input_tensor=None,
+                          pooling=None
+                          #classes=1000
+                         )
+
+    #for layer in base_model.layers:
+    #    layer.trainable = False
+    for layer in base_model.layers[:-3]: # All but ~last three layers
+        layer.trainable = False          #  are no trainable.
+    for layer in base_model.layers[-3:]: # ~Last three layers
+        layer.trainable = True           #  are trainable.
+
+    xi = Input(shape=img_dim)              # input tensor
+    x  = BatchNormalization()(xi)          # next layer
+    x  = base_model(x)                     # Each x on the right refers to
+    x  = Dropout(0.5)(x)                   #  the previous x on the left.
+    x  = Flatten()(x)                      #
+    xo = Dense(1, activation='sigmoid')(x) # output tensor
+    model = Model(inputs=xi, outputs=xo, name='xception_a')
     return model
 
 
@@ -244,10 +348,4 @@ def train_model(input_model, batch_size, epochs, img_size,
     preds_test /= n_fold
 
     return histories_, preds_test
-
-
-
-
-
-
 

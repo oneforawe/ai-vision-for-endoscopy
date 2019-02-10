@@ -23,16 +23,16 @@ def main():
     # Load Data #
     #############
     # A: Full data set in original file structure.
-    #data_path = '../data/1-pre-processed/A'
+    #data_path = '../input-data/1-pre-processed/A'
     #data_name = "data_A"
     # B: 26 images
-    #data_path = '../data/1-pre-processed/B'
+    #data_path = '../input-data/1-pre-processed/B'
     #data_name = "data_B"
     # C: 200 images (Abnormal=Blood)
     #data_path = '../input-data/1-pre-processed/C'
     #data_name = "data_C"
     # D: 2000 images
-    data_path = '../data/1-pre-processed/D'
+    data_path = '../input-data/1-pre-processed/D'
     data_name = "data_D"
     # Full data set in original file structure.
     train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(data_path)
@@ -60,7 +60,10 @@ def main():
     ##################
 
     # Initialize model
-    model = a2c.mobilenet_v2_a(img_shape)
+    #model = a2c.mobilenet_v2_a(img_shape) # without "fine-tuning"
+    model = a2c.mobilenet_v2_b(img_shape) # with shallow "fine-tuning"
+    #model = a2c.mobilenet_v2_c(img_shape) # with deep "fine-tuning"
+    #model = a2c.xception_a(img_shape)     # halts with an ERROR
 
     # Output location
     output_root = '../output/'
@@ -76,9 +79,9 @@ def main():
 
     # (Find) run number
     run = 1
-    while os.path.isfile(output_base+f'/Run_{run:02d}/run_duration.txt'):
+    while os.path.isfile(output_base+f'Run_{run:02d}/run_duration.txt'):
         run += 1
-    run_path = output_base+f'/Run_{run:02d}/'
+    run_path = output_base+f'Run_{run:02d}/'
 
     os.makedirs(run_path,exist_ok=True)
     file = open(run_path+f'train_params.txt',"w")
@@ -101,7 +104,7 @@ def main():
 
     os.makedirs(run_path+f'for_plots',exist_ok=True)
     f = open(run_path+f'for_plots/histories_Run_{run:02d}.pckl', 'wb')
-    pickle.dump(run_path+f'for_plots/hist.histories', f)
+    pickle.dump(histories, f)
     f.close()
 
     end_time = datetime.datetime.now()
