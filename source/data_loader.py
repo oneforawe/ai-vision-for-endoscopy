@@ -9,21 +9,6 @@ import numpy as np
 import pandas as pd
 import cv2
 import h5py
-import tensorflow as tf
-import keras
-from keras.models import Model, model_from_json
-from keras.optimizers import Adam
-from keras.applications.mobilenet_v2 import MobileNetV2
-from keras.layers import Dense, Input, Flatten, Dropout, GlobalAveragePooling2D
-from keras.layers.normalization import BatchNormalization
-from keras.callbacks import TensorBoard, ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
-from sklearn.model_selection import KFold
-from sklearn import metrics
-import matplotlib
-from matplotlib import pylab, mlab
-from matplotlib import pyplot as plt
-from IPython.core.pylabtools import figsize, getfigs
-import matplotlib.image as mpimg
 from sklearn.utils import shuffle
 
 
@@ -33,18 +18,26 @@ from sklearn.utils import shuffle
 
 def load_data(path):
 
-    colon_normal   = glob.glob(path+'/Normal/*.jpg')
-    colon_abnormal = glob.glob(path+'/Abnormal/*.jpg')
+    normalImgFiles   = []
+    abnormalImgFiles = []
+    for dirPath, subDirs, files in os.walk(path+'/Normal'):
+        for file in files:
+            if file.endswith(".jpg"):
+                normalImgFiles.append( os.path.join(dirPath, file) )
+    for dirPath, subDirs, files in os.walk(path+'/Abnormal'):
+        for file in files:
+            if file.endswith(".jpg"):
+                abnormalImgFiles.append( os.path.join(dirPath, file) )
     dfn = pd.DataFrame()
     dfa = pd.DataFrame()
-    dfn['filepath'] = colon_normal
-    dfa['filepath'] = colon_abnormal
+    dfn['filepath'] = normalImgFiles
+    dfa['filepath'] = abnormalImgFiles
     dfn['abnormality'] = 0
     dfa['abnormality'] = 1
 
     # Split into train and test sets.
     # (train will be further split into train and validation using KFold)
-    splitPoint = int(0.8*len(colon_abnormal))
+    splitPoint = int(0.8*len(abnormalImgFiles))
     n_train = dfn[:splitPoint]
     n_test  = dfn[splitPoint:]
     a_train = dfa[:splitPoint]
