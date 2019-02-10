@@ -93,8 +93,8 @@ def main():
     test_set['abnormality_pred'] = test_pred
     test_set.to_csv(f'./outputs/{model.name}/{breeder_version}/{data_folder}/Run_{run:02d}_output_scores.csv', index=None)
 
-    os.makedirs(f'./for_plots/{model.name}/{breeder_version}',exist_ok=True)
-    f = open(f'for_plots/{model.name}/{breeder_version}/histories_Run_{run:02d}.pckl', 'wb')
+    os.makedirs(f'./for_plots/{model.name}/{breeder_version}/{data_folder}',exist_ok=True)
+    f = open(f'for_plots/{model.name}/{breeder_version}/{data_folder}/histories_Run_{run:02d}.pckl', 'wb')
     pickle.dump(f'for_plots/{model.name}/{breeder_version}/hist.histories', f)
     f.close()
 
