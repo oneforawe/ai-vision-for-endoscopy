@@ -115,10 +115,12 @@ dmypy.json
 .DS_Store
 
 # Specific sub-folders
+input-data/1-pre-processed/*.zip
 input-data/1-pre-processed/A
 input-data/1-pre-processed/C
 input-data/1-pre-processed/D
 input-data/1-pre-processed/E
 input-data/1-pre-processed/F
 input-data/1-pre-processed/G
+output/old
 
