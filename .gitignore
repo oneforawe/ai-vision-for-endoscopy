@@ -114,3 +114,8 @@ dmypy.json
 # Mac Desktop Services Store customization files
 .DS_Store
 
+# Specific sub-folders
+input-data/1-pre-processed/A
+input-data/1-pre-processed/C
+input-data/1-pre-processed/D
+
