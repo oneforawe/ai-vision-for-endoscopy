@@ -2,6 +2,10 @@
 # filename: analyzers_2_categories.py
 # version:  1
 
+# Attribution:
+# This code is a modification of code from James Requa's Kaggle notebook found here:
+# https://www.kaggle.com/jamesrequa/keras-k-fold-inception-v3-1st-place-lb-0-99770/notebook
+
 import os
 import glob
 import pickle
