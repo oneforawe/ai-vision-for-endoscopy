@@ -132,5 +132,7 @@ output/old
 output/mobilenet_v2_b/breeder_01/data_D/Run_01_Fail/
 source/configs/
 source/build/examples/
+source/img-processing/img_cropper_Actually_Used.py
+source/img-processing/Test_cropper.ipynb
 tests/README-ref.md
 
