@@ -126,6 +126,6 @@ input-data/1-pre-processed/E
 input-data/1-pre-processed/F
 input-data/1-pre-processed/G
 output/old
+output/mobilenet_v2_b/breeder_01/data_D/Run_01_Fail/
 source/configs/
 source/build/examples/
-
