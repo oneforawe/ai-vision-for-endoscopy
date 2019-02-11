@@ -1,6 +1,6 @@
 # AI Vision for Endoscopy
 
-This repository contains python code that helps to partially automate analysis of gastrointestinal endoscopy images.  This software uses machine learning (neural networks for computer vision object detection) to analyze endoscopy images.  It classifies images as being "normal" or "abnormal" (that is, containing a gastrointestinal abnormality such as blood, a polyp, or a lesion).  (Later classifications: recognize the various kinds of abnormalities.  Later analysis: identify and highlight the location of the abnormality within the image.)
+This repository contains python code that helps to partially automate analysis of gastrointestinal endoscopy images.  This software uses machine learning (neural networks for computer vision object detection) to classify endoscopy images.  It classifies images as being "normal" or "abnormal" (that is, containing a gastrointestinal abnormality such as blood, a polyp, or a lesion).  This flags images for a gastrointestinal doctor to examine further, reducing the amount of time it takes to process the images and helping increase the detection of abnormalities and intervention in cases that may lead to cancer.
 
 ## Contents of this repo
 |  folder    | content |
