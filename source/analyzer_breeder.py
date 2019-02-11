@@ -34,11 +34,11 @@ def main():
     #data_path = data_base+'C'
     #data_name = "data_C"
     # D: 2000 images.
-    #data_path = data_base+'D'
-    #data_name = "data_D"
+    data_path = data_base+'D'
+    data_name = "data_D"
     # F: 138062 images. Full data set in modified file structure.
-    data_path = data_base+'F'
-    data_name = "data_F"
+    #data_path = data_base+'F'
+    #data_name = "data_F"
     # Load:
     train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(data_path)
 
@@ -76,8 +76,8 @@ def main():
 
     # Prepare for training
     #batch_size = 4  # C
-    #batch_size = 20 # D
-    batch_size = 50 # F
+    batch_size = 20 # D
+    #batch_size = 50 # F
     epochs = 50
     #n_fold = 4 # C
     n_fold = 5 # D,F
