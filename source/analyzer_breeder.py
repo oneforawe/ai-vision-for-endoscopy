@@ -22,19 +22,24 @@ def main():
     #############
     # Load Data #
     #############
-    # A: Full data set in original file structure.
-    #data_path = '../input-data/1-pre-processed/A'
+    data_root = '../input-data/'
+    data_base = data_root+'1-pre-processed/'
+    # A: 138062 images. Full data set in original file structure.
+    #data_path = data_base+'A'
     #data_name = "data_A"
-    # B: 26 images
-    #data_path = '../input-data/1-pre-processed/B'
+    # B: 26 images.
+    #data_path = data_base+'B'
     #data_name = "data_B"
-    # C: 200 images (Abnormal=Blood)
-    #data_path = '../input-data/1-pre-processed/C'
+    # C: 200 images. (Abnormal=Blood)
+    #data_path = data_base+'C'
     #data_name = "data_C"
-    # D: 2000 images
-    data_path = '../input-data/1-pre-processed/D'
-    data_name = "data_D"
-    # Full data set in original file structure.
+    # D: 2000 images.
+    #data_path = data_base+'D'
+    #data_name = "data_D"
+    # F: 138062 images. Full data set in modified file structure.
+    data_path = data_base+'F'
+    data_name = "data_F"
+    # Load:
     train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(data_path)
 
 
@@ -71,10 +76,11 @@ def main():
 
     # Prepare for training
     #batch_size = 4  # C
-    batch_size = 20 # D
+    #batch_size = 20 # D
+    batch_size = 50 # F
     epochs = 50
     #n_fold = 4 # C
-    n_fold = 5 # D
+    n_fold = 5 # D,F
     histories = []
 
     # (Find) run number
