@@ -1,8 +1,6 @@
+Here you can find material that explains the project and investiates the input and output (mostly in the form of Jupyter notebooks).
 
-presentations (slide show "demos")
-EDA (exploratory data analysis) jupyter notebooks.
-reference?
-
-Explain how to run/view EDA file(s) for exploratory data analysis.
-Any other jupyter notebooks?
+Notes:
+* EDA = exploratory data analysis
+* presentations include slide shows (aka "demos")
 

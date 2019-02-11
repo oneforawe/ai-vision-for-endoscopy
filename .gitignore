@@ -118,9 +118,11 @@ dmypy.json
 .DS_Store
 
 # Specific sub-folders
+README-ref.md
 explain/reference
 input-data/1-pre-processed/*.zip
 input-data/1-pre-processed/A
+input-data/1-pre-processed/B/file_counter_by_walk.py
 input-data/1-pre-processed/C
 input-data/1-pre-processed/D
 input-data/1-pre-processed/E
@@ -130,3 +132,5 @@ output/old
 output/mobilenet_v2_b/breeder_01/data_D/Run_01_Fail/
 source/configs/
 source/build/examples/
+tests/README-ref.md
+
