@@ -1,1 +1,1 @@
-Maybe create a YouTube video of a live demonstration.
+Demonstrating the building of the code and how it works in smaller chunks.
