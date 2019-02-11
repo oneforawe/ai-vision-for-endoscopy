@@ -120,6 +120,8 @@ dmypy.json
 # Specific sub-folders
 README-ref.md
 explain/reference
+explain/EDA/ExploratoryDataAnalysis_old.ipynb
+explain/demonstrations/AnalyzingResults_initial.ipynb
 input-data/1-pre-processed/*.zip
 input-data/1-pre-processed/A
 input-data/1-pre-processed/B/file_counter_by_walk.py
