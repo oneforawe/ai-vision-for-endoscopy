@@ -124,7 +124,7 @@ explain/EDA/ExploratoryDataAnalysis_old.ipynb
 explain/demonstrations/AnalyzingResults_initial.ipynb
 input-data/1-pre-processed/*.zip
 input-data/1-pre-processed/A
-input-data/1-pre-processed/B/file_counter_by_walk.py
+input-data/1-pre-processed/B
 input-data/1-pre-processed/C
 input-data/1-pre-processed/D
 input-data/1-pre-processed/E
