@@ -126,7 +126,7 @@ def mobilenet_v2_c(img_dim):
 def xception_a(img_dim):
     # base network to be built around:
     base_model = Xception(input_shape=None,
-                          include_top=True,
+                          include_top=False,
                           weights='imagenet',
                           input_tensor=None,
                           pooling=None
@@ -150,10 +150,10 @@ def xception_a(img_dim):
     return model
 
 # larger than mobilenet_v2, with "fine-tuning"
-def xception_a(img_dim):
+def xception_b(img_dim):
     # base network to be built around:
     base_model = Xception(input_shape=None,
-                          include_top=True,
+                          include_top=False,
                           weights='imagenet',
                           input_tensor=None,
                           pooling=None
