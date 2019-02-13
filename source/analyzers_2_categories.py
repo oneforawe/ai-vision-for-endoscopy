@@ -149,7 +149,7 @@ def xception_a(img_dim):
     model = Model(inputs=xi, outputs=xo, name='xception_a')
     return model
 
-# larger than mobilenet_v2, with "fine-tuning"
+# larger than mobilenet_v2, with shallow "fine-tuning"
 def xception_b(img_dim):
     # base network to be built around:
     base_model = Xception(input_shape=None,

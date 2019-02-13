@@ -31,11 +31,11 @@ def main():
     #data_path = data_base+'B'
     #data_name = "data_B"
     # C: 200 images. (Abnormal=Blood)
-    data_path = data_base+'C'
-    data_name = "data_C"
+    #data_path = data_base+'C'
+    #data_name = "data_C"
     # D: 2000 images.
-    #data_path = data_base+'D'
-    #data_name = "data_D"
+    data_path = data_base+'D'
+    data_name = "data_D"
     # F: 138062 images. Full data set in modified file structure.
     #data_path = data_base+'F'
     #data_name = "data_F"
@@ -68,20 +68,21 @@ def main():
     #model = a2c.mobilenet_v2_a(img_shape) # without "fine-tuning"
     #model = a2c.mobilenet_v2_b(img_shape) # with shallow "fine-tuning"
     #model = a2c.mobilenet_v2_c(img_shape) # with deep "fine-tuning"
-    model = a2c.xception_a(img_shape)     # halts with an ERROR
-    #model = a2c.xception_a(img_shape)     # halts with an ERROR
+    model = a2c.xception_a(img_shape)     # without "fine-tuning"
+    #model = a2c.xception_a(img_shape)     # with shallow "fine-tuning"
 
     # Output location
     output_root = '../output/'
     output_base = output_root+f'{model.name}/{breeder_version}/{data_name}/'
 
     # Prepare for training
-    batch_size = 4  # C
-    #batch_size = 20 # D
+    #batch_size = 4  # C
+    batch_size = 20 # D (mobilenet)
+    batch_size = 10 # D (xception)
     #batch_size = 50 # F
     epochs = 50
-    n_fold = 4 # C
-    #n_fold = 5 # D,F
+    #n_fold = 4 # C
+    n_fold = 5 # D,F
     histories = []
 
     # (Find) run number
