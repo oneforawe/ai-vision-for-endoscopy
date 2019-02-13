@@ -21,10 +21,10 @@ from keras.models import Model, model_from_json
 from keras.optimizers import Adam
 from keras.applications.mobilenet_v2 import MobileNetV2
 from keras.applications.xception import Xception
-from keras.layers import Dense, Input, Flatten,
+from keras.layers import Dense, Input, Flatten, \
                          Dropout, GlobalAveragePooling2D
 from keras.layers.normalization import BatchNormalization
-from keras.callbacks import TensorBoard, ModelCheckpoint,
+from keras.callbacks import TensorBoard, ModelCheckpoint, \
                             EarlyStopping, ReduceLROnPlateau
 from sklearn import metrics
 import matplotlib

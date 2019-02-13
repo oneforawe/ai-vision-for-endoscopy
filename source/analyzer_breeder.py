@@ -7,7 +7,8 @@ import cv2
 import data_loader as dl
 import analyzers_2_categories as a2c
 from sklearn.model_selection import KFold
-import training_figures as tr_figs
+import model_evaluation as m_eval
+import eval_figures as eval_figs
 import datetime
 
 
@@ -34,16 +35,16 @@ def main():
     #data_path = data_base+'B'
     #data_name = "data_B"
     # C: 200 images. (Abnormal=Blood)
-    #data_path = data_base+'C'
-    #data_name = "data_C"
+    data_path = data_base+'C'
+    data_name = "data_C"
     # D: 2000 images.
-    data_path = data_base+'D'
-    data_name = "data_D"
+    #data_path = data_base+'D'
+    #data_name = "data_D"
     # F: 138062 images. Full data set in modified file structure.
     #data_path = data_base+'F'
     #data_name = "data_F"
     # Load:
-    train_set, train_files, train_labels,
+    train_set, train_files, train_labels, \
            test_set, test_files  =  dl.load_data(data_path)
 
 
@@ -70,25 +71,26 @@ def main():
     ##################
 
     # Initialize model
-    #model = a2c.mobilenet_v2_a(img_shape) # without "fine-tuning"
+    model = a2c.mobilenet_v2_a(img_shape) # without "fine-tuning"
     #model = a2c.mobilenet_v2_b(img_shape) # with shallow "fine-tuning"
     #model = a2c.mobilenet_v2_c(img_shape) # with deep "fine-tuning"
-    model = a2c.xception_a(img_shape)     # without "fine-tuning"
+    #model = a2c.xception_a(img_shape)     # without "fine-tuning"
     #model = a2c.xception_a(img_shape)     # with shallow "fine-tuning"
 
     # Output location
-    output_root = '../output/'
-    output_base = output_root
+    output_root = '../output/test/'
+    #output_root = '../output/'
+    output_base = output_root \
                   +f'{model.name}/{breeder_version}/{data_name}/'
 
     # Prepare for training
-    #batch_size = 4  # C
+    batch_size = 4  # C
     #batch_size = 20 # D (mobilenet)
-    batch_size = 10 # D (xception) #Got errors (fixed by reducing to 10)
+    #batch_size = 10 # D (xception) #Got errors (fixed by reducing to 10)
     #batch_size = 50 # F
     epochs = 50
-    #n_fold = 4 # C
-    n_fold = 5 # D,F
+    n_fold = 4 # C
+    #n_fold = 5 # D,F
     histories = []
 
     # (Find) run number
@@ -126,9 +128,15 @@ def main():
     pickle.dump(histories, f)
     f.close()
 
-    print("Now generating figures.")
-    tr_figs.make_acc_loss_plots(histories)
-    #tr_figs.make_confusion_matrix_figure(s)?
+    print("Now generating and saving evaluations and figures.")
+    eval_path = run_path+f'evaluations/'
+    eval_fig_path = eval_path+f'figures'
+    os.makedirs(eval_fig_path,exist_ok=True)
+    eval_figs.make_acc_loss_plots(histories)
+    #eval_figs.make_roc_plot(test_set, eval_fig_path)
+    test_w_reckonings, evaluations \
+        = m_eval.make_eval_data(test_set, eval_path)
+    #eval_figs.make_eval_metric_figures(evaluations, eval_fig_path)
 
     print("Now recording train-and-test duration.")
     end_time = datetime.datetime.now()

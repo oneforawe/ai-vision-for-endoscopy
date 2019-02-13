@@ -7,14 +7,18 @@ model_evaluation
 A library for generating plots of model evaluation metrics while
 training/testing and for previous train/test sessions.
 """
-
 # See below for vocabulary/variable definitions.
 
-def make_eval_plots():
-    # for each threshold, there is a confusion matrix with TP, FP, TN, FN
+import os
+
+
+def make_eval_data(test_set, eval_path):
+    # for each threshold, there is a confusion matrix with TP,FP,TN,FN
     # from which TPR = TP/P and FPR = FP/N can be calculated
-    test_w_reckonings = test_set[['abnormality','abnormality_pred']].copy()
-    evaluations = pd.DataFrame() # FN, FP, confusion matrices, ROC curve points
+    test_w_reckonings = test_set[['abnormality',
+                                  'abnormality_pred']].copy()
+    evaluations = pd.DataFrame()
+    # including FNs, FPs, confusion matrices, ROC curve points
 
     divisions = 1001
     for step in range(divisions+1):
@@ -25,17 +29,17 @@ def make_eval_plots():
             label = test_set['abnormality'].loc[i]
             pred  = test_set['abnormality_pred'].loc[i]
         reckoning = 0 if pred < thrsh else 1
-            if reckoning == label:
-                    if reckoning == 1:
-                    TP += 1
-                else:
-                    TN += 1
-            if reckoning != label:
-                if reckoning == 1:
-                    FP += 1
-                else:
-                    FN += 1
-            reckonings.append(reckoning)
+        if reckoning == label:
+            if reckoning == 1:
+                TP += 1
+            else:
+                TN += 1
+        if reckoning != label:
+            if reckoning == 1:
+                FP += 1
+            else:
+                FN += 1
+        reckonings.append(reckoning)
         confusion_matrix = [[TP, FP], [FN, TN]]
         MP = TP+FP
         MN = TN+FN
@@ -46,12 +50,16 @@ def make_eval_plots():
         TNR = TN/N
         FPR = FP/N
         FNR = FN/P
-        test_w_reckonings[f'{thrsh:0.3f}'] = reckonings
-        eval_thrsh = [round(thrsh, 3), FN, FP, confusion_matrix, FPR, TPR]
-        evaluations[f'{thrsh:0.3f}'] = eval_thrsh
+    test_w_reckonings[f'{thrsh:0.3f}'] = reckonings
+    eval_thrsh = [round(thrsh, 3), FN, FP, confusion_matrix,
+                  PPV, TPR, TNR, FPR, FNR]
+    evaluations[f'{thrsh:0.3f}'] = eval_thrsh
 
-    return evaluations
+    evaluations.to_csv(eval_path+f'eval_metrics.csv', index=None)
+    test_w_reckonings.to_csv(eval_path+f'test_w_reckonings.csv',
+                             index=None)
 
+    return test_w_reckonings, evaluations
 
 
 # Vocabulary / Variables
