@@ -96,15 +96,15 @@ def main():
 
     # (Find) run number
     run = 1
-    while os.path.isfile(output_base
-                         +f'Run_{run:02d}/run_duration.txt'):
+    while os.path.isfile(output_base +
+                         f'Run_{run:02d}/run_duration.txt'):
         run += 1
     run_path = output_base+f'Run_{run:02d}/'
 
     os.makedirs(run_path,exist_ok=True)
     file = open(run_path+f'train_params.txt',"w")
-    file.write(f'batch_size = {batch_size}\n'+
-               f'epochs = {epochs}\n'+
+    file.write(f'batch_size = {batch_size}\n' +
+               f'epochs = {epochs}\n' +
                f'n_fold = {n_fold}\n')
     file.close()
 
@@ -127,8 +127,8 @@ def main():
     os.makedirs(run_results_path,exist_ok=True)
     test_set.to_csv(run_results_file_path, index=None)
     run_histories_path = run_path+f'histories/'
-    run_histories_file_path = run_histories_path
-                              +f'histories_Run_{run:02d}.pckl'
+    run_histories_file_path = run_histories_path+
+                              f'histories_Run_{run:02d}.pckl'
     os.makedirs(run_forplots_path,exist_ok=True)
     f = open(run_histories_file_path, 'wb')
     pickle.dump(histories, f)
@@ -153,10 +153,10 @@ def main():
     mins = (secs-hrs*3600)//60
     secs = secs-hrs*3600-mins*60
     file = open(run_path+f'run_duration.txt',"w")
-    file.write(f'Run train-and-test time (duration) = '
-               +f'{days} days, {hrs} hours, '
-               +f'{mins} minutes, {secs} seconds, '
-               +f'{elapsed.microseconds} microseconds.\n')
+    file.write(f'Run train-and-test time (duration) = ' +
+               f'{days} days, {hrs} hours, ' +
+               f'{mins} minutes, {secs} seconds, ' +
+               f'{elapsed.microseconds} microseconds.\n')
     file.close()
 
 
