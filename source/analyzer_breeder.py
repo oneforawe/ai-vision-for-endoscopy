@@ -83,8 +83,8 @@ def main():
 
     # Prepare for training
     #batch_size = 4  # C
-    batch_size = 20 # D (mobilenet)
-    batch_size = 10 # D (xception)
+    #batch_size = 20 # D (mobilenet)
+    batch_size = 10 # D (xception) #Got errors (fixed by reducing to 10)
     #batch_size = 50 # F
     epochs = 50
     #n_fold = 4 # C
