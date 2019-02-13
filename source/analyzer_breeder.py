@@ -19,7 +19,7 @@ def main():
     # File Version #
     ################
 
-    breeder_version = "breeder_01"
+    breeder_version = 'breeder_01'
 
 
     #############
@@ -30,19 +30,25 @@ def main():
     data_base = data_root+'1-pre-processed/'
     # A: 138062 images. Full data set in original file structure.
     #data_path = data_base+'A'
-    #data_name = "data_A"
+    #data_name = 'data_A'
+    #data_short_name = 'A'
     # B: 26 images.
     #data_path = data_base+'B'
-    #data_name = "data_B"
+    #data_name = 'data_B'
+    #data_short_name = 'B'
     # C: 200 images. (Abnormal=Blood)
     data_path = data_base+'C'
-    data_name = "data_C"
+    data_name = 'data_C'
+    data_short_name = 'C'
     # D: 2000 images.
     #data_path = data_base+'D'
-    #data_name = "data_D"
+    #data_name = 'data_D'
+    #data_short_name = 'D'
     # F: 138062 images. Full data set in modified file structure.
     #data_path = data_base+'F'
-    #data_name = "data_F"
+    #data_name = 'data_F'
+    #data_short_name = 'F'
+
     # Load:
     train_set, train_files, train_labels, \
            test_set, test_files  =  dl.load_data(data_path)
@@ -71,7 +77,7 @@ def main():
     ##################
 
     # Initialize model
-    model, modelshortname \
+    model, model_short_name \
         = a2c.mobilenet_v2_a(img_shape) # without "fine-tuning"
     #model = a2c.mobilenet_v2_b(img_shape) # with shallow "fine-tuning"
     #model = a2c.mobilenet_v2_c(img_shape) # with deep "fine-tuning"
@@ -138,7 +144,8 @@ def main():
     eval_path = run_path+f'evaluations/'
     eval_fig_path = eval_path+f'figures'
     os.makedirs(eval_fig_path,exist_ok=True)
-    eval_figs.make_acc_loss_plots(modelshortname, histories)
+    eval_figs.make_acc_loss_plots(model_short_name,
+                                  data_short_name, run, histories)
     eval_figs.make_roc_plot(test_set, eval_fig_path)
     test_w_reckonings, evaluations \
         = m_eval.make_eval_data(test_set, eval_path)

@@ -8,7 +8,8 @@ from sklearn import metrics
 import numpy as np
 
 
-def make_acc_loss_plots(modelshortname, histories):
+def make_acc_loss_plots(model_short_name,
+                        data_short_name, run, histories):
 
     # Want to plot accuracy and loss over training epochs
     plot_these = [['acc','val_acc','accuracy','Acc'],
@@ -21,8 +22,9 @@ def make_acc_loss_plots(modelshortname, histories):
         for i in range(len(histories)):
             plt.plot(histories[i].history[plot_this[1]],
                      linestyle='dashed') # loss
+        plot_run_name = model_short_name+data_short_name+'r'+run
         plt.title('{} model {}'.format(
-            modelshortname, plot_this[2] ) )
+            plot_run_name, plot_this[2] ) )
         plt.ylabel(plot_this[2])
         plt.xlabel('epoch')
         legend_labels = []
@@ -36,7 +38,7 @@ def make_acc_loss_plots(modelshortname, histories):
             plt.legend(legend_labels, loc='upper right')
         plt.legend()
         savefig("figures/{}_{}.png".format(
-            modelshortname, plot_this[3]),
+            plot_run_name, plot_this[3]),
             dpi=300, bbox_inches='tight')
 
 
@@ -57,6 +59,10 @@ def make_roc_plot(test_set, eval_fig_path):
     plt.legend(loc="lower right")
     plt.show()
     print(thrsh)
+        savefig("figures/{}_{}.png".format(
+            plot_run_name, plot_this[3]),
+            dpi=300, bbox_inches='tight')
+
 
 
 def make_eval_metric_figures(evaluations, eval_path):
