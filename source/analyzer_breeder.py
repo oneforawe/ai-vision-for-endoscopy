@@ -127,7 +127,7 @@ def main():
     os.makedirs(run_results_path,exist_ok=True)
     test_set.to_csv(run_results_file_path, index=None)
     run_histories_path = run_path+f'histories/'
-    run_histories_file_path = run_histories_path+
+    run_histories_file_path = run_histories_path +
                               f'histories_Run_{run:02d}.pckl'
     os.makedirs(run_forplots_path,exist_ok=True)
     f = open(run_histories_file_path, 'wb')
