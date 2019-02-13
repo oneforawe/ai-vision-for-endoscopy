@@ -22,9 +22,9 @@ def make_acc_loss_plots(modelshortname, histories):
             modelshortname, plot_this[2] ) )
         plt.ylabel(plot_this[2])
         plt.xlabel('epoch')
-        for i in len(histories):
+        for i in range(len(histories)):
             legend_labels.append(f'train fold {i}')
-        for i in len(histories):
+        for i in range(len(histories)):
             legend_labels.append(f'validation f{i}')
         if plot_this[0]=='acc':
             plt.legend(legend_labels, loc='lower right')

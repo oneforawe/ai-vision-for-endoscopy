@@ -122,10 +122,15 @@ def main():
 
     print("Now saving training output and histories.")
     test_set['abnormality_pred'] = test_pred
-    os.makedirs(run_path+f'results',exist_ok=True)
-    test_set.to_csv(run_path+f'results/output_scores.csv', index=None)
-    os.makedirs(run_path+f'for_plots',exist_ok=True)
-    f = open(run_path+f'for_plots/histories_Run_{run:02d}.pckl', 'wb')
+    run_results_path = run_path+f'results/'
+    run_results_file_path = run_results_path+f'output_scores.csv'
+    os.makedirs(run_results_path,exist_ok=True)
+    test_set.to_csv(run_results_file_path, index=None)
+    run_histories_path = run_path+f'histories/'
+    run_histories_file_path = run_histories_path
+                              +f'histories_Run_{run:02d}.pckl'
+    os.makedirs(run_forplots_path,exist_ok=True)
+    f = open(run_histories_file_path, 'wb')
     pickle.dump(histories, f)
     f.close()
 
