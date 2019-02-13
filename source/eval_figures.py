@@ -5,6 +5,7 @@ from matplotlib import pyplot as plt
 from sklearn import metrics
 #from sklearn.metrics import confusion_matrix
 #from sklearn.metrics import confusion_matrix
+from pylab import savefig
 import numpy as np
 
 
