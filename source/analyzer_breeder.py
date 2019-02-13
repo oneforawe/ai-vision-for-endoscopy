@@ -71,7 +71,8 @@ def main():
     ##################
 
     # Initialize model
-    model = a2c.mobilenet_v2_a(img_shape) # without "fine-tuning"
+    model, modelshortname \
+        = a2c.mobilenet_v2_a(img_shape) # without "fine-tuning"
     #model = a2c.mobilenet_v2_b(img_shape) # with shallow "fine-tuning"
     #model = a2c.mobilenet_v2_c(img_shape) # with deep "fine-tuning"
     #model = a2c.xception_a(img_shape)     # without "fine-tuning"
@@ -132,7 +133,7 @@ def main():
     eval_path = run_path+f'evaluations/'
     eval_fig_path = eval_path+f'figures'
     os.makedirs(eval_fig_path,exist_ok=True)
-    eval_figs.make_acc_loss_plots(histories)
+    eval_figs.make_acc_loss_plots(modelshortname, histories)
     #eval_figs.make_roc_plot(test_set, eval_fig_path)
     test_w_reckonings, evaluations \
         = m_eval.make_eval_data(test_set, eval_path)

@@ -62,7 +62,8 @@ def mobilenet_v2_a(img_dim):
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_a')
-    return model
+    modelshortname = 'MNv2a'
+    return model, modelshortname
 
 # With "fine-tuning" (shallow)
 def mobilenet_v2_b(img_dim):

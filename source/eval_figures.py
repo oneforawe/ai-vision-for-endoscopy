@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from sklearn.metrics import confusion_matrix
 
 
-def make_acc_loss_plots(histories):
+def make_acc_loss_plots(modelshortname, histories):
 
     # Want to plot accuracy and loss over training epochs
     plot_these = [['acc','val_acc','accuracy','Acc'],
@@ -19,7 +19,7 @@ def make_acc_loss_plots(histories):
             plt.plot(histories[i].history[plot_this[1]],
                      linestyle='dashed') # loss
         plt.title('{} model {}'.format(
-            histories_paths[output_index]['name'], plot_this[2] ) )
+            modelshortname, plot_this[2] ) )
         plt.ylabel(plot_this[2])
         plt.xlabel('epoch')
         for i in len(histories):
@@ -32,7 +32,7 @@ def make_acc_loss_plots(histories):
             plt.legend(legend_labels, loc='upper right')
         plt.legend()
         savefig("figures/{}_{}.png".format(
-            histories_paths[output_index]['name'], plot_this[3]),
+            modelshortname, plot_this[3]),
             dpi=300, bbox_inches='tight')
 
 
