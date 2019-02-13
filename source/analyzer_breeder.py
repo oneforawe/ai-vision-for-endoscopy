@@ -7,6 +7,7 @@ import cv2
 import data_loader as dl
 import analyzers_2_categories as a2c
 from sklearn.model_selection import KFold
+import training_figures as tr_figs
 import datetime
 
 
@@ -16,12 +17,14 @@ def main():
     ################
     # File Version #
     ################
+
     breeder_version = "breeder_01"
 
 
     #############
     # Load Data #
     #############
+
     data_root = '../input-data/'
     data_base = data_root+'1-pre-processed/'
     # A: 138062 images. Full data set in original file structure.
@@ -40,12 +43,14 @@ def main():
     #data_path = data_base+'F'
     #data_name = "data_F"
     # Load:
-    train_set, train_files, train_labels,  test_set, test_files  =  dl.load_data(data_path)
+    train_set, train_files, train_labels,
+           test_set, test_files  =  dl.load_data(data_path)
 
 
     ####################
     # Find Input Shape #
     ####################
+
     # Take sample image
     img = cv2.imread(train_set.iloc[0][0])
 
@@ -73,7 +78,8 @@ def main():
 
     # Output location
     output_root = '../output/'
-    output_base = output_root+f'{model.name}/{breeder_version}/{data_name}/'
+    output_base = output_root
+                  +f'{model.name}/{breeder_version}/{data_name}/'
 
     # Prepare for training
     #batch_size = 4  # C
@@ -87,7 +93,8 @@ def main():
 
     # (Find) run number
     run = 1
-    while os.path.isfile(output_base+f'Run_{run:02d}/run_duration.txt'):
+    while os.path.isfile(output_base
+                         +f'Run_{run:02d}/run_duration.txt'):
         run += 1
     run_path = output_base+f'Run_{run:02d}/'
 
@@ -101,20 +108,29 @@ def main():
     kf = KFold(n_splits=n_fold, shuffle=True)
 
     # Train model: compile (configure for training), train, test, save
-    histories, test_pred = a2c.train_model(model, batch_size, epochs, img_size,
-                                       train_set, train_labels, test_files,
-                                       n_fold, kf, run_path, run)
+    histories, test_pred = a2c.train_model(model, batch_size, epochs,
+                                           img_size, train_set,
+                                           train_labels, test_files,
+                                           n_fold, kf, run_path, run)
 
-    print("Now saving results.")
+    #############################
+    # Save/Generate More Output #
+    #############################
+
+    print("Now saving training output and histories.")
     test_set['abnormality_pred'] = test_pred
     os.makedirs(run_path+f'results',exist_ok=True)
     test_set.to_csv(run_path+f'results/output_scores.csv', index=None)
-
     os.makedirs(run_path+f'for_plots',exist_ok=True)
     f = open(run_path+f'for_plots/histories_Run_{run:02d}.pckl', 'wb')
     pickle.dump(histories, f)
     f.close()
 
+    print("Now generating figures.")
+    tr_figs.make_acc_loss_plots(histories)
+    #tr_figs.make_confusion_matrix_figure(s)?
+
+    print("Now recording train-and-test duration.")
     end_time = datetime.datetime.now()
     elapsed = end_time - start_time
     days = elapsed.days
@@ -124,7 +140,8 @@ def main():
     secs = secs-hrs*3600-mins*60
     file = open(run_path+f'run_duration.txt',"w")
     file.write(f'Run train-and-test time (duration) = '
-               +f'{days} days, {hrs} hours, {mins} minutes, {secs} seconds, '
+               +f'{days} days, {hrs} hours, '
+               +f'{mins} minutes, {secs} seconds, '
                +f'{elapsed.microseconds} microseconds.\n')
     file.close()
 
