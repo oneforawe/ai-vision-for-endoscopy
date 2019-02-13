@@ -2,7 +2,10 @@
 # filename: eval_figures.py
 
 from matplotlib import pyplot as plt
-from sklearn.metrics import confusion_matrix
+from sklearn import metrics
+#from sklearn.metrics import confusion_matrix
+#from sklearn.metrics import confusion_matrix
+import numpy as np
 
 
 def make_acc_loss_plots(modelshortname, histories):
@@ -22,6 +25,7 @@ def make_acc_loss_plots(modelshortname, histories):
             modelshortname, plot_this[2] ) )
         plt.ylabel(plot_this[2])
         plt.xlabel('epoch')
+        legend_labels = []
         for i in range(len(histories)):
             legend_labels.append(f'train fold {i}')
         for i in range(len(histories)):
@@ -36,6 +40,25 @@ def make_acc_loss_plots(modelshortname, histories):
             dpi=300, bbox_inches='tight')
 
 
+def make_roc_plot(test_set, eval_fig_path):
+    fpr, tpr, thrsh = metrics.roc_curve(test_set['abnormality'],
+                                        test_set['abnormality_pred'])
+    roc_auc = metrics.auc(fpr, tpr)
+    plt.figure()
+    lw = 2
+    plt.plot(fpr, tpr, color='darkorange',
+             lw=lw, label='ROC curve (area = %0.2f)' % roc_auc)
+    plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('ROC curve')
+    plt.legend(loc="lower right")
+    plt.show()
+    print(thrsh)
+
+
 def make_eval_metric_figures(evaluations, eval_path):
 
     # code from:
@@ -44,14 +67,6 @@ def make_eval_metric_figures(evaluations, eval_path):
     # #sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py
 
     #print(__doc__)
-
-    import itertools
-    import numpy as np
-    import matplotlib.pyplot as plt
-
-    from sklearn import svm, datasets
-    from sklearn.model_selection import train_test_split
-    from sklearn.metrics import confusion_matrix
 
     # Compute confusion matrix
     cnf_matrix = confusion_matrix(y_test, y_pred)
@@ -69,25 +84,6 @@ def make_eval_metric_figures(evaluations, eval_path):
                           title='Normalized confusion matrix')
 
     #plt.show()
-
-
-def make_roc_plot(test_set):
-    fpr, tpr, thrsh = metrics.roc_curve(test_set['abnormality'],
-                                        test_set['abnormality_pred'])
-    roc_auc = metrics.auc(fpr, tpr)
-    plt.figure()
-    lw = 2
-    plt.plot(fpr, tpr, color='darkorange',
-             lw=lw, label='ROC curve (area = %0.2f)' % roc_auc)
-    plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
-    plt.xlim([0.0, 1.0])
-    plt.ylim([0.0, 1.05])
-    plt.xlabel('False Positive Rate')
-    plt.ylabel('True Positive Rate')
-    plt.title('ROC curve')
-    plt.legend(loc="lower right")
-    plt.show()
-    print(thrsh)
 
 
 
@@ -125,7 +121,5 @@ def plot_confusion_matrix(cm, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.tight_layout()
-
-
 
 
