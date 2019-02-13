@@ -81,8 +81,8 @@ def main():
     # Output location
     output_root = '../output/test/'
     #output_root = '../output/'
-    output_base = output_root \
-                  +f'{model.name}/{breeder_version}/{data_name}/'
+    output_base = output_root + \
+                  f'{model.name}/{breeder_version}/{data_name}/'
 
     # Prepare for training
     batch_size = 4  # C
@@ -96,7 +96,7 @@ def main():
 
     # (Find) run number
     run = 1
-    while os.path.isfile(output_base +
+    while os.path.isfile(output_base + \
                          f'Run_{run:02d}/run_duration.txt'):
         run += 1
     run_path = output_base+f'Run_{run:02d}/'
@@ -127,7 +127,7 @@ def main():
     os.makedirs(run_results_path,exist_ok=True)
     test_set.to_csv(run_results_file_path, index=None)
     run_histories_path = run_path+f'histories/'
-    run_histories_file_path = run_histories_path +
+    run_histories_file_path = run_histories_path + \
                               f'histories_Run_{run:02d}.pckl'
     os.makedirs(run_forplots_path,exist_ok=True)
     f = open(run_histories_file_path, 'wb')
