@@ -87,7 +87,7 @@ def main():
     # Prepare for training
     batch_size = 4  # C
     #batch_size = 20 # D (mobilenet)
-    #batch_size = 10 # D (xception) #Got errors (fixed by reducing to 10)
+    #batch_size = 10 # D (xception) #Got error (fixed by reducing to 10)
     #batch_size = 50 # F
     epochs = 50
     n_fold = 4 # C
@@ -129,7 +129,7 @@ def main():
     run_histories_path = run_path+f'histories/'
     run_histories_file_path = run_histories_path + \
                               f'histories_Run_{run:02d}.pckl'
-    os.makedirs(run_forplots_path,exist_ok=True)
+    os.makedirs(run_histories_path,exist_ok=True)
     f = open(run_histories_file_path, 'wb')
     pickle.dump(histories, f)
     f.close()
