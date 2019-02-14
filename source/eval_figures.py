@@ -38,9 +38,8 @@ def make_acc_loss_plots(model_short_name,
         if plot_this[0]=='loss':
             plt.legend(legend_labels, loc='upper right')
         plt.legend()
-        savefig("figures/{}_{}.png".format(
-            plot_run_name, plot_this[3]),
-            dpi=300, bbox_inches='tight')
+        savefig("figures/{}_{}.png".format(plot_run_name, plot_this[3]),
+                                           dpi=300, bbox_inches='tight')
 
 
 def make_roc_plot(test_set, eval_fig_path):
