@@ -347,6 +347,7 @@ def train_model(input_model, batch_size, epochs, img_size,
         print('\n\n')
 
     print('Finished training!')
+    print('\n')
 
     # Save
     print('Now saving trained model.')
