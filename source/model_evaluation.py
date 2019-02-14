@@ -50,8 +50,14 @@ def make_eval_data(test_set, eval_path):
         P  = TP+FN
         N  = TN+FP
         if P != P_check:
+            print('P != P_check')
+            print(f'P_check = {P_check}')
+            print(f'P       = {P}')
             return -1
         if N != N_check:
+            print("N != N_check")
+            print(f'N_check = {N_check}')
+            print(f'N       = {N}')
             return -1
         PPV = TP/MP
         TPR = TP/P
@@ -65,8 +71,8 @@ def make_eval_data(test_set, eval_path):
 
     # Save to csv
     evaluations.to_csv(eval_path+f'eval_metrics.csv', index=None)
-    test_w_reckonings.to_csv(eval_path+f'test_w_reckonings.csv',
-                             index=None)
+    test_w_reckonings.to_csv(eval_path +
+                             f'test_w_reckonings.csv', index=None)
 
     return test_w_reckonings, evaluations
 
