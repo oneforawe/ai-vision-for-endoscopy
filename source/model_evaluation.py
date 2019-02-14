@@ -17,8 +17,6 @@ import numpy as np
 def make_eval_data(test_set, eval_path):
     # for each threshold, there is a confusion matrix with TP,FP,TN,FN
     # from which TPR = TP/P and FPR = FP/N can be calculated
-    P_check = len(test_set[test_set['abnormality'] == 1])
-    N_check = len(test_set[test_set['abnormality'] == 0])
     test_w_reckonings = test_set[['abnormality',
                                   'abnormality_pred']].copy()
     evaluations = pd.DataFrame()
@@ -49,16 +47,6 @@ def make_eval_data(test_set, eval_path):
         MN = TN+FN
         P  = TP+FN
         N  = TN+FP
-        if P != P_check:
-            print('P != P_check')
-            print(f'P_check = {P_check}')
-            print(f'P       = {P}')
-            return -1
-        if N != N_check:
-            print("N != N_check")
-            print(f'N_check = {N_check}')
-            print(f'N       = {N}')
-            return -1
         if MP==0:
             PPV = None
         else:

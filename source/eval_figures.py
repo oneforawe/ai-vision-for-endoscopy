@@ -35,7 +35,6 @@ def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
             plt.legend(legend_labels, loc='lower right')
         if plot_this[0]=='loss':
             plt.legend(legend_labels, loc='upper right')
-        plt.legend()
         savefig(eval_fig_path +
                 "{}_{}.png".format(plot_run_name, plot_this[3]),
                 dpi=300, bbox_inches='tight')
