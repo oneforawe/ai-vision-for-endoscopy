@@ -16,6 +16,7 @@ def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
                   ['loss','val_loss','loss','Loss']]
     # [(history key), (history key), (plot label), (filename affix)]
     for plot_this in plot_these:
+        plt.clf()
         for i in range(len(histories)):
             plt.plot(histories[i].history[plot_this[0]],
                      linestyle='solid') # accuracy
