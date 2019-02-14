@@ -59,7 +59,10 @@ def make_eval_data(test_set, eval_path):
             print(f'N_check = {N_check}')
             print(f'N       = {N}')
             return -1
-        PPV = TP/MP
+        if MP==0:
+            PPV = None
+        else:
+            PPV = TP/MP
         TPR = TP/P
         TNR = TN/N
         FPR = FP/N
