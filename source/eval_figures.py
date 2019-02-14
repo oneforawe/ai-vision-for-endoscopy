@@ -23,7 +23,7 @@ def make_acc_loss_plots(model_short_name,
         for i in range(len(histories)):
             plt.plot(histories[i].history[plot_this[1]],
                      linestyle='dashed') # loss
-        plot_run_name = model_short_name+data_short_name+'r'+run
+        plot_run_name = model_short_name+data_short_name+'r'+str(run)
         plt.title('{} model {}'.format(
             plot_run_name, plot_this[2] ) )
         plt.ylabel(plot_this[2])
@@ -42,7 +42,6 @@ def make_acc_loss_plots(model_short_name,
                 dpi=300, bbox_inches='tight')
 
 
-"""
 def make_roc_plot(test_set, eval_fig_path):
     fpr, tpr, thrsh = metrics.roc_curve(test_set['abnormality'],
                                         test_set['abnormality_pred'])
@@ -62,7 +61,6 @@ def make_roc_plot(test_set, eval_fig_path):
     print(thrsh)
     savefig("figures/{}_{}.png".format(plot_run_name, plot_this[3]),
             dpi=300, bbox_inches='tight')
-"""
 
 
 def make_eval_metric_figures(evaluations, eval_path):
