@@ -17,6 +17,8 @@ import numpy as np
 def make_eval_data(test_set, eval_path):
     # for each threshold, there is a confusion matrix with TP,FP,TN,FN
     # from which TPR = TP/P and FPR = FP/N can be calculated
+    P_check = len(test_set[test_set['abnormality'] == 1])
+    N_check = len(test_set[test_set['abnormality'] == 0])
     test_w_reckonings = test_set[['abnormality',
                                   'abnormality_pred']].copy()
     evaluations = pd.DataFrame()
@@ -45,18 +47,23 @@ def make_eval_data(test_set, eval_path):
         confusion_matrix = [[TP, FP], [FN, TN]]
         MP = TP+FP
         MN = TN+FN
-        P = TP+FN
-        N = TN+FP
+        P  = TP+FN
+        N  = TN+FP
+        if P != P_check:
+            return -1
+        if N != N_check:
+            return -1
         PPV = TP/MP
         TPR = TP/P
         TNR = TN/N
         FPR = FP/N
         FNR = FN/P
     test_w_reckonings[f'{thrsh:0.3f}'] = reckonings
-    eval_thrsh = [round(thrsh, 3), FN, FP, confusion_matrix,
-                  PPV, TPR, TNR, FPR, FNR]
+    eval_thrsh = [round(thrsh, 3), FN, FP,
+                  confusion_matrix, PPV, TPR, TNR, FPR, FNR]
     evaluations[f'{thrsh:0.3f}'] = eval_thrsh
 
+    # Save to csv
     evaluations.to_csv(eval_path+f'eval_metrics.csv', index=None)
     test_w_reckonings.to_csv(eval_path+f'test_w_reckonings.csv',
                              index=None)
