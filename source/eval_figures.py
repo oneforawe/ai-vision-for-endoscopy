@@ -55,10 +55,10 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
     plt.ylim([0.0, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('ROC curve')
+    plt.title(f'{plot_run_name} ROC curve')
     plt.legend(loc="lower right")
-    savefig(eval_fig_path +
-            "figures/{}_{}.png".format(plot_run_name, plot_this[3]),
+    savefig(eval_fig_path
+            +f'{plot_run_name}_ROC_Curve.png',
             dpi=300, bbox_inches='tight')
 
 
