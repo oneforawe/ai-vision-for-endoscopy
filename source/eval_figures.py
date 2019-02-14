@@ -48,7 +48,7 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
     plt.figure()
     lw = 2
     plt.plot(fpr, tpr, color='darkorange',
-             lw=lw, label='ROC curve (area = %0.2f)' % roc_auc)
+             lw=lw, label=f'ROC curve (area = {roc_auc:0.2f})')
     plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
     plt.xlim([0.0, 1.0])
     plt.ylim([0.0, 1.05])
