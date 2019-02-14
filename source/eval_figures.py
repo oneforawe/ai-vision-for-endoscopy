@@ -4,9 +4,9 @@
 from matplotlib import pyplot as plt
 from sklearn import metrics
 #from sklearn.metrics import confusion_matrix
-#from sklearn.metrics import confusion_matrix
 from pylab import savefig
 import numpy as np
+import itertools
 
 
 def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
@@ -90,12 +90,10 @@ def make_eval_metric_figures(evaluations, eval_path):
 
 
 
-def plot_confusion_matrix(cm, classes,
-                          normalize=False,
-                          title='Confusion matrix',
-                          cmap=plt.cm.Blues):
+def plot_confusion_matrix(cm, classes, normalize=False,
+                          title='Confusion matrix', cmap=plt.cm.Blues):
     """
-    This function prints and plots the confusion matrix.
+    This function plots the confusion matrix.
     Normalization can be applied by setting `normalize=True`.
     """
     if normalize:
@@ -103,9 +101,6 @@ def plot_confusion_matrix(cm, classes,
         print("Normalized confusion matrix")
     else:
         print('Confusion matrix, without normalization')
-
-    print(cm)
-    print(type(cm))
 
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
@@ -116,7 +111,8 @@ def plot_confusion_matrix(cm, classes,
 
     fmt = '.2f' if normalize else 'd'
     thresh = cm.max() / 2.
-    for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
+    for i, j in itertools.product(range(cm.shape[0]),
+                                  range(cm.shape[1])):
         plt.text(j, i, format(cm[i, j], fmt),
                  horizontalalignment="center",
                  color="white" if cm[i, j] > thresh else "black")

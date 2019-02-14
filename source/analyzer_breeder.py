@@ -145,12 +145,17 @@ def main():
     eval_path = run_path+f'evaluations/'
     eval_fig_path = eval_path+f'figures'
     os.makedirs(eval_fig_path,exist_ok=True)
+    # histories
     plot_run_name = model_short_name+data_short_name+'r'+str(run)
     eval_figs.make_acc_loss_plots(histories,
                                   eval_fig_path, plot_run_name)
+    # ROC fig
     eval_figs.make_roc_plot(test_set, eval_fig_path, plot_run_name)
+    # evaluations data
+    # (precision/recall, sensitivity/specificity, ROC/thresholds, etc)
     test_w_reckonings, evaluations \
         = m_eval.make_eval_data(test_set, eval_path)
+    # CM fig
     #eval_figs.make_eval_metric_figures(evaluations, eval_fig_path)
 
     print("Now recording train-and-test duration.")
