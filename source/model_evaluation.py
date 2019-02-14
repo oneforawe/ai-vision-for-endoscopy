@@ -32,18 +32,18 @@ def make_eval_data(test_set, eval_path):
         for i in range(len(test_set)):
             label = test_set['abnormality'].loc[i]
             pred  = test_set['abnormality_pred'].loc[i]
-        reckoning = 0 if pred < thrsh else 1
-        if reckoning == label:
-            if reckoning == 1:
-                TP += 1
-            else:
-                TN += 1
-        if reckoning != label:
-            if reckoning == 1:
-                FP += 1
-            else:
-                FN += 1
-        reckonings.append(reckoning)
+            reckoning = 0 if pred < thrsh else 1
+            if reckoning == label:
+                if reckoning == 1:
+                    TP += 1
+                else:
+                    TN += 1
+            if reckoning != label:
+                if reckoning == 1:
+                    FP += 1
+                else:
+                    FN += 1
+            reckonings.append(reckoning)
         confusion_matrix = [[TP, FP], [FN, TN]]
         MP = TP+FP
         MN = TN+FN
