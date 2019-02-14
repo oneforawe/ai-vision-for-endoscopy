@@ -39,9 +39,10 @@ def make_acc_loss_plots(model_short_name,
             plt.legend(legend_labels, loc='upper right')
         plt.legend()
         savefig("figures/{}_{}.png".format(plot_run_name, plot_this[3]),
-                                           dpi=300, bbox_inches='tight')
+                dpi=300, bbox_inches='tight')
 
 
+"""
 def make_roc_plot(test_set, eval_fig_path):
     fpr, tpr, thrsh = metrics.roc_curve(test_set['abnormality'],
                                         test_set['abnormality_pred'])
@@ -59,10 +60,9 @@ def make_roc_plot(test_set, eval_fig_path):
     plt.legend(loc="lower right")
     plt.show()
     print(thrsh)
-        savefig("figures/{}_{}.png".format(
-            plot_run_name, plot_this[3]),
+    savefig("figures/{}_{}.png".format(plot_run_name, plot_this[3]),
             dpi=300, bbox_inches='tight')
-
+"""
 
 
 def make_eval_metric_figures(evaluations, eval_path):
