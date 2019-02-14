@@ -144,9 +144,10 @@ def main():
     eval_path = run_path+f'evaluations/'
     eval_fig_path = eval_path+f'figures'
     os.makedirs(eval_fig_path,exist_ok=True)
-    eval_figs.make_acc_loss_plots(model_short_name,
-                                  data_short_name, run, histories)
-    eval_figs.make_roc_plot(test_set, eval_fig_path)
+    plot_run_name = model_short_name+data_short_name+'r'+str(run)
+    eval_figs.make_acc_loss_plots(histories,
+                                  eval_fig_path, plot_run_name)
+    eval_figs.make_roc_plot(test_set, eval_fig_path, plot_run_name)
     test_w_reckonings, evaluations \
         = m_eval.make_eval_data(test_set, eval_path)
     #eval_figs.make_eval_metric_figures(evaluations, eval_fig_path)

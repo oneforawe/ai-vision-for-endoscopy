@@ -9,8 +9,7 @@ from pylab import savefig
 import numpy as np
 
 
-def make_acc_loss_plots(model_short_name,
-                        data_short_name, run, histories):
+def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
 
     # Want to plot accuracy and loss over training epochs
     plot_these = [['acc','val_acc','accuracy','Acc'],
@@ -23,7 +22,6 @@ def make_acc_loss_plots(model_short_name,
         for i in range(len(histories)):
             plt.plot(histories[i].history[plot_this[1]],
                      linestyle='dashed') # loss
-        plot_run_name = model_short_name+data_short_name+'r'+str(run)
         plt.title('{} model {}'.format(
             plot_run_name, plot_this[2] ) )
         plt.ylabel(plot_this[2])
@@ -38,13 +36,15 @@ def make_acc_loss_plots(model_short_name,
         if plot_this[0]=='loss':
             plt.legend(legend_labels, loc='upper right')
         plt.legend()
-        savefig("figures/{}_{}.png".format(plot_run_name, plot_this[3]),
+        savefig(eval_fig_path +
+                "{}_{}.png".format(plot_run_name, plot_this[3]),
                 dpi=300, bbox_inches='tight')
 
 
-def make_roc_plot(test_set, eval_fig_path):
-    fpr, tpr, thrsh = metrics.roc_curve(test_set['abnormality'],
+def make_roc_plot(test_set, eval_fig_path, plot_run_name):
+    roc_data = metrics.roc_curve(test_set['abnormality'],
                                         test_set['abnormality_pred'])
+    fpr, tpr, thrsh = roc_data
     roc_auc = metrics.auc(fpr, tpr)
     plt.figure()
     lw = 2
@@ -57,9 +57,8 @@ def make_roc_plot(test_set, eval_fig_path):
     plt.ylabel('True Positive Rate')
     plt.title('ROC curve')
     plt.legend(loc="lower right")
-    plt.show()
-    print(thrsh)
-    savefig("figures/{}_{}.png".format(plot_run_name, plot_this[3]),
+    savefig(eval_fig_path +
+            "figures/{}_{}.png".format(plot_run_name, plot_this[3]),
             dpi=300, bbox_inches='tight')
 
 
