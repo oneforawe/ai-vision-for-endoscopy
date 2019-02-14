@@ -129,7 +129,8 @@ def main():
     print("Now saving training output and histories.")
     test_set['abnormality_pred'] = test_pred
     run_results_path = run_path+f'results/'
-    run_results_file_path = run_results_path+f'output_scores.csv'
+    run_results_file_path = run_results_path + \
+                            f'output_scores.csv'
     os.makedirs(run_results_path,exist_ok=True)
     test_set.to_csv(run_results_file_path, index=None)
     run_histories_path = run_path+f'histories/'

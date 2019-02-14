@@ -10,6 +10,7 @@ training/testing and for previous train/test sessions.
 # See below for vocabulary/variable definitions.
 
 import os
+import pandas as pd
 
 
 def make_eval_data(test_set, eval_path):
