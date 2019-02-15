@@ -15,16 +15,22 @@ import numpy as np
 
 
 def make_eval_data(test_set, eval_path):
-    # for each threshold, there is a confusion matrix with TP,FP,TN,FN
-    # from which TPR = TP/P and FPR = FP/N can be calculated
+    # We want to collect these (for each threshold):
+    eval_names = ['Score Threshold',
+                  'False Negatives (FN)', 'False Positives (FP)',
+                  'Confusion Matrix (cm)', 'Precision (PPV)',
+                  'Recall/Sensitivity (TPR)',
+                  'Specificity/Selectivity (TNR)',
+                  'Fallout (FPR)', 'Miss Rate (FNR)']
+                  # including TPR and FPR as ROC curve points
+    evaluations = pd.DataFrame(columns=eval_names)
     test_w_reckonings = test_set[['abnormality',
                                   'abnormality_pred']].copy()
-    evaluations = pd.DataFrame()
-    # including FNs, FPs, confusion matrices, ROC curve points
 
     # run through many threshold values from 0 to 1 (plus another step)
     # (1000 steps from zero to one progress by 0.001, and additional
     #  last step ends at 1.001)
+    i = 0
     thrsh_steps = 1001
     for step in range(thrsh_steps+1):
         thrsh = np.linspace(0,1.001,thrsh_steps+1)[step]
@@ -58,10 +64,11 @@ def make_eval_data(test_set, eval_path):
         TNR = TN/N
         FPR = FP/N
         FNR = FN/P
-    test_w_reckonings[f'{thrsh:0.3f}'] = reckonings
-    eval_thrsh = [round(thrsh, 3), FN, FP,
-                  confusion_matrix, PPV, TPR, TNR, FPR, FNR]
-    evaluations[f'{thrsh:0.3f}'] = eval_thrsh
+        test_w_reckonings[f'{thrsh:0.3f}'] = reckonings
+        eval_values = [round(thrsh, 3), FN, FP,
+                       confusion_matrix, PPV, TPR, TNR, FPR, FNR]
+        evaluation_metrics.loc[i] = eval_values
+        i += 1
 
     # Save to csv
     evaluations.to_csv(eval_path+f'eval_metrics.csv', index=None)
@@ -104,10 +111,13 @@ def make_eval_data(test_set, eval_path):
 # MN = TN+FN
 #
 # TP/MP = PPV = Precision                  Positive Predictive Value
-# TP/P  = TPR = Sensitivity = Recall       True  P rate
-# TN/N  = TNR = Specificity = Selectivity  True  N rate
+# TP/P  = TPR = Sensitivity = Recall       True  P rate (1)
+# TN/N  = TNR = Specificity = Selectivity  True  N rate (2)
 # FP/N  = FPR = Fallout                    False P rate
 # FN/P  = FNR = Miss Rate                  False P rate
+#
+# (1) Probability of Correct Detection for Positives
+# (2) Probability of Correct Detection for Negatives
 #
 # TPR = 1 - FNR        (Sensitivity|Recall) = 1-(Miss Rate)
 # TNR = 1 - FPR   (Specificity|Selectivity) = 1-(Fallout)
