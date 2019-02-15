@@ -143,7 +143,7 @@ def main():
 
     print("Now generating and saving evaluations and figures.")
     eval_path = run_path+f'evaluations/'
-    eval_fig_path = eval_path+f'figures'
+    eval_fig_path = eval_path+f'figures/'
     os.makedirs(eval_fig_path,exist_ok=True)
     # histories
     plot_run_name = model_short_name+data_short_name+'r'+str(run)
@@ -160,7 +160,7 @@ def main():
     test_w_reckonings = test_w_reckoning_choices[['abnormality',
                                                   'abnormality_pred',
                                                   f'{thresh:0.3f}']]
-    # CM fig (assuming threshold = 0.5 (?))
+    # CM fig
     eval_figs.make_eval_metric_figures(test_w_reckonings, thresh,
                                        eval_fig_path, plot_run_name)
 
