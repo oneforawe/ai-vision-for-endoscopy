@@ -156,7 +156,7 @@ def main():
     test_w_reckoning_choices, evaluations \
         = m_eval.make_eval_data(test_set, eval_path)
     # pick threshold for a specific set of reckonings
-    thresh = pick_threshold(test_w_reckoning_choices)
+    thresh = m_eval.pick_threshold(test_w_reckoning_choices)
     #test_w_reckonings = test_w_reckoning_choices[['
     # CM fig (assuming threshold = 0.5 (?))
     #eval_figs.make_eval_metric_figures(test_w_reckonings, eval_fig_path)
