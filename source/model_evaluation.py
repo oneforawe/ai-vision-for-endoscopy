@@ -22,9 +22,12 @@ def make_eval_data(test_set, eval_path):
     evaluations = pd.DataFrame()
     # including FNs, FPs, confusion matrices, ROC curve points
 
-    divisions = 1001
-    for step in range(divisions+1):
-        thrsh = np.linspace(0,1.001,divisions+1)[step]
+    # run through many threshold values from 0 to 1 (plus another step)
+    # (1000 steps from zero to one progress by 0.001, and additional
+    #  last step ends at 1.001)
+    thrsh_steps = 1001
+    for step in range(thrsh_steps+1):
+        thrsh = np.linspace(0,1.001,thrsh_steps+1)[step]
         TP = 0; FP = 0; TN = 0; FN = 0
         reckonings = []
         for i in range(len(test_set)):
@@ -70,6 +73,10 @@ def make_eval_data(test_set, eval_path):
 
 # Vocabulary / Variables
 # ======================
+#
+# threshold = a score boundary value, where scores below it indicate
+#             one category/class and scores above it indicate the other
+# reckoning = the category/class determined from a score and threshold
 #
 # mp  = measured positive (a test/measured case that gets a
 #                          "positive" result from a binary test)

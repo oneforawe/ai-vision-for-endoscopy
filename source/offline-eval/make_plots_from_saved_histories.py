@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # filename: make_plots_from_saved_histories.py
 
+# Run in `source` folder with the following command:
+# python -m offline-eval.make_plots_from_saved_histories
+
+import os
 import pickle
 import eval_figures as eval_figs
 
@@ -17,7 +21,8 @@ def main():
         'for_plots/histories_Run_03.pckl'} )
 
     # Output location
-    eval_fig_path = '../output/offline-figures/'
+    eval_fig_path = '../output/offline-eval/'
+    os.makedirs(eval_fig_path,exist_ok=True)
 
     for run in histories_paths:
         print(f'Extracting histories from a run\'s pickle file...')
