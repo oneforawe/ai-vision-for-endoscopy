@@ -67,7 +67,7 @@ def make_eval_data(test_set, eval_path):
         test_w_reckonings[f'{thrsh:0.3f}'] = reckonings
         eval_values = [round(thrsh, 3), FN, FP,
                        confusion_matrix, PPV, TPR, TNR, FPR, FNR]
-        evaluation_metrics.loc[i] = eval_values
+        evaluations.loc[i] = eval_values
         i += 1
 
     # Save to csv

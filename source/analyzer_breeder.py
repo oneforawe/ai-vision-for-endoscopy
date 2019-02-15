@@ -155,7 +155,7 @@ def main():
     # (precision/recall, sensitivity/specificity, ROC/thresholds, etc)
     test_w_reckonings, evaluations \
         = m_eval.make_eval_data(test_set, eval_path)
-    # CM fig
+    # CM fig (assuming threshold = 0.5 (?))
     #eval_figs.make_eval_metric_figures(evaluations, eval_fig_path)
 
     print("Now recording train-and-test duration.")
@@ -167,7 +167,7 @@ def main():
     mins = (secs-hrs*3600)//60
     secs = secs-hrs*3600-mins*60
     file = open(run_path+f'run_duration.txt',"w")
-    file.write(f'Run train-and-test time (duration) = ' +
+    file.write(f'Run train-and-test time (duration)\n = ' +
                f'{days} days, {hrs} hours, ' +
                f'{mins} minutes, {secs} seconds, ' +
                f'{elapsed.microseconds} microseconds.\n')

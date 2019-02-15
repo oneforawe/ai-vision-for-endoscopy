@@ -90,7 +90,8 @@ def mobilenet_v2_b(img_dim):
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_b')
-    return model
+    modelshortname = 'MNv2b'
+    return model, modelshortname
 
 # With "fine-tuning" (deep)
 def mobilenet_v2_c(img_dim):
@@ -117,7 +118,8 @@ def mobilenet_v2_c(img_dim):
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_c')
-    return model
+    modelshortname = 'MNv2c'
+    return model, modelshortname
 
 # larger than mobilenet_v2, without "fine-tuning"
 def xception_a(img_dim):
@@ -140,7 +142,8 @@ def xception_a(img_dim):
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='xception_a')
-    return model
+    modelshortname = 'Xcp_a'
+    return model, modelshortname
 
 # larger than mobilenet_v2, with "fine-tuning" (shallow)
 def xception_b(img_dim):
@@ -164,7 +167,8 @@ def xception_b(img_dim):
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='xception_a')
-    return model
+    modelshortname = 'Xcp_b'
+    return model, modelshortname
 
 
 ################################
