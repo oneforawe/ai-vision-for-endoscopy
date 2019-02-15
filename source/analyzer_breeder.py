@@ -155,7 +155,8 @@ def main():
     # (precision/recall, sensitivity/specificity, ROC/thresholds, etc)
     test_w_reckoning_choices, evaluations \
         = m_eval.make_eval_data(test_set, eval_path)
-    # pick threshold and specific set of reckonings
+    # pick threshold for a specific set of reckonings
+    #pick_threshold(test_w_reckoning_choices)
     # thresh range (pick closest to 0.5)
     # thresh
     # test_w_reckonings =

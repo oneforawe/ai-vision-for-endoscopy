@@ -21,7 +21,7 @@ def main():
         'for_plots/histories_Run_03.pckl'} )
 
     # Output location
-    eval_fig_path = '../output/offline-eval/'
+    eval_fig_path = '../output/offline-eval/figures/'
     os.makedirs(eval_fig_path,exist_ok=True)
 
     for run in histories_paths:
