@@ -24,8 +24,9 @@ def make_eval_data(test_set, eval_path):
                   'Fallout (FPR)', 'Miss Rate (FNR)']
                   # including TPR and FPR as ROC curve points
     evaluations = pd.DataFrame(columns=eval_names)
-    test_w_reckoning_choices = test_set[['abnormality',
-                                  'abnormality_pred']].copy()
+    test_w_reckoning_choices = test_set.copy()
+    #test_w_reckoning_choices = test_set[['abnormality',
+    #                                     'abnormality_pred']].copy()
 
     # run through many threshold values from 0 to 1 (plus another step)
     # (1000 steps from zero to one progress by 0.001, and additional
@@ -76,6 +77,25 @@ def make_eval_data(test_set, eval_path):
         f'test_w_reckoning_choices.csv', index=None)
 
     return test_w_reckoning_choices, evaluations
+
+
+def pick_threshold(test_w_reckoning_choices):
+    # First default is thresh = 0.5
+
+    df1 = test_w_reckoning
+    df2 = df1[df1[1] == 0]
+    minimum = df2[2].min()
+    df3 = df2.loc[df2[2] == minimum]
+    good_thrsh_min = df3[0].min()
+    good_thrsh_max = df3[0].max()
+    print(f'Good thresholds are in the interval:')
+    print(f'  [{good_thrsh_min}, {good_thrsh_max}]')
+    # Among these, pick the closest to 0.5...
+    # or just set to 0.5 for now:
+    thresh = 0.5
+
+    return thresh
+
 
 
 # Vocabulary / Variables
