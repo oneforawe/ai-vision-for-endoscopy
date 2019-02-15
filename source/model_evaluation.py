@@ -14,7 +14,7 @@ import pandas as pd
 import numpy as np
 
 
-def make_eval_data(test_set, eval_path):
+def make_eval_data(test_set, eval_path, plot_run_name):
     # We want to collect these (for each threshold):
     eval_names = ['Score Threshold',
                   'False Negatives (FN)', 'False Positives (FP)',
@@ -72,22 +72,28 @@ def make_eval_data(test_set, eval_path):
         i += 1
 
     # Save to csv
-    evaluations.to_csv(eval_path+f'eval_metrics.csv', index=None)
+    evaluations.to_csv(eval_path
+                       +f'{plot_run_name}_eval_metrics.csv', index=None)
     test_w_reckoning_choices.to_csv(eval_path +
-        f'test_w_reckoning_choices.csv', index=None)
+        f'{plot_run_name}_test_w_reckoning_choices.csv', index=None)
 
     return test_w_reckoning_choices, evaluations
 
 
-def pick_threshold(test_w_reckoning_choices):
+def pick_threshold(evaluations):
     # First default is thresh = 0.5
 
-    df1 = test_w_reckoning
-    df2 = df1[df1[1] == 0]
-    minimum = df2[2].min()
-    df3 = df2.loc[df2[2] == minimum]
-    good_thrsh_min = df3[0].min()
-    good_thrsh_max = df3[0].max()
+    df1 = evaluations
+    #df2 = df1[df1[1] == 0]           # False Negatives (FN) == 0
+    #minimum = df2[2].min()           # False Positives (FP) minimum
+    #df3 = df2.loc[df2[2] == minimum] # all thresholds with FP minimum
+    #good_thrsh_min = df3[0].min()    # among these, threshold min
+    #good_thrsh_max = df3[0].max()    # among these, threshold max
+    df2 = df1[df1['False Negatives (FN)'] == 0]
+    minimum = df2['False Positives (FP)'].min()
+    df3 = df2.loc[df2['False Positives (FP)'] == minimum]
+    good_thrsh_min = df3['Score Threshold'].min()
+    good_thrsh_max = df3['Score Threshold'].max()
     print(f'Good thresholds are in the interval:')
     print(f'  [{good_thrsh_min}, {good_thrsh_max}]')
     # Among these, pick the closest to 0.5...

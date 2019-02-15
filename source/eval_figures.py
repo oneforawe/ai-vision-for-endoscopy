@@ -3,7 +3,7 @@
 
 from matplotlib import pyplot as plt
 from sklearn import metrics
-#from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix
 from pylab import savefig
 import numpy as np
 import itertools
@@ -62,14 +62,24 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
             dpi=300, bbox_inches='tight')
 
 
-def make_eval_metric_figures(test_w_reckonings, eval_path):
-
+def make_eval_metric_figures(test_w_reckonings, thresh,
+                             eval_fig_path, plot_run_name):
     # code from:
     # https://scikit-learn.org/
     # stable/auto_examples/model_selection/plot_confusion_matrix.html
     # #sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py
 
+    # Clear current figure
+    plt.clf()
+
+    # Should have class_names as input:
+    class_names = ['Normal','Abnormal']
+
     #print(__doc__)
+
+    df = test_w_reckonings # will turn column of this dataframe to list
+    y_test = df.loc[:,['abnormality']].T.values.tolist()[0]  # labels
+    y_pred = df.loc[:,[f'{thresh:0.3f}']].T.values.tolist()[0] # reckn's
 
     # Compute confusion matrix
     cnf_matrix = confusion_matrix(y_test, y_pred)
@@ -78,16 +88,29 @@ def make_eval_metric_figures(test_w_reckonings, eval_path):
     # Plot non-normalized confusion matrix
     plt.figure()
     plot_confusion_matrix(cnf_matrix, classes=class_names,
-                          title='Confusion matrix (not normalized)')
+                          title=f'Confusion matrix (T={thresh:0.3f})')
+    savefig(eval_fig_path
+            +f'{plot_run_name}_Confusion_Matrix_T_{thresh:0.3f}.png',
+            dpi=150, bbox_inches='tight')
+    plt.clf()
 
     # Plot normalized confusion matrix
     plt.figure()
     plot_confusion_matrix(cnf_matrix, classes=class_names,
                           normalize=True,
-                          title='Normalized confusion matrix')
+                          title=f'Normalized confusion matrix ' +
+                                f'(T={thresh:0.3f})')
 
-    #plt.show()
+    savefig(eval_fig_path +
+            f'{plot_run_name}_Confusion_Matrix_norm_' +
+            f'T_{thresh:0.3f}.png',
+            dpi=150, bbox_inches='tight')
+    plt.clf()
 
+    # Save data file
+    test_w_reckonings.to_csv(eval_fig_path +
+                             f'{plot_run_name}_CM_data_' +
+                             f'T_{thresh:0.3f}.csv', index=None)
 
 
 def plot_confusion_matrix(cm, classes, normalize=False,
@@ -98,9 +121,6 @@ def plot_confusion_matrix(cm, classes, normalize=False,
     """
     if normalize:
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
-        print("Normalized confusion matrix")
-    else:
-        print('Confusion matrix, without normalization')
 
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)

@@ -154,12 +154,15 @@ def main():
     # evaluations data
     # (precision/recall, sensitivity/specificity, ROC/thresholds, etc)
     test_w_reckoning_choices, evaluations \
-        = m_eval.make_eval_data(test_set, eval_path)
+        = m_eval.make_eval_data(test_set, eval_path, plot_run_name)
     # pick threshold for a specific set of reckonings
-    thresh = m_eval.pick_threshold(test_w_reckoning_choices)
-    #test_w_reckonings = test_w_reckoning_choices[['
+    thresh = m_eval.pick_threshold(evaluations)
+    test_w_reckonings = test_w_reckoning_choices[['abnormality',
+                                                  'abnormality_pred',
+                                                  f'{thresh:0.3f}']]
     # CM fig (assuming threshold = 0.5 (?))
-    #eval_figs.make_eval_metric_figures(test_w_reckonings, eval_fig_path)
+    eval_figs.make_eval_metric_figures(test_w_reckonings, thresh,
+                                       eval_fig_path, plot_run_name)
 
     print("Now recording train-and-test duration.")
     end_time = datetime.datetime.now()
