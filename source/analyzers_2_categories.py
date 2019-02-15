@@ -3,8 +3,10 @@
 # version:  1
 
 # Attribution:
-# This code is a modification of code from James Requa's Kaggle notebook found here:
-# https://www.kaggle.com/jamesrequa/keras-k-fold-inception-v3-1st-place-lb-0-99770/notebook
+# This code is a modification of code from
+# James Requa's Kaggle notebook found here:
+# https://www.kaggle.com/
+#  jamesrequa/keras-k-fold-inception-v3-1st-place-lb-0-99770/notebook
 
 import os
 import glob
@@ -19,9 +21,11 @@ from keras.models import Model, model_from_json
 from keras.optimizers import Adam
 from keras.applications.mobilenet_v2 import MobileNetV2
 from keras.applications.xception import Xception
-from keras.layers import Dense, Input, Flatten, Dropout, GlobalAveragePooling2D
+from keras.layers import Dense, Input, Flatten, \
+                         Dropout, GlobalAveragePooling2D
 from keras.layers.normalization import BatchNormalization
-from keras.callbacks import TensorBoard, ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
+from keras.callbacks import TensorBoard, ModelCheckpoint, \
+                            EarlyStopping, ReduceLROnPlateau
 from sklearn import metrics
 import matplotlib
 from matplotlib import pylab, mlab
@@ -50,19 +54,16 @@ def mobilenet_v2_a(img_dim):
                             )
     for layer in base_model.layers:
         layer.trainable = False
-    #for layer in base_model.layers[:153]:
-    #    layer.trainable = False
-    #for layer in base_model.layers[153:]:
-    #    layer.trainable = True
 
     xi = Input(shape=img_dim)              # input tensor
     x  = BatchNormalization()(xi)          # next layer
-    x  = base_model(x)                     # Each x on the right refers to
-    x  = Dropout(0.5)(x)                   #  the previous x on the left.
+    x  = base_model(x)                     # Each x on right refers to
+    x  = Dropout(0.5)(x)                   #  previous x on the left.
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_a')
-    return model
+    modelshortname = 'MNv2a'
+    return model, modelshortname
 
 # With "fine-tuning" (shallow)
 def mobilenet_v2_b(img_dim):
@@ -77,8 +78,6 @@ def mobilenet_v2_b(img_dim):
                              pooling=None
                              #classes=1000
                             )
-    #for layer in base_model.layers:
-    #    layer.trainable = False
     for layer in base_model.layers[:-3]: # All but ~last three layers
         layer.trainable = False          #  are no trainable.
     for layer in base_model.layers[-3:]: # ~Last three layers
@@ -86,12 +85,13 @@ def mobilenet_v2_b(img_dim):
 
     xi = Input(shape=img_dim)              # input tensor
     x  = BatchNormalization()(xi)          # next layer
-    x  = base_model(x)                     # Each x on the right refers to
-    x  = Dropout(0.5)(x)                   #  the previous x on the left.
+    x  = base_model(x)                     # Each x on right refers to
+    x  = Dropout(0.5)(x)                   #  previous x on the left.
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_b')
-    return model
+    modelshortname = 'MNv2b'
+    return model, modelshortname
 
 # With "fine-tuning" (deep)
 def mobilenet_v2_c(img_dim):
@@ -106,21 +106,20 @@ def mobilenet_v2_c(img_dim):
                              pooling=None
                              #classes=1000
                             )
-    #for layer in base_model.layers:
-    #    layer.trainable = False
-    for layer in base_model.layers[:-50]: # All but ~last three layers
+    for layer in base_model.layers[:-50]: # All but ~last fifty layers
         layer.trainable = False           #  are no trainable.
-    for layer in base_model.layers[-50:]: # ~Last three layers
+    for layer in base_model.layers[-50:]: # ~Last fifty layers
         layer.trainable = True            #  are trainable.
 
     xi = Input(shape=img_dim)              # input tensor
     x  = BatchNormalization()(xi)          # next layer
-    x  = base_model(x)                     # Each x on the right refers to
-    x  = Dropout(0.5)(x)                   #  the previous x on the left.
+    x  = base_model(x)                     # Each x on right refers to
+    x  = Dropout(0.5)(x)                   #  previous x on the left.
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_c')
-    return model
+    modelshortname = 'MNv2c'
+    return model, modelshortname
 
 # larger than mobilenet_v2, without "fine-tuning"
 def xception_a(img_dim):
@@ -135,21 +134,18 @@ def xception_a(img_dim):
 
     for layer in base_model.layers:
         layer.trainable = False
-    #for layer in base_model.layers[:-3]: # All but ~last three layers
-    #    layer.trainable = False          #  are no trainable.
-    #for layer in base_model.layers[-3:]: # ~Last three layers
-    #    layer.trainable = True           #  are trainable.
 
     xi = Input(shape=img_dim)              # input tensor
     x  = BatchNormalization()(xi)          # next layer
-    x  = base_model(x)                     # Each x on the right refers to
-    x  = Dropout(0.5)(x)                   #  the previous x on the left.
+    x  = base_model(x)                     # Each x on right refers to
+    x  = Dropout(0.5)(x)                   #  previous x on the left.
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='xception_a')
-    return model
+    modelshortname = 'Xcp_a'
+    return model, modelshortname
 
-# larger than mobilenet_v2, with "fine-tuning"
+# larger than mobilenet_v2, with "fine-tuning" (shallow)
 def xception_b(img_dim):
     # base network to be built around:
     base_model = Xception(input_shape=None,
@@ -159,9 +155,6 @@ def xception_b(img_dim):
                           pooling=None
                           #classes=1000
                          )
-
-    #for layer in base_model.layers:
-    #    layer.trainable = False
     for layer in base_model.layers[:-3]: # All but ~last three layers
         layer.trainable = False          #  are no trainable.
     for layer in base_model.layers[-3:]: # ~Last three layers
@@ -169,12 +162,13 @@ def xception_b(img_dim):
 
     xi = Input(shape=img_dim)              # input tensor
     x  = BatchNormalization()(xi)          # next layer
-    x  = base_model(x)                     # Each x on the right refers to
-    x  = Dropout(0.5)(x)                   #  the previous x on the left.
+    x  = base_model(x)                     # Each x on right refers to
+    x  = Dropout(0.5)(x)                   #  previous x on the left.
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='xception_a')
-    return model
+    modelshortname = 'Xcp_b'
+    return model, modelshortname
 
 
 ################################
@@ -288,33 +282,51 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         os.makedirs(run_path_+f'tb_logs/tb_fold_{str(i)}',exist_ok=True)
 
-        callbacks = [EarlyStopping(monitor='val_loss', patience=3, verbose=1, min_delta=1e-4),
-                     ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=1, cooldown=1,
-                                       verbose=1, min_lr=1e-7),
+        callbacks = [EarlyStopping(monitor='val_loss', patience=3,
+                                   verbose=1, min_delta=1e-4),
+                                   ReduceLROnPlateau(monitor='val_loss',
+                                   factor=0.1, patience=1, cooldown=1,
+                                   verbose=1, min_lr=1e-7
+                                  ),
                      ModelCheckpoint(filepath =
-                                     run_path_+f'chkpts/weights_fold_{str(i)}.hdf5',
-                                     verbose=1, save_best_only=True, save_weights_only=True, mode='auto'),
-                     TensorBoard(log_dir = run_path_+f'tb_logs/tb_fold_{str(i)}/' )
-                    ]
+                                     run_path_
+                                     +f'chkpts/'
+                                     +f'weights_fold_{str(i)}.hdf5',
+                                     verbose=1, save_best_only=True,
+                                     save_weights_only=True,
+                                     mode='auto'
+                                    ),
+                     TensorBoard(log_dir = run_path_
+                                           +f'tb_logs/'
+                                           +f'tb_fold_{str(i)}/' )]
 
-        model.compile(optimizer=Adam(lr=1e-4), loss='binary_crossentropy',
+        model.compile(optimizer=Adam(lr=1e-4),
+                      loss='binary_crossentropy',
                       metrics = ['accuracy'])
 
         # Train and record fold history.
-        history = model.fit_generator(train_generator(), train_steps, epochs=epochs, verbose=1,
-                                      callbacks=callbacks, validation_data=valid_generator(),
+        history = model.fit_generator(train_generator(),
+                                      train_steps, epochs=epochs,
+                                      verbose=1, callbacks=callbacks,
+                                      validation_data=valid_generator(),
                                       validation_steps=valid_steps)
         histories_.append(history)
 
-        model.load_weights(filepath = run_path_+f'chkpts/weights_fold_{str(i)}.hdf5' )
+        model.load_weights(filepath = run_path_
+                                      +f'chkpts/'
+                                      +f'weights_fold_{str(i)}.hdf5' )
 
         print('Running validation predictions on fold {}'.format(i))
-        preds_valid = model.predict_generator(generator=valid_generator(),
-                                              steps=valid_steps, verbose=1)[:, 0]
+        preds_valid = model.predict_generator(generator=
+                                              valid_generator(),
+                                              steps=valid_steps,
+                                              verbose=1)[:, 0]
 
         print('Running train predictions on fold {}'.format(i))
-        preds_train = model.predict_generator(generator=train_generator(),
-                                              steps=train_steps, verbose=1)[:, 0]
+        preds_train = model.predict_generator(generator=
+                                              train_generator(),
+                                              steps=train_steps,
+                                              verbose=1)[:, 0]
 
         valid_score = roc_auc(y_valid, preds_valid)
         train_score = roc_auc(y_train, preds_train)
@@ -323,19 +335,23 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         valid_scores.append(valid_score)
         train_scores.append(train_score)
-        print('Avg Train Score:{0:0.5f}, Val Score:{1:0.5f} after {2:0.5f} folds'.format
+        print('Avg Train Score:{0:0.5f}, '
+              +'Val Score:{1:0.5f} after {2:0.5f} folds'.format
               (np.mean(train_scores), np.mean(valid_scores), i))
 
         print('Running test predictions with fold {}'.format(i))
 
-        preds_test_fold = model.predict_generator(generator=test_generator(),
-                                                  steps=test_steps, verbose=1)[:, -1]
+        preds_test_fold = model.predict_generator(generator=
+                                                  test_generator(),
+                                                  steps=test_steps,
+                                                  verbose=1)[:, -1]
 
         preds_test += preds_test_fold
 
         print('\n\n')
 
     print('Finished training!')
+    print('\n')
 
     # Save
     print('Now saving trained model.')
