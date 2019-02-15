@@ -153,10 +153,14 @@ def main():
     eval_figs.make_roc_plot(test_set, eval_fig_path, plot_run_name)
     # evaluations data
     # (precision/recall, sensitivity/specificity, ROC/thresholds, etc)
-    test_w_reckonings, evaluations \
+    test_w_reckoning_choices, evaluations \
         = m_eval.make_eval_data(test_set, eval_path)
+    # pick threshold and specific set of reckonings
+    # thresh range (pick closest to 0.5)
+    # thresh
+    # test_w_reckonings =
     # CM fig (assuming threshold = 0.5 (?))
-    #eval_figs.make_eval_metric_figures(evaluations, eval_fig_path)
+    #eval_figs.make_eval_metric_figures(test_w_reckonings, eval_fig_path)
 
     print("Now recording train-and-test duration.")
     end_time = datetime.datetime.now()

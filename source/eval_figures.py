@@ -62,7 +62,7 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
             dpi=300, bbox_inches='tight')
 
 
-def make_eval_metric_figures(evaluations, eval_path):
+def make_eval_metric_figures(test_w_reckonings, eval_path):
 
     # code from:
     # https://scikit-learn.org/
