@@ -81,8 +81,8 @@ def make_eval_data(test_set, eval_path, plot_run_name):
 
 
 def pick_threshold(evaluations):
-    # The default is thresh = 0.5, but we can find thresh to achieve certain
-    # number of FNs (0) and FPs (minimized)
+    # The default is thrsh = 0.5, but we can (also) find thrsh values that
+    # achieve a certain number of fn's (FN=0) and fp's (FP minimized).
     df1 = evaluations
     df2 = df1[df1['False Negatives (FN)'] == 0]           # Thresholds w/ FN = 0
     minimum = df2['False Positives (FP)'].min()           # and minimum FP, and
@@ -92,11 +92,15 @@ def pick_threshold(evaluations):
     # ..giving the range of good thresholds.
     print(f'Good thresholds are in the interval:')
     print(f'  [{good_thrsh_min}, {good_thrsh_max}]')
-    # Among these, pick the closest to 0.5...
-    # or just set to 0.5 for now:
-    thresh = 0.5
+    # Among these, pick the closest to 0.5:
+    if good_thrsh_min <= 0.5 <= good_thrsh_max:
+        thrsh = 0.5
+    elif 0.5 < good_thrsh_min:
+        thrsh = good_thrsh_min
+    elif 0.5 > good_thrsh_max:
+        thrsh = good_thrsh_max
 
-    return thresh
+    return thrsh
 
 
 

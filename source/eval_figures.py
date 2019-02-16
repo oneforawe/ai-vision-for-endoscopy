@@ -7,6 +7,7 @@ from sklearn.metrics import confusion_matrix
 from pylab import savefig
 import numpy as np
 import itertools
+import model_evaluation as m_eval
 
 
 def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
@@ -60,6 +61,28 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
     savefig(eval_fig_path
             +f'{plot_run_name}_ROC_Curve.png',
             dpi=300, bbox_inches='tight')
+
+
+def pick_thresh_make_figures(evaluations, test_w_reckonings):
+    # Pick threshold for a specific set of reckonings.
+    # (use thresh=0.5 and another good value, with FN=0 and FP minimized, if
+    #  thresh must be different from 0.5 to achieve that result)
+    thresh = m_eval.pick_threshold(evaluations)
+    test_w_reckonings = test_w_reckoning_choices[['abnormality',
+                                                  'abnormality_pred',
+                                                  f'{thresh:0.3f}']]
+    # CM fig
+    make_eval_metric_figures(test_w_reckonings, thresh,
+                             eval_fig_path, plot_run_name)
+    if thresh != 0.5:
+        # Repeat with thresh=0.5
+        thresh = 0.5
+        test_w_reckonings = test_w_reckoning_choices[['abnormality',
+                                                      'abnormality_pred',
+                                                      f'{thresh:0.3f}']]
+        # CM fig
+        make_eval_metric_figures(test_w_reckonings, thresh,
+                                 eval_fig_path, plot_run_name)
 
 
 def make_eval_metric_figures(test_w_reckonings, thresh,

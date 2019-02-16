@@ -22,17 +22,17 @@ def main():
 
     # Output location
     eval_root = '../output/offline-eval/'
-    os.makedirs(eval_root,exist_ok=True)
+    os.makedirs(eval_root, exist_ok=True)
 
     for run in histories_paths:
         print(f'Extracting histories from a run\'s pickle file...')
-        file = open(run['filepath'],'rb')
+        file = open(run['filepath'], 'rb')
         histories = pickle.load(file) # histories for a single run
         file.close()
 
         plot_run_name = run['name']
         eval_fig_path = f'../output/offline-eval/{plot_run_name}/figures/'
-        os.makedirs(eval_fig_path,exist_ok=True)
+        os.makedirs(eval_fig_path, exist_ok=True)
 
         print(f'Creating plots from run {plot_run_name} histories...')
         eval_figs.make_acc_loss_plots(histories,

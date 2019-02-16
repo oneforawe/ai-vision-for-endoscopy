@@ -22,7 +22,7 @@ def main():
 
     # Output location
     eval_root = '../output/offline-eval/'
-    os.makedirs(eval_root,exist_ok=True)
+    os.makedirs(eval_root, exist_ok=True)
 
     for run in results_paths:
         print(f'Reading scores (etc) from a run\'s output file...')
@@ -30,8 +30,8 @@ def main():
 
         plot_run_name = run['name']
 
-        eval_path = eval_root+f'{plot_run_name}/'
-        os.makedirs(eval_path,exist_ok=True)
+        eval_path = eval_root + f'{plot_run_name}/'
+        os.makedirs(eval_path, exist_ok=True)
 
         print(f'Creating evaluation data from run {plot_run_name} output...')
         m_eval.make_eval_data(test_set, eval_path, plot_run_name)

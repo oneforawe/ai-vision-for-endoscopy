@@ -102,8 +102,7 @@ def main():
 
     # (Find) run number
     run = 1
-    while os.path.isfile(output_base + \
-                         f'Run_{run:02d}/run_duration.txt'):
+    while os.path.isfile(output_base + f'Run_{run:02d}/run_duration.txt'):
         run += 1
     run_path = output_base+f'Run_{run:02d}/'
 
@@ -155,14 +154,8 @@ def main():
     # (precision/recall, sensitivity/specificity, ROC/thresholds, etc)
     test_w_reckoning_choices, evaluations \
         = m_eval.make_eval_data(test_set, eval_path, plot_run_name)
-    # pick threshold for a specific set of reckonings
-    thresh = m_eval.pick_threshold(evaluations)
-    test_w_reckonings = test_w_reckoning_choices[['abnormality',
-                                                  'abnormality_pred',
-                                                  f'{thresh:0.3f}']]
-    # CM fig
-    eval_figs.make_eval_metric_figures(test_w_reckonings, thresh,
-                                       eval_fig_path, plot_run_name)
+    # thresh, CM fig, and reckonings
+    pick_thresh_make_figures(evaluations, test_w_reckonings)
 
     print('Now recording train-and-test duration.')
     end_time = datetime.datetime.now()
