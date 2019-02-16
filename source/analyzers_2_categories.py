@@ -353,13 +353,13 @@ def train_model(input_model, batch_size, epochs, img_size,
 
     # Save
     print('Now saving trained model.')
-    model.save(run_path_+f'chkpts/ModelWhole_trained.hdf5')
+    model.save(run_path_ + f'chkpts/ModelWhole_trained.hdf5')
     #model = load_model('my_model.hdf5')        # (to load saved model)
     model_json_string = model.to_json()
     with open(run_path_+f'chkpts/ModelArch.json', 'w') as json_file:
         json_file.write(model_json_string)
     #model = model_from_json(json_string)       # (to load architecture)
-    model.save_weights(run_path_+f'chkpts/ModelWeights_trained.hdf5')
+    model.save_weights(run_path_ + f'chkpts/ModelWeights_trained.hdf5')
     #model.load_weights('my_model_weights.h5')  # (to load model weights)
     # compare with last fold weights (should be same)
 

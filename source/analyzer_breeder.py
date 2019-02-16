@@ -9,7 +9,7 @@ import analyzers_2_categories as a2c
 from sklearn.model_selection import KFold
 import model_evaluation as m_eval
 import eval_figures as eval_figs
-import datetime
+import timer
 
 
 def main():
@@ -100,11 +100,12 @@ def main():
     #n_fold = 5 # D,F
     histories = []
 
-    # (Find) run number
+    # Find this run's number ("train-and-test run #..")
     run = 1
-    while os.path.isfile(output_base + f'Run_{run:02d}/run_duration.txt'):
+    while os.path.isfile(output_base +
+                         f'Run_{run:02d}/duration_total_breeder.txt'):
         run += 1
-    run_path = output_base+f'Run_{run:02d}/'
+    run_path = output_base + f'Run_{run:02d}/'
 
     os.makedirs(run_path, exist_ok=True)
     file = open(run_path+f'train_params.txt', 'w')
@@ -115,10 +116,19 @@ def main():
 
     kf = KFold(n_splits=n_fold, shuffle=True)
 
-    # Train model: compile (configure for training), train, test, save
+    # Train model: compile (configure for training), train, test, save (& time)
+    tnt_start_time = datetime.datetime.now()
     histories, test_pred = a2c.train_model(model, batch_size, epochs, img_size,
                                            train_set, train_labels, test_files,
                                            n_fold, kf, run_path, run)
+    tnt_end_time = datetime.datetime.now()
+
+    print('Now recording train-and-test duration.')
+    tnt_elapsed = tnt_end_time - tnt_start_time
+    description = 'Run train-and-test time (duration)'
+    filepath = run_path + f'duration_train_and_test.txt'
+    timer.record_duration(interval, description, filepath)
+
 
     #############################
     # Save/Generate More Output #
@@ -157,20 +167,12 @@ def main():
     # thresh, CM fig, and reckonings
     eval_figs.pick_thresh_make_figures(evaluations, test_w_reckonings)
 
-    print('Now recording train-and-test duration.')
+    print('Now recording total breeder duration.')
     end_time = datetime.datetime.now()
     elapsed = end_time - start_time
-    days = elapsed.days
-    secs = elapsed.seconds
-    hrs  = secs//3600
-    mins = (secs-hrs*3600)//60
-    secs = secs - hrs*3600 - mins*60
-    file = open(run_path+f'run_duration.txt', 'w')
-    file.write(f'Run train-and-test time (duration)\n = ' +
-               f'{days} days, {hrs} hours, ' +
-               f'{mins} minutes, {secs} seconds, ' +
-               f'{elapsed.microseconds} microseconds.\n')
-    file.close()
+    description = 'Total breeder (train-test-evaluate-etc) time (duration)'
+    filepath = run_path + f'duration_total_breeder.txt'
+    timer.record_duration(interval, description, filepath)
 
 
 if __name__ == '__main__':

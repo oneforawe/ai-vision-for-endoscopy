@@ -12,10 +12,6 @@ import h5py
 from sklearn.utils import shuffle
 
 
-#############
-# Load Data #
-#############
-
 def load_data(path):
 
     normalImgFiles   = []
