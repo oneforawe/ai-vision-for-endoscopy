@@ -155,7 +155,7 @@ def main():
     test_w_reckoning_choices, evaluations \
         = m_eval.make_eval_data(test_set, eval_path, plot_run_name)
     # thresh, CM fig, and reckonings
-    pick_thresh_make_figures(evaluations, test_w_reckonings)
+    m_eval.pick_thresh_make_figures(evaluations, test_w_reckonings)
 
     print('Now recording train-and-test duration.')
     end_time = datetime.datetime.now()

@@ -39,6 +39,6 @@ def main():
         evaluations = pd.read_csv(run_eval['filepath'])
 
         # thresh, CM fig, and reckonings
-        pick_thresh_make_figures(evaluations, test_w_reckonings)
+        m_eval.pick_thresh_make_figures(evaluations, test_w_reckonings)
 
 
