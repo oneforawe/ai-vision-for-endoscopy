@@ -5,7 +5,7 @@ This repository contains python code that helps to partially automate analysis o
 ## Contents of this repo
 |  folder    | content |
 | ---------- | ------- |
-| explain    | includes material that explains the project and investiates the input and output |
+| explain    | includes material that explains the project and investigates the input and output |
 | input-data | includes the endoscopy images (or the little that may be made public) |
 | output     | includes output files from the code |
 | source     | includes all source code for production and files supporting building and running the code |
