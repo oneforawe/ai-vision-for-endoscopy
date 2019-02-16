@@ -21,17 +21,15 @@ from keras.models import Model, model_from_json
 from keras.optimizers import Adam
 from keras.applications.mobilenet_v2 import MobileNetV2
 from keras.applications.xception import Xception
-from keras.layers import Dense, Input, Flatten, \
-                         Dropout, GlobalAveragePooling2D
+from keras.layers import Dense, Input, Flatten, Dropout, GlobalAveragePooling2D
 from keras.layers.normalization import BatchNormalization
 from keras.callbacks import TensorBoard, ModelCheckpoint, \
                             EarlyStopping, ReduceLROnPlateau
 from sklearn import metrics
 import matplotlib
-from matplotlib import pylab, mlab
+#from matplotlib import pylab, mlab
 from matplotlib import pyplot as plt
-from IPython.core.pylabtools import figsize, getfigs
-import matplotlib.image as mpimg
+#from IPython.core.pylabtools import figsize, getfigs
 from sklearn.utils import shuffle
 
 
@@ -289,20 +287,20 @@ def train_model(input_model, batch_size, epochs, img_size,
                                    verbose=1, min_lr=1e-7
                                   ),
                      ModelCheckpoint(filepath =
-                                     run_path_
-                                     +f'chkpts/'
-                                     +f'weights_fold_{str(i)}.hdf5',
+                                     run_path_ +
+                                     f'chkpts/' +
+                                     f'weights_fold_{str(i)}.hdf5',
                                      verbose=1, save_best_only=True,
                                      save_weights_only=True,
                                      mode='auto'
                                     ),
-                     TensorBoard(log_dir = run_path_
-                                           +f'tb_logs/'
-                                           +f'tb_fold_{str(i)}/' )]
+                     TensorBoard(log_dir = run_path_ +
+                                           f'tb_logs/' +
+                                           f'tb_fold_{str(i)}/' )]
 
         model.compile(optimizer=Adam(lr=1e-4),
                       loss='binary_crossentropy',
-                      metrics = ['accuracy'])
+                      metrics=['accuracy'])
 
         # Train and record fold history.
         history = model.fit_generator(train_generator(),
@@ -312,9 +310,9 @@ def train_model(input_model, batch_size, epochs, img_size,
                                       validation_steps=valid_steps)
         histories_.append(history)
 
-        model.load_weights(filepath = run_path_
-                                      +f'chkpts/'
-                                      +f'weights_fold_{str(i)}.hdf5' )
+        model.load_weights(filepath = run_path_ +
+                                      f'chkpts/' +
+                                      f'weights_fold_{str(i)}.hdf5' )
 
         print('Running validation predictions on fold {}'.format(i))
         preds_valid = model.predict_generator(generator=
@@ -356,13 +354,13 @@ def train_model(input_model, batch_size, epochs, img_size,
     # Save
     print('Now saving trained model.')
     model.save(run_path_+f'chkpts/ModelWhole_trained.hdf5')
-    #model = load_model('my_model.hdf5')
+    #model = load_model('my_model.hdf5')        # (to load saved model)
     model_json_string = model.to_json()
-    with open(run_path_+f'chkpts/ModelArch.json', "w") as json_file:
+    with open(run_path_+f'chkpts/ModelArch.json', 'w') as json_file:
         json_file.write(model_json_string)
-    #model = model_from_json(json_string)
+    #model = model_from_json(json_string)       # (to load architecture)
     model.save_weights(run_path_+f'chkpts/ModelWeights_trained.hdf5')
-    #model.load_weights('my_model_weights.h5')
+    #model.load_weights('my_model_weights.h5')  # (to load model weights)
     # compare with last fold weights (should be same)
 
     preds_test /= n_fold

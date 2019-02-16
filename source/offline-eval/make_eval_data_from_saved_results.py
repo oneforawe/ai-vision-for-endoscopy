@@ -33,8 +33,7 @@ def main():
         eval_path = eval_root+f'{plot_run_name}/'
         os.makedirs(eval_path,exist_ok=True)
 
-        print(f'Creating evaluation data from run {plot_run_name} ' +
-              'output...')
+        print(f'Creating evaluation data from run {plot_run_name} output...')
         m_eval.make_eval_data(test_set, eval_path, plot_run_name)
 
 

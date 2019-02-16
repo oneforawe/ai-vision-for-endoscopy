@@ -31,8 +31,7 @@ def main():
         file.close()
 
         plot_run_name = run['name']
-        eval_fig_path = f'../output/' + \
-                        f'offline-eval/{plot_run_name}/figures/'
+        eval_fig_path = f'../output/offline-eval/{plot_run_name}/figures/'
         os.makedirs(eval_fig_path,exist_ok=True)
 
         print(f'Creating plots from run {plot_run_name} histories...')

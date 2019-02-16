@@ -37,7 +37,7 @@ def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
         if plot_this[0]=='loss':
             plt.legend(legend_labels, loc='upper right')
         savefig(eval_fig_path +
-                "{}_{}.png".format(plot_run_name, plot_this[3]),
+                '{}_{}.png'.format(plot_run_name, plot_this[3]),
                 dpi=300, bbox_inches='tight')
 
 
@@ -56,7 +56,7 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
     plt.title(f'{plot_run_name} ROC curve')
-    plt.legend(loc="lower right")
+    plt.legend(loc='lower right')
     savefig(eval_fig_path
             +f'{plot_run_name}_ROC_Curve.png',
             dpi=300, bbox_inches='tight')
@@ -134,8 +134,8 @@ def plot_confusion_matrix(cm, classes, normalize=False,
     for i, j in itertools.product(range(cm.shape[0]),
                                   range(cm.shape[1])):
         plt.text(j, i, format(cm[i, j], fmt),
-                 horizontalalignment="center",
-                 color="white" if cm[i, j] > thresh else "black")
+                 horizontalalignment='center',
+                 color='white' if cm[i, j] > thresh else 'black')
 
     plt.ylabel('True label')
     plt.xlabel('Predicted label')

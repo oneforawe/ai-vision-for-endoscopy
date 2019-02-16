@@ -25,12 +25,11 @@ def make_eval_data(test_set, eval_path, plot_run_name):
                   # including TPR and FPR as ROC curve points
     evaluations = pd.DataFrame(columns=eval_names)
     test_w_reckoning_choices = test_set.copy()
-    #test_w_reckoning_choices = test_set[['abnormality',
-    #                                     'abnormality_pred']].copy()
 
-    # run through many threshold values from 0 to 1 (plus another step)
-    # (1000 steps from zero to one progress by 0.001, and additional
-    #  last step ends at 1.001)
+    # Run through many threshold values from 0 to 1 (plus another step).
+    # (1000 steps from zero to one progress by 0.001, and additional last step
+    #  ends at 1.001)
+    # i = threshold step index:
     i = 0
     thrsh_steps = 1001
     for step in range(thrsh_steps+1):
@@ -38,6 +37,7 @@ def make_eval_data(test_set, eval_path, plot_run_name):
         TP = 0; FP = 0; TN = 0; FN = 0
         reckonings = []
         for j in range(len(test_set)):
+            # j = image index
             label = test_set['abnormality'].loc[j]
             pred  = test_set['abnormality_pred'].loc[j]
             reckoning = 0 if pred < thrsh else 1
@@ -81,19 +81,15 @@ def make_eval_data(test_set, eval_path, plot_run_name):
 
 
 def pick_threshold(evaluations):
-    # First default is thresh = 0.5
-
+    # The default is thresh = 0.5, but we can find thresh to achieve certain
+    # number of FNs (0) and FPs (minimized)
     df1 = evaluations
-    #df2 = df1[df1[1] == 0]           # False Negatives (FN) == 0
-    #minimum = df2[2].min()           # False Positives (FP) minimum
-    #df3 = df2.loc[df2[2] == minimum] # all thresholds with FP minimum
-    #good_thrsh_min = df3[0].min()    # among these, threshold min
-    #good_thrsh_max = df3[0].max()    # among these, threshold max
-    df2 = df1[df1['False Negatives (FN)'] == 0]
-    minimum = df2['False Positives (FP)'].min()
-    df3 = df2.loc[df2['False Positives (FP)'] == minimum]
-    good_thrsh_min = df3['Score Threshold'].min()
-    good_thrsh_max = df3['Score Threshold'].max()
+    df2 = df1[df1['False Negatives (FN)'] == 0]           # Thresholds w/ FN = 0
+    minimum = df2['False Positives (FP)'].min()           # and minimum FP, and
+    df3 = df2.loc[df2['False Positives (FP)'] == minimum] # among these, find
+    good_thrsh_min = df3['Score Threshold'].min() # the smallest threshold and
+    good_thrsh_max = df3['Score Threshold'].max() # the largest threshold..
+    # ..giving the range of good thresholds.
     print(f'Good thresholds are in the interval:')
     print(f'  [{good_thrsh_min}, {good_thrsh_max}]')
     # Among these, pick the closest to 0.5...

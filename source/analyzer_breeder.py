@@ -62,7 +62,7 @@ def main():
     img = cv2.imread(train_set.iloc[0][0])
 
     img_height = img.shape[0]
-    img_width = img.shape[1]
+    img_width  = img.shape[1]
     img_channels = img.shape[2]
     img_shape = (img_height, img_width, img_channels)
     img_size  = (img_height, img_width)
@@ -78,11 +78,11 @@ def main():
 
     # Initialize model
     model, model_short_name \
-        = a2c.mobilenet_v2_a(img_shape) # without "fine-tuning"
-    #model = a2c.mobilenet_v2_b(img_shape) # with shallow "fine-tuning"
-    #model = a2c.mobilenet_v2_c(img_shape) # with deep "fine-tuning"
-    #model = a2c.xception_a(img_shape)     # without "fine-tuning"
-    #model = a2c.xception_a(img_shape)     # with shallow "fine-tuning"
+        = a2c.mobilenet_v2_a(img_shape)  # without "fine-tuning"
+    #   = a2c.mobilenet_v2_b(img_shape)  # with shallow "fine-tuning"
+    #   = a2c.mobilenet_v2_c(img_shape)  # with deep "fine-tuning"
+    #   = a2c.xception_a(img_shape)      # without "fine-tuning"
+    #   = a2c.xception_a(img_shape)      # with shallow "fine-tuning"
 
     # Output location
     output_root = '../output/test/'
@@ -107,8 +107,8 @@ def main():
         run += 1
     run_path = output_base+f'Run_{run:02d}/'
 
-    os.makedirs(run_path,exist_ok=True)
-    file = open(run_path+f'train_params.txt',"w")
+    os.makedirs(run_path, exist_ok=True)
+    file = open(run_path+f'train_params.txt', 'w')
     file.write(f'batch_size = {batch_size}\n' +
                f'epochs = {epochs}\n' +
                f'n_fold = {n_fold}\n')
@@ -117,38 +117,38 @@ def main():
     kf = KFold(n_splits=n_fold, shuffle=True)
 
     # Train model: compile (configure for training), train, test, save
-    histories, test_pred = a2c.train_model(model, batch_size, epochs,
-                                           img_size, train_set,
-                                           train_labels, test_files,
+    histories, test_pred = a2c.train_model(model, batch_size, epochs, img_size,
+                                           train_set, train_labels, test_files,
                                            n_fold, kf, run_path, run)
 
     #############################
     # Save/Generate More Output #
     #############################
 
-    print("Now saving training output and histories.")
+    print('Now saving training output and histories.')
+    run_results_path = run_path + f'results/'
+    os.makedirs(run_results_path, exist_ok=True)
+    # output:
     test_set['abnormality_pred'] = test_pred
-    run_results_path = run_path+f'results/'
     run_results_file_path = run_results_path + \
                             f'output_scores.csv'
-    os.makedirs(run_results_path,exist_ok=True)
     test_set.to_csv(run_results_file_path, index=None)
-    run_histories_path = run_path+f'histories/'
+    # histories:
+    run_histories_path = run_path + f'histories/'
     run_histories_file_path = run_histories_path + \
                               f'histories_Run_{run:02d}.pckl'
-    os.makedirs(run_histories_path,exist_ok=True)
+    os.makedirs(run_histories_path, exist_ok=True)
     f = open(run_histories_file_path, 'wb')
     pickle.dump(histories, f)
     f.close()
 
-    print("Now generating and saving evaluations and figures.")
-    eval_path = run_path+f'evaluations/'
-    eval_fig_path = eval_path+f'figures/'
-    os.makedirs(eval_fig_path,exist_ok=True)
+    print('Now generating and saving evaluations and figures.')
+    eval_path = run_path + f'evaluations/'
+    eval_fig_path = eval_path + f'figures/'
+    os.makedirs(eval_fig_path, exist_ok=True)
     # histories
-    plot_run_name = model_short_name+data_short_name+'r'+str(run)
-    eval_figs.make_acc_loss_plots(histories,
-                                  eval_fig_path, plot_run_name)
+    plot_run_name = model_short_name + data_short_name + 'r' + str(run)
+    eval_figs.make_acc_loss_plots(histories, eval_fig_path, plot_run_name)
     # ROC fig
     eval_figs.make_roc_plot(test_set, eval_fig_path, plot_run_name)
     # evaluations data
@@ -164,15 +164,15 @@ def main():
     eval_figs.make_eval_metric_figures(test_w_reckonings, thresh,
                                        eval_fig_path, plot_run_name)
 
-    print("Now recording train-and-test duration.")
+    print('Now recording train-and-test duration.')
     end_time = datetime.datetime.now()
     elapsed = end_time - start_time
     days = elapsed.days
     secs = elapsed.seconds
     hrs  = secs//3600
     mins = (secs-hrs*3600)//60
-    secs = secs-hrs*3600-mins*60
-    file = open(run_path+f'run_duration.txt',"w")
+    secs = secs - hrs*3600 - mins*60
+    file = open(run_path+f'run_duration.txt', 'w')
     file.write(f'Run train-and-test time (duration)\n = ' +
                f'{days} days, {hrs} hours, ' +
                f'{mins} minutes, {secs} seconds, ' +
