@@ -15,13 +15,6 @@ import timer
 def main():
     start_time = datetime.datetime.now()
 
-    ################
-    # File Version #
-    ################
-
-    breeder_version = 'breeder_01'
-
-
     #############
     # Load Data #
     #############
@@ -85,10 +78,9 @@ def main():
     #   = a2c.xception_a(img_shape)      # with shallow "fine-tuning"
 
     # Output location
-    output_root = '../output/test/'
-    #output_root = '../output/'
-    output_base = output_root + \
-                  f'{model.name}/{breeder_version}/{data_name}/'
+    output_root = '../output/test/train/'
+    #output_root = '../output/train/'
+    output_base = output_root + f'{model.name}/{data_name}/'
 
     # Prepare for training
     batch_size = 4  # C
