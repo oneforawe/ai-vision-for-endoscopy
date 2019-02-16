@@ -7,7 +7,6 @@
 import os
 import pandas as pd
 import eval_figures as eval_figs
-import model_evaluation as m_eval
 
 
 def main():
@@ -39,6 +38,6 @@ def main():
         evaluations = pd.read_csv(run_eval['filepath'])
 
         # thresh, CM fig, and reckonings
-        m_eval.pick_thresh_make_figures(evaluations, test_w_reckonings)
+        eval_figs.pick_thresh_make_figures(evaluations, test_w_reckonings)
 
 
