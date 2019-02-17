@@ -63,8 +63,8 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
             dpi=300, bbox_inches='tight')
 
 
-def pick_thresh_make_figures(evaluations,
-                             test_w_reckonings, eval_fig_path, plot_run_name):
+def pick_thresh_make_figures(evaluations, test_w_reckoning_choices,
+                             eval_fig_path, plot_run_name):
     # Pick threshold for a specific set of reckonings.
     # (use thresh=0.5 and another good value, with FN=0 and FP minimized, if
     #  thresh must be different from 0.5 to achieve that result)

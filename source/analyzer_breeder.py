@@ -164,7 +164,7 @@ def main():
     test_w_reckoning_choices, evaluations \
         = m_eval.make_eval_data(test_set, eval_path, plot_run_name)
     # thresh, CM fig, and reckonings
-    eval_figs.pick_thresh_make_figures(evaluations,test_w_reckonings,
+    eval_figs.pick_thresh_make_figures(evaluations, test_w_reckoning_choices,
                                        eval_fig_path, plot_run_name)
     # (could show points on ROC curve for chosen threshold(s))
 
