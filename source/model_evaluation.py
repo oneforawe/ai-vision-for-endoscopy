@@ -3,7 +3,7 @@
 
 """
 model_evaluation
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 A library for generating plots of model evaluation metrics while
 training/testing and for previous train/test sessions.
 """
@@ -77,7 +77,7 @@ def make_eval_data(test_set, eval_path, plot_run_name):
     return test_w_reckoning_choices, evaluations
 
 
-def pick_threshold(evaluations):
+def pick_threshold(evaluations, eval_path, plot_run_name):
     # The default is thrsh = 0.5, but we can (also) find thrsh values that
     # achieve a certain number of fn's (FN=0) and fp's (FP minimized).
     df1 = evaluations
@@ -89,6 +89,11 @@ def pick_threshold(evaluations):
     # ..giving the range of good thresholds.
     print(f'Good thresholds are in the interval:')
     print(f'  [{good_thrsh_min}, {good_thrsh_max}]')
+    thrsh_interval_filepath = eval_path + f'{plot_run_name}_eval_thresholds.txt'
+    file = open(thrsh_interval_filepath, 'w')
+    file.write(f'Good thresholds are in the interval:\n' +
+               f'  [{good_thrsh_min}, {good_thrsh_max}]\n')
+    file.close()
     # Among these, pick the closest to 0.5:
     if good_thrsh_min <= 0.5 <= good_thrsh_max:
         thrsh = 0.5

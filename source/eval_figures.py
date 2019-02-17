@@ -64,11 +64,13 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
 
 
 def pick_thresh_make_figures(evaluations, test_w_reckoning_choices,
-                             eval_fig_path, plot_run_name):
+                             eval_path, eval_fig_path, plot_run_name):
     # Pick threshold for a specific set of reckonings.
     # (use thresh=0.5 and another good value, with FN=0 and FP minimized, if
     #  thresh must be different from 0.5 to achieve that result)
-    thresh = m_eval.pick_threshold(evaluations)
+    thresh = m_eval.pick_threshold(evaluations, eval_path, plot_run_name)
+    evaluations_chosen = \
+        evaluations.loc[evaluations['Score Threshold'] == thresh]
     test_w_reckonings = test_w_reckoning_choices[['abnormality',
                                                   'abnormality_pred',
                                                   f'{thresh:0.3f}']]
@@ -78,12 +80,20 @@ def pick_thresh_make_figures(evaluations, test_w_reckoning_choices,
     if thresh != 0.5:
         # Repeat with thresh=0.5
         thresh = 0.5
+        evaluations_compare = \
+            evaluations.loc[evaluations['Score Threshold'] == thresh]
+        dataframes = [evaluations_chosen, evaluations_compare]
+        evaluations_chosen = pd.concat(dataframes)
         test_w_reckonings = test_w_reckoning_choices[['abnormality',
                                                       'abnormality_pred',
                                                       f'{thresh:0.3f}']]
         # CM fig
         make_eval_metric_figures(test_w_reckonings, thresh,
                                  eval_fig_path, plot_run_name)
+
+    evaluations_chosen.to_csv(eval_path +
+                              f'{plot_run_name}_eval_' +
+                              f'thresholds_chosen.csv', index=None)
 
 
 def make_eval_metric_figures(test_w_reckonings, thresh,

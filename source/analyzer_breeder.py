@@ -122,11 +122,24 @@ def main():
                                            n_fold, kf, run_path, run)
     tnt_end_time = datetime.datetime.now()
 
-    print('Now recording train-and-test duration.')
-    tnt_elapsed = tnt_end_time - tnt_start_time
+    print('Now recording train-and-test durations.')
+    # Total:
     description = 'Run train-and-test time (duration)'
-    filepath = run_path + f'duration_train_and_test.txt'
-    timer.record_duration(tnt_elapsed, description, filepath)
+    filepath1 = run_path + f'duration_train_and_test.txt'
+    tnt_elapsed = tnt_end_time - tnt_start_time
+    tnt_tot_sec = timer.record_duration(tnt_elapsed, description, filepath1)
+    # Per image:
+    description = 'Run train-and-test time (average duration per image)'
+    filepath2 = run_path + f'duration_train_and_test_per_img.txt'
+    tot_num_imgs = len(train_set) + len(test_set)
+    tnt_elapsed_per_img = tnt_tot_sec / tot_num_imgs
+    tnt_imgs_per_sec =  tot_num_imgs / tnt_tot_sec
+    file = open(filepath, 'w')
+    file.write(f'{description}\n = ' +
+               f'{tnt_elapsed_per_img} seconds/image.' +
+               f'\n' +
+               f'{tnt_imgs_per_sec} images/second.\n')
+    file.close()
 
 
     #############################
@@ -165,7 +178,7 @@ def main():
         = m_eval.make_eval_data(test_set, eval_path, plot_run_name)
     # thresh, CM fig, and reckonings
     eval_figs.pick_thresh_make_figures(evaluations, test_w_reckoning_choices,
-                                       eval_fig_path, plot_run_name)
+                                       eval_path, eval_fig_path, plot_rnd_name)
     # (could show points on ROC curve for chosen threshold(s))
 
     print('Now recording total breeder duration.')

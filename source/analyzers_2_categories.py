@@ -27,9 +27,7 @@ from keras.callbacks import TensorBoard, ModelCheckpoint, \
                             EarlyStopping, ReduceLROnPlateau
 from sklearn import metrics
 import matplotlib
-#from matplotlib import pylab, mlab
 from matplotlib import pyplot as plt
-#from IPython.core.pylabtools import figsize, getfigs
 from sklearn.utils import shuffle
 
 
@@ -185,7 +183,7 @@ def train_model(input_model, batch_size, epochs, img_size,
     model = input_model
 
     os.makedirs(run_path_+f'chkpts', exist_ok=True)
-    os.makedirs(run_path_+f'tb_logs',exist_ok=True)
+    os.makedirs(run_path_+f'tb_logs', exist_ok=True)
 
     print(f'\n')
     print(f'Training: Run {run_:02d}')
@@ -279,7 +277,7 @@ def train_model(input_model, batch_size, epochs, img_size,
         valid_steps = len(x_valid) / batch_size
         test_steps  = len(test) / batch_size
 
-        os.makedirs(run_path_+f'tb_logs/tb_fold_{str(i)}',exist_ok=True)
+        os.makedirs(run_path_+f'tb_logs/tb_fold_{str(i)}', exist_ok=True)
 
         callbacks = [EarlyStopping(monitor='val_loss', patience=3,
                                    verbose=1, min_delta=1e-4),
@@ -367,4 +365,50 @@ def train_model(input_model, batch_size, epochs, img_size,
     preds_test /= n_fold
 
     return histories_, preds_test
+
+
+
+###############################
+# Define Inference Procedures #
+###############################
+
+def apply_model(input_model, batch_size, img_size, test, rnd_):
+
+    model = input_model
+
+    print(f'\n')
+    print(f'Inference: Round {rnd_:02d}')
+    print(f'-------------------')
+
+    def test_generator():
+        while True:
+            for start in range(0, len(test), batch_size):
+                x_batch = []
+                end = min(start + batch_size, len(test))
+                test_batch = test[start:end]
+                for filepath in test_batch:
+                    img = cv2.imread(filepath)
+                    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                    img = cv2.resize(img, img_size)
+                    x_batch.append(img)
+                x_batch = np.array(x_batch, np.float32) / 255.
+                yield x_batch
+
+    test_steps  = len(test) / batch_size
+
+    #callbacks = []
+
+    #model.compile(optimizer=Adam(lr=1e-4),
+    #              loss='binary_crossentropy',
+    #              metrics=['accuracy'])
+
+    # Apply model for inference.
+    preds_test = model.predict_generator(generator=
+                                         test_generator(),
+                                         steps=test_steps,
+                                         verbose=1)[:, -1]
+    print('Finished inference!')
+    print('\n')
+
+    return preds_test
 

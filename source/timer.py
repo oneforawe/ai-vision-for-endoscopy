@@ -8,6 +8,7 @@ import datetime
 def record_duration(interval, description, filepath):
     days = interval.days
     secs = interval.seconds
+    total_seconds = days*86400 + secs
     hrs  = secs//3600
     mins = (secs-hrs*3600)//60
     secs = secs - hrs*3600 - mins*60
@@ -18,4 +19,4 @@ def record_duration(interval, description, filepath):
                f'{interval.microseconds} microseconds.\n')
     file.close()
 
-
+    return total_seconds
