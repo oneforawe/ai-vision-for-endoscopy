@@ -334,8 +334,8 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         valid_scores.append(valid_score)
         train_scores.append(train_score)
-        print('Avg Train Score:{0:0.5f}, '
-              +'Val Score:{1:0.5f} after {2:0.5f} folds'.format
+        print('Avg Train Score:{0:0.5f}, ' +
+              'Val Score:{1:0.5f} after {2:0.5f} folds'.format
               (np.mean(train_scores), np.mean(valid_scores), i))
 
         print('Running test predictions with fold {}'.format(i))

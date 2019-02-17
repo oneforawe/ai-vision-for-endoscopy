@@ -126,7 +126,7 @@ def main():
     tnt_elapsed = tnt_end_time - tnt_start_time
     description = 'Run train-and-test time (duration)'
     filepath = run_path + f'duration_train_and_test.txt'
-    timer.record_duration(interval, description, filepath)
+    timer.record_duration(tnt_elapsed, description, filepath)
 
 
     #############################
@@ -173,7 +173,7 @@ def main():
     elapsed = end_time - start_time
     description = 'Total breeder (train-test-evaluate-etc) time (duration)'
     filepath = run_path + f'duration_total_breeder.txt'
-    timer.record_duration(interval, description, filepath)
+    timer.record_duration(elapsed, description, filepath)
 
 
 if __name__ == '__main__':
