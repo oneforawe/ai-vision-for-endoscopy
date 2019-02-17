@@ -112,16 +112,16 @@ def main():
     print('Now recording inference duration.')
     # Total:
     description = 'Round inference time (duration)'
-    filepath = rnd_path + f'duration_inference.txt'
+    filepath1 = rnd_path + f'duration_inference.txt'
     inf_elapsed = inf_end_time - inf_start_time
-    inf_tot_sec = timer.record_duration(inf_elapsed, description, filepath)
+    inf_tot_sec = timer.record_duration(inf_elapsed, description, filepath1)
     # Per image:
     description = 'Round inference time (average duration per image)'
     filepath2 = rnd_path + f'duration_inference_per_img.txt'
     tot_num_imgs = len(test_set)
     inf_elapsed_per_img = inf_tot_sec / tot_num_imgs
     inf_imgs_per_sec =  tot_num_imgs / inf_tot_sec
-    file = open(filepath, 'w')
+    file = open(filepath2, 'w')
     file.write(f'{description}\n = ' +
                f'{inf_elapsed_per_img} seconds/image.' +
                f'\n' +
@@ -161,8 +161,8 @@ def main():
     end_time = datetime.datetime.now()
     elapsed = end_time - start_time
     description = 'Total activator (load-infer-evaluate-etc) time (duration)'
-    filepath = rnd_path + f'duration_total_activator.txt'
-    timer.record_duration(elapsed, description, filepath)
+    filepath3 = rnd_path + f'duration_total_activator.txt'
+    timer.record_duration(elapsed, description, filepath3)
 
 
 if __name__ == '__main__':

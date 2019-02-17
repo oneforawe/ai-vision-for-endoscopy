@@ -134,7 +134,7 @@ def main():
     tot_num_imgs = len(train_set) + len(test_set)
     tnt_elapsed_per_img = tnt_tot_sec / tot_num_imgs
     tnt_imgs_per_sec =  tot_num_imgs / tnt_tot_sec
-    file = open(filepath, 'w')
+    file = open(filepath2, 'w')
     file.write(f'{description}\n = ' +
                f'{tnt_elapsed_per_img} seconds/image.' +
                f'\n' +
@@ -185,8 +185,8 @@ def main():
     end_time = datetime.datetime.now()
     elapsed = end_time - start_time
     description = 'Total breeder (train-test-evaluate-etc) time (duration)'
-    filepath = run_path + f'duration_total_breeder.txt'
-    timer.record_duration(elapsed, description, filepath)
+    filepath3 = run_path + f'duration_total_breeder.txt'
+    timer.record_duration(elapsed, description, filepath3)
 
 
 if __name__ == '__main__':
