@@ -84,8 +84,8 @@ def main():
     #   = a2c.xception_a(img_shape)      # with shallow "fine-tuning"
 
     # Output location
-    output_root = '../output/test/train/'
-    #output_root = '../output/train/'
+    #output_root = '../output/test/train/'
+    output_root = '../output/train/'
     output_base = output_root + f'{model_short_name}/' + \
                                 f'{data_category}/{class_split}/{data_name}/'
 
