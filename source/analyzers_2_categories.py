@@ -61,7 +61,7 @@ def mobilenet_v2_a(img_dim):
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_a')
     modelshortname = 'MNv2a'
-    return model, modelshortname
+    return model, modelshortname, base_model.name
 
 # With "fine-tuning" (shallow)
 def mobilenet_v2_b(img_dim):
@@ -88,8 +88,9 @@ def mobilenet_v2_b(img_dim):
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_b')
-    modelshortname = 'MNv2b'
-    return model, modelshortname
+    model_short_name = 'MNv2b'
+
+    return model, model_short_name, base_model.name
 
 # With "fine-tuning" (deep)
 def mobilenet_v2_c(img_dim):
@@ -117,7 +118,7 @@ def mobilenet_v2_c(img_dim):
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_c')
     modelshortname = 'MNv2c'
-    return model, modelshortname
+    return model, modelshortname, base_model.name
 
 # larger than mobilenet_v2, without "fine-tuning"
 def xception_a(img_dim):
@@ -141,7 +142,7 @@ def xception_a(img_dim):
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='xception_a')
     modelshortname = 'Xcp_a'
-    return model, modelshortname
+    return model, modelshortname, base_model.name
 
 # larger than mobilenet_v2, with "fine-tuning" (shallow)
 def xception_b(img_dim):
@@ -166,7 +167,7 @@ def xception_b(img_dim):
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='xception_a')
     modelshortname = 'Xcp_b'
-    return model, modelshortname
+    return model, modelshortname, base_model.name
 
 
 ################################
@@ -276,7 +277,7 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         train_steps = len(x_train) / batch_size
         valid_steps = len(x_valid) / batch_size
-        test_steps = len(test) / batch_size
+        test_steps  = len(test) / batch_size
 
         os.makedirs(run_path_+f'tb_logs/tb_fold_{str(i)}',exist_ok=True)
 

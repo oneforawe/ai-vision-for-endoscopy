@@ -10,7 +10,14 @@ import model_evaluation as m_eval
 
 
 def main():
-    # Input:
+    # Output location (root):
+    eval_root = '../output/offline-eval/'
+    data_category = '1-pre-processed'
+    #data_category = '2-processed'
+    eval_base = eval_root + data_category + '/'
+    os.makedirs(eval_base, exist_ok=True)
+
+    # Input locations:
     # Manually add the desired files to utilize.
     results_paths = []
     results_paths.append( {'name': 'MNv2a_Cr3', 'filepath' :
@@ -20,19 +27,17 @@ def main():
         '../output/mobilenet_v2_a/breeder_01/data_D/Run_03/' +
         'results/output_scores.csv'} )
 
-    # Output location
-    eval_root = '../output/offline-eval/'
-    os.makedirs(eval_root, exist_ok=True)
-
     for run in results_paths:
+        # Read input.
         print(f'Reading scores (etc) from a run\'s output file...')
         test_set = pd.read_csv(run['filepath']) # dataframe
 
+        # Set ultimate output location.
         plot_run_name = run['name']
-
-        eval_path = eval_root + f'{plot_run_name}/'
+        eval_path = eval_base + f'{plot_run_name}/'
         os.makedirs(eval_path, exist_ok=True)
 
+        # Make data.
         print(f'Creating evaluation data from run {plot_run_name} output...')
         m_eval.make_eval_data(test_set, eval_path, plot_run_name)
 

@@ -130,11 +130,12 @@ input-data/1-pre-processed/D
 input-data/1-pre-processed/E
 input-data/1-pre-processed/F
 input-data/1-pre-processed/G
-output/old
+output/z_old
 output/mobilenet_v2_b/breeder_01/data_D/Run_01_Fail/
 source/configs/
 source/build/examples/
-source/img-processing/img_cropper_Actually_Used.py
+source/img-processing/img_cropper_old.py
 source/img-processing/Test_cropper.ipynb
-tests/README-ref.md
+tests
+#tests/README-ref.md
 

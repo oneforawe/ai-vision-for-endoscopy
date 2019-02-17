@@ -20,7 +20,8 @@ def main():
     #############
 
     data_root = '../input-data/'
-    data_base = data_root+'1-pre-processed/'
+    data_category = '1-pre-processed'
+    data_base = data_root + data_category + '/'
     # A: 138062 images. Full data set in original file structure.
     #data_path = data_base+'A'
     #data_name = 'data_A'
@@ -43,8 +44,12 @@ def main():
     #data_short_name = 'F'
 
     # Load:
+    class_split = 'by_abnorm'
+    #class_split = 'by_region'
     train_set, train_files, train_labels, \
-           test_set, test_files  =  dl.load_data(data_path)
+           test_set, test_files \
+        =  dl.load_data_2class_abnormality(data_path)
+    #   =  dl.load_data_4class_region(data_path)
 
 
     ####################
@@ -70,7 +75,7 @@ def main():
     ##################
 
     # Initialize model
-    model, model_short_name \
+    model, model_short_name, base_model_name \
         = a2c.mobilenet_v2_a(img_shape)  # without "fine-tuning"
     #   = a2c.mobilenet_v2_b(img_shape)  # with shallow "fine-tuning"
     #   = a2c.mobilenet_v2_c(img_shape)  # with deep "fine-tuning"
@@ -80,7 +85,8 @@ def main():
     # Output location
     output_root = '../output/test/train/'
     #output_root = '../output/train/'
-    output_base = output_root + f'{model.name}/{data_name}/'
+    output_base = output_root + f'{model_short_name}/' +
+                                f'{data_category}/{class_split}/{data_name}/'
 
     # Prepare for training
     batch_size = 4  # C
@@ -157,7 +163,9 @@ def main():
     test_w_reckoning_choices, evaluations \
         = m_eval.make_eval_data(test_set, eval_path, plot_run_name)
     # thresh, CM fig, and reckonings
-    eval_figs.pick_thresh_make_figures(evaluations, test_w_reckonings)
+    eval_figs.pick_thresh_make_figures(evaluations,test_w_reckonings,
+                                       eval_fig_path, plot_run_name)
+    # (could show points on ROC curve for chosen threshold(s))
 
     print('Now recording total breeder duration.')
     end_time = datetime.datetime.now()

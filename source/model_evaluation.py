@@ -29,8 +29,6 @@ def make_eval_data(test_set, eval_path, plot_run_name):
     # Run through many threshold values from 0 to 1 (plus another step).
     # (1000 steps from zero to one progress by 0.001, and additional last step
     #  ends at 1.001)
-    # i = threshold step index:
-    i = 0
     thrsh_steps = 1001
     for step in range(thrsh_steps+1):
         thrsh = np.linspace(0,1.001,thrsh_steps+1)[step]
@@ -68,8 +66,7 @@ def make_eval_data(test_set, eval_path, plot_run_name):
         test_w_reckoning_choices[f'{thrsh:0.3f}'] = reckonings
         eval_values = [round(thrsh, 3), FN, FP,
                        confusion_matrix, PPV, TPR, TNR, FPR, FNR]
-        evaluations.loc[i] = eval_values
-        i += 1
+        evaluations.loc[step] = eval_values
 
     # Save to csv
     evaluations.to_csv(eval_path
