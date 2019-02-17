@@ -9,6 +9,7 @@ import analyzers_2_categories as a2c
 from sklearn.model_selection import KFold
 import model_evaluation as m_eval
 import eval_figures as eval_figs
+import datetime
 import timer
 
 
@@ -85,7 +86,7 @@ def main():
     # Output location
     output_root = '../output/test/train/'
     #output_root = '../output/train/'
-    output_base = output_root + f'{model_short_name}/' +
+    output_base = output_root + f'{model_short_name}/' + \
                                 f'{data_category}/{class_split}/{data_name}/'
 
     # Prepare for training
