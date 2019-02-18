@@ -99,7 +99,7 @@ def main():
     #batch_size = 4  # C
     #batch_size = 20 # D (mobilenet)
     #batch_size = 10 # D (xception) #Got error (fixed by reducing to 10)
-    batch_size = 40 #E
+    batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
     #batch_size = 100 # F
     epochs = 50
     #n_fold = 4 # C
