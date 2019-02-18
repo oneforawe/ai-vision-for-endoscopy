@@ -130,12 +130,24 @@ input-data/1-pre-processed/D
 input-data/1-pre-processed/E
 input-data/1-pre-processed/F
 input-data/1-pre-processed/G
+input-data/2-processed/C/
+input-data/2-processed/C_processed.zip
+input-data/2-processed/D/
+input-data/2-processed/D_processed.zip
+input-data/2-processed/E/
+input-data/2-processed/E_processed.zip
+input-data/2-processed/F/
+input-data/2-processed/test/
+input-data/2-processed/test_control/
 output/z_old
 output/mobilenet_v2_b/breeder_01/data_D/Run_01_Fail/
 source/configs/
 source/build/examples/
-source/img-processing/img_cropper_old.py
 source/img-processing/Test_cropper.ipynb
+source/img-processing/Test/
+source/img-processing/1376916 20 Dec 18_1 0088.jpg
+source/img-processing/img_cropper_old1.py
+source/img-processing/img_cropper_old2.py
 tests
 #tests/README-ref.md
 
