@@ -44,7 +44,7 @@ def main():
     #data_path = data_base+'E'
     #data_name = 'data_E'
     #data_short_name = 'E'
-    # F: 138062 images. Full data set in modified file structure.
+    # F: 138062 images. Full data (minus vids) set in modified file structure.
     #data_path = data_base+'F'
     #data_name = 'data_F'
     #data_short_name = 'F'
