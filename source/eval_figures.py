@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # filename: eval_figures.py
 
+import numpy as np
+import pandas as pd
 from matplotlib import pyplot as plt
+from pylab import savefig
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
-from pylab import savefig
-import numpy as np
 import itertools
 import model_evaluation as m_eval
 
