@@ -76,11 +76,16 @@ def main():
 
     # Load saved (trained) model from a particular source (run)
     source_run_path = \
-    #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
+    #   '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
+        '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
     #   '../output/'
-        '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
+    #   '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
     model_short_name = \
         'MNv2a'
+    #   'MNv2b'
+    #   'MNv2c'
+    #   'Xcp_a'
+    #   'Xcp_b'
     #   '...'
     source_run_file_path = source_run_path + f'chkpts/ModelWhole_trained.hdf5'
     model = load_model(source_run_file_path)
