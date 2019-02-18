@@ -82,11 +82,13 @@ def main():
 
     # Initialize model
     model, model_short_name, base_model_name \
+        = a2c.xception_a(img_shape)      # without "fine-tuning"
+    # Options:
     #   = a2c.mobilenet_v2_a(img_shape)  # without "fine-tuning"
     #   = a2c.mobilenet_v2_b(img_shape)  # with shallow "fine-tuning"
     #   = a2c.mobilenet_v2_c(img_shape)  # with deep "fine-tuning"
-        = a2c.xception_a(img_shape)      # without "fine-tuning"
-    #   = a2c.xception_a(img_shape)      # with shallow "fine-tuning"
+    #   = a2c.xception_a(img_shape)      # without "fine-tuning"
+    #   = a2c.xception_b(img_shape)      # with shallow "fine-tuning"
 
     # Output location
     #output_root = '../output/test/train/'
