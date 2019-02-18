@@ -81,9 +81,10 @@ def pick_threshold(evaluations, eval_path, plot_run_name):
     # The default is thrsh = 0.5, but we can (also) find thrsh values that
     # achieve a certain number of fn's (FN=0) and fp's (FP minimized).
     df1 = evaluations
-    df2 = df1[df1['False Negatives (FN)'] == 0]           # Thresholds w/ FN = 0
-    minimum = df2['False Positives (FP)'].min()           # and minimum FP, and
-    df3 = df2.loc[df2['False Positives (FP)'] == minimum] # among these, find
+    FN_min = df1['False Negatives (FN)'].min()            # Ideally w/ FN = 0
+    df2 = df1[df1['False Negatives (FN)'] == FN_min]      # Thresholds w/ FN sml
+    FP_min = df2['False Positives (FP)'].min()            # and minimum FP, and
+    df3 = df2.loc[df2['False Positives (FP)'] == FP_min]  # among these, find
     good_thrsh_min = df3['Score Threshold'].min() # the smallest threshold and
     good_thrsh_max = df3['Score Threshold'].max() # the largest threshold..
     # ..giving the range of good thresholds.

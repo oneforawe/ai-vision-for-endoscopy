@@ -32,13 +32,13 @@ def main():
     #data_name = 'data_B'
     #data_short_name = 'B'
     # C: 200 images. (Abnormal=Blood)
-    #data_path = data_base+'C'
-    #data_name = 'data_C'
-    #data_short_name = 'C'
+    data_path = data_base+'C'
+    data_name = 'data_C'
+    data_short_name = 'C'
     # D: 2000 images.
-    data_path = data_base+'D'
-    data_name = 'data_D'
-    data_short_name = 'D'
+    #data_path = data_base+'D'
+    #data_name = 'data_D'
+    #data_short_name = 'D'
     # E: 10000 images.
     #data_path = data_base+'E'
     #data_name = 'data_E'
@@ -81,8 +81,10 @@ def main():
 
     # Load saved (trained) model from a particular source (run)
     source_run_path = \
-        '../output/train/MNv2a/2-processed/by_abnorm/data_D/Run_01/'
+        '../output/train/MNv2a/2-processed/by_abnorm/data_C/Run_01/'
     #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
+    #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_D/Run_01/' #maybe
+    #   '../output/train/MNv2a/2-processed/by_abnorm/data_C/Run_01/'
     #   '../output/train/MNv2a/2-processed/by_abnorm/data_D/Run_01/'
     #   '../output/'
     #   '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
