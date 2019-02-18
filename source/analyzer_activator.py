@@ -76,10 +76,11 @@ def main():
 
     # Load saved (trained) model from a particular source (run)
     source_run_path = \
-    #   '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/' #\
         '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
-    #   '../output/' #\
-    #   '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/' #\
+    #   '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
+    #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
+    #   '../output/'
+    #   '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
     model_short_name = \
         'MNv2a'
     #   'MNv2b'
