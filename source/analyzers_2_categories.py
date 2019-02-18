@@ -26,9 +26,6 @@ from keras.layers.normalization import BatchNormalization
 from keras.callbacks import TensorBoard, ModelCheckpoint, \
                             EarlyStopping, ReduceLROnPlateau
 from sklearn import metrics
-import matplotlib
-from matplotlib import pyplot as plt
-from sklearn.utils import shuffle
 
 
 #################

@@ -76,8 +76,9 @@ def main():
 
     # Load saved (trained) model from a particular source (run)
     source_run_path = \
-        '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
+    #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
     #   '../output/'
+        '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
     model_short_name = \
         'MNv2a'
     #   '...'
@@ -86,7 +87,8 @@ def main():
 
     # Output location
     #output_root = '../output/test/infer/'
-    output_root = '../output/infer/'
+    output_root = '../output/cpu/infer/'
+    #output_root = '../output/infer/'
     output_base = output_root + f'{model_short_name}/' + \
                                 f'{data_category}/{class_split}/{data_name}/'
 
@@ -123,10 +125,13 @@ def main():
     inf_imgs_per_sec =  tot_num_imgs / inf_tot_sec
     file = open(filepath2, 'w')
     file.write(f'{description}\n = ' +
+               f'({inf_tot_sec} seconds) / ({tot_num_imgs} images)\n = ' +
                f'{inf_elapsed_per_img} seconds/image.' +
-               f'\n' +
+               f'\n\n' +
+               f'({tot_num_imgs} images) / ({inf_tot_sec} seconds)\n = ' +
                f'{inf_imgs_per_sec} images/second.\n')
     file.close()
+
 
 
     #############################

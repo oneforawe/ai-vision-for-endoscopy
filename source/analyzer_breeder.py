@@ -85,7 +85,8 @@ def main():
 
     # Output location
     #output_root = '../output/test/train/'
-    output_root = '../output/train/'
+    output_root = '../output/cpu/train/'
+    #output_root = '../output/train/'
     output_base = output_root + f'{model_short_name}/' + \
                                 f'{data_category}/{class_split}/{data_name}/'
 
@@ -136,8 +137,10 @@ def main():
     tnt_imgs_per_sec =  tot_num_imgs / tnt_tot_sec
     file = open(filepath2, 'w')
     file.write(f'{description}\n = ' +
+               f'({tnt_tot_sec} seconds) / ({tot_num_imgs} images)\n = ' +
                f'{tnt_elapsed_per_img} seconds/image.' +
-               f'\n' +
+               f'\n\n' +
+               f'({tot_num_imgs} images) / ({tnt_tot_sec} seconds)\n = ' +
                f'{tnt_imgs_per_sec} images/second.\n')
     file.close()
 
@@ -178,7 +181,7 @@ def main():
         = m_eval.make_eval_data(test_set, eval_path, plot_run_name)
     # thresh, CM fig, and reckonings
     eval_figs.pick_thresh_make_figures(evaluations, test_w_reckoning_choices,
-                                       eval_path, eval_fig_path, plot_rnd_name)
+                                       eval_path, eval_fig_path, plot_run_name)
     # (could show points on ROC curve for chosen threshold(s))
 
     print('Now recording total breeder duration.')
