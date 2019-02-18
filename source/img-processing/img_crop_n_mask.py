@@ -4,13 +4,14 @@
 from PIL import Image, ImageOps, ImageDraw
 import os
 
-# This could be done more efficiently by not re-creating the mask for each img.
-
 # Instructions:
-# 1) Move pre-processed images (under input-data/1-pre-processed/)
+# 1) Copy pre-processed images (under input-data/1-pre-processed/)
 #    into a "processed" folder (under input-data/2-processed/).
-# 2) Set the images path_base (folder where the images are located) below.
+# 2) Set the images `path_base` (folder where the images are located) below.
 # 3) Execute this code to transform (crop-and-mask) the images in-place.
+
+# Note:
+# This could be done more efficiently by not re-creating the mask for each img.
 
 
 def crop_mask_n_save_img(src_img_filepath,dst_img_filepath):
