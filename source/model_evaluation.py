@@ -76,7 +76,7 @@ def make_eval_data(test_set, eval_path, plot_run_name):
         TNR = TN/N
         FPR = FP/N
         FNR = FN/P
-        if PPN is None:
+        if PPV is None:
             F1 = None
         else:
             F1  = 2*PPV*TPR/(PPV+TPR)
