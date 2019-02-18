@@ -21,8 +21,8 @@ def main():
     #############
 
     data_root = '../input-data/'
-    #data_category = '1-pre-processed'
-    data_category = '2-processed'
+    data_category = '1-pre-processed'
+    #data_category = '2-processed'
     data_base = data_root + data_category + '/'
     # A: 138062 images. Full data set in original file structure.
     #data_path = data_base+'A'
