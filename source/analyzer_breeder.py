@@ -82,7 +82,7 @@ def main():
 
     # Initialize model
     model, model_short_name, base_model_name \
-        = a2c.mobilenet_v2_a(img_shape)  # without "fine-tuning"
+        = a2c.xception_a(img_shape)      # without "fine-tuning"
     # Options:
     #   = a2c.mobilenet_v2_a(img_shape)  # without "fine-tuning"
     #   = a2c.mobilenet_v2_b(img_shape)  # with shallow "fine-tuning"
