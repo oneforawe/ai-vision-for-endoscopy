@@ -140,7 +140,6 @@ input-data/2-processed/F/
 input-data/2-processed/test/
 input-data/2-processed/test_control/
 output/z_old
-output/mobilenet_v2_b/breeder_01/data_D/Run_01_Fail/
 source/configs/
 source/build/examples/
 source/img-processing/Test_cropper.ipynb
