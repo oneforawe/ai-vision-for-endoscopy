@@ -14,18 +14,31 @@ def main():
     eval_root = '../output/offline-eval/'
     data_category = '1-pre-processed'
     #data_category = '2-processed'
-    eval_base = eval_root + data_category + '/'
-    os.makedirs(eval_base, exist_ok=True)
+    class_split = 'by_abnorm'
+    #class_split = 'by_region'
 
     # Input locations:
     # Manually add the desired files to utilize.
     results_paths = []
-    results_paths.append( {'name': 'MNv2a_Cr3', 'filepath' :
-        '../output/mobilenet_v2_a/breeder_01/data_C/Run_03/' +
+    results_paths.append( {'model_short_name' : 'MNv2a',
+        'data_short_name' : 'C',
+        'run' : 1,
+        'filepath' :
+        '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/' +
         'results/output_scores.csv'} )
-    results_paths.append( {'name': 'MNv2a_Dr3', 'filepath' :
-        '../output/mobilenet_v2_a/breeder_01/data_D/Run_03/' +
+    results_paths.append( {'model_short_name' : 'MNv2a',
+        'data_short_name' : 'C',
+        'run' : 2,
+        'filepath' :
+        '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_02/' +
         'results/output_scores.csv'} )
+    results_paths.append( {'model_short_name' : 'Xcp_a',
+        'data_short_name' : 'C',
+        'run' : 1,
+        'filepath' :
+        '../output/train/Xcp_a/1-pre-processed/by_abnorm/data_C/Run_01/' +
+        'results/output_scores.csv'} )
+
 
     for run in results_paths:
         # Read input.
@@ -33,8 +46,12 @@ def main():
         test_set = pd.read_csv(run['filepath']) # dataframe
 
         # Set ultimate output location.
-        plot_run_name = run['name']
-        eval_path = eval_base + f'{plot_run_name}/'
+        mn = run['model_short_name']
+        dn = run['data_short_name']
+        r  = run['run']
+        plot_run_name = f'{mn}{dn}r{r}'
+        eval_path = eval_root + f'{mn}/{data_category}/' + \
+                    f'{class_split}/data_{dn}/Run_{r:02d}/evaluations/'
         os.makedirs(eval_path, exist_ok=True)
 
         # Make data.

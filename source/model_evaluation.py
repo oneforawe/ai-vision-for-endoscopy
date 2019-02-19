@@ -16,7 +16,7 @@ import numpy as np
 
 def make_eval_data(test_set, eval_path, plot_run_name):
     # We want to collect these (for each threshold):
-    eval_names = ['Score Threshold'
+    eval_names = ['Score Threshold',
                   'Measurements (M)',
                   'Confusion Matrix (cm)',
                   'True Pos.s (TP)', 'True Neg.s (TN)',

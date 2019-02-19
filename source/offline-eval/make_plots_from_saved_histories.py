@@ -14,18 +14,31 @@ def main():
     eval_root = '../output/offline-eval/'
     data_category = '1-pre-processed'
     #data_category = '2-processed'
-    eval_base = eval_root + data_category + '/'
-    os.makedirs(eval_base, exist_ok=True)
+    class_split = 'by_abnorm'
+    #class_split = 'by_region'
 
     # Input locations:
     # Manually add the desired files to utilize.
-    histories_paths = []
-    histories_paths.append( {'name': 'MNv2a_Cr3', 'filepath' :
-        '../output/mobilenet_v2_a/breeder_01/data_C/Run_03/' +
-        'for_plots/histories_Run_03.pckl'} )
-    histories_paths.append( {'name': 'MNv2a_Dr3', 'filepath' :
-        '../output/mobilenet_v2_a/breeder_01/data_D/Run_03/' +
-        'for_plots/histories_Run_03.pckl'} )
+    histories_paths = list()
+    histories_paths.append( {'model_short_name' : 'MNv2a',
+        'data_short_name' : 'C',
+        'run' : 1,
+        'filepath' :
+        '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/' +
+        'histories/histories_Run_01.pckl'} )
+    histories_paths.append( {'model_short_name' : 'MNv2a',
+        'data_short_name' : 'C',
+        'run' : 2,
+        'filepath' :
+        '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_02/' +
+        'histories/histories_Run_02.pckl'} )
+    histories_paths.append( {'model_short_name' : 'Xcp_a',
+        'data_short_name' : 'C',
+        'run' : 1,
+        'filepath' :
+        '../output/train/Xcp_a/1-pre-processed/by_abnorm/data_C/Run_01/' +
+        'histories/histories_Run_01.pckl'} )
+
 
     for run in histories_paths:
         # Read input.
@@ -35,8 +48,13 @@ def main():
         file.close()
 
         # Set ultimate output location.
-        plot_run_name = run['name']
-        eval_fig_path = eval_base + f'{plot_run_name}/figures/'
+        mn = run['model_short_name']
+        dn = run['data_short_name']
+        r  = run['run']
+        plot_run_name = f'{mn}{dn}r{r}'
+        eval_path = eval_root + f'{mn}/{data_category}/' + \
+                    f'{class_split}/data_{dn}/Run_{r:02d}/evaluations/'
+        eval_fig_path = eval_path + 'figures/'
         os.makedirs(eval_fig_path, exist_ok=True)
 
         # Make plots.
