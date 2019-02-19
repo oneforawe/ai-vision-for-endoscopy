@@ -79,7 +79,11 @@ def make_eval_data(test_set, eval_path, plot_run_name):
         if PPV is None:
             F1 = None
         else:
-            F1  = 2*PPV*TPR/(PPV+TPR)
+            denominator = PPV+TPR
+            if denominator != 0:
+                F1 = 2*PPV*TPR/(PPV+TPR)
+            else:
+                F1 = None
         test_w_reckoning_choices[f'{thrsh:0.3f}'] = reckonings
         eval_values = [round(thrsh, 3), M,
                        confusion_matrix, TP, FN, FP, FN,

@@ -24,30 +24,48 @@ def main():
         'data_short_name' : 'C',
         'run' : 1,
         'filepath' :
-        '../output/offline-eval/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'+
+        '../output/offline-eval/MNv2a/2-processed/by_abnorm/data_C/Run_01/' +
         'evaluations/MNv2aCr1_eval_metrics.csv'} )
     eval_data_paths.append( {'model_short_name' : 'MNv2a',
         'data_short_name' : 'C',
         'run' : 2,
         'filepath' :
-        '../output/offline-eval/MNv2a/1-pre-processed/by_abnorm/data_C/Run_02/'+
+        '../output/offline-eval/MNv2a/2-processed/by_abnorm/data_C/Run_02/' +
         'evaluations/MNv2aCr2_eval_metrics.csv'} )
+    eval_data_paths.append( {'model_short_name' : 'MNv2a',
+        'data_short_name' : 'D',
+        'run' : 1,
+        'filepath' :
+        '../output/offline-eval/MNv2a/2-processed/by_abnorm/data_D/Run_01/' +
+        'evaluations/MNv2aDr1_eval_metrics.csv'} )
+    eval_data_paths.append( {'model_short_name' : 'MNv2a',
+        'data_short_name' : 'E',
+        'run' : 1,
+        'filepath' :
+        '../output/offline-eval/MNv2a/2-processed/by_abnorm/data_E/Run_01/' +
+        'evaluations/MNv2aEr1_eval_metrics.csv'} )
     eval_data_paths.append( {'model_short_name' : 'Xcp_a',
         'data_short_name' : 'C',
         'run' : 1,
         'filepath' :
-        '../output/offline-eval/Xcp_a/1-pre-processed/by_abnorm/data_C/Run_01/'+
+        '../output/offline-eval/Xcp_a/2-processed/by_abnorm/data_C/Run_01/' +
         'evaluations/Xcp_aCr1_eval_metrics.csv'} )
 
     reckoning_paths = []
-    reckoning_paths.append( {'name': 'MNv2a_Cr1', 'filepath' :
-        '../output/offline-eval/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'+
+    reckoning_paths.append( {'filepath' :
+        '../output/offline-eval/MNv2a/2-processed/by_abnorm/data_C/Run_01/'+
         'evaluations/MNv2aCr1_test_w_reckoning_choices.csv'} )
-    reckoning_paths.append( {'name': 'MNv2a_Cr2', 'filepath' :
-        '../output/offline-eval/MNv2a/1-pre-processed/by_abnorm/data_C/Run_02/'+
+    reckoning_paths.append( {'filepath' :
+        '../output/offline-eval/MNv2a/2-processed/by_abnorm/data_C/Run_02/'+
         'evaluations/MNv2aCr2_test_w_reckoning_choices.csv'} )
-    reckoning_paths.append( {'name': 'Xcp_a_Cr1', 'filepath' :
-        '../output/offline-eval/Xcp_a/1-pre-processed/by_abnorm/data_C/Run_01/'+
+    reckoning_paths.append( {'filepath' :
+        '../output/offline-eval/MNv2a/2-processed/by_abnorm/data_D/Run_01/'+
+        'evaluations/MNv2aDr1_test_w_reckoning_choices.csv'} )
+    reckoning_paths.append( {'filepath' :
+        '../output/offline-eval/MNv2a/2-processed/by_abnorm/data_E/Run_01/'+
+        'evaluations/MNv2aEr1_test_w_reckoning_choices.csv'} )
+    reckoning_paths.append( {'filepath' :
+        '../output/offline-eval/Xcp_a/2-processed/by_abnorm/data_C/Run_01/'+
         'evaluations/Xcp_aCr1_test_w_reckoning_choices.csv'} )
 
 

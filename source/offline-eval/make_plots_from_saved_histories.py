@@ -12,8 +12,8 @@ import eval_figures as eval_figs
 def main():
     # Output location (root):
     eval_root = '../output/offline-eval/'
-    data_category = '1-pre-processed'
-    #data_category = '2-processed'
+    #data_category = '1-pre-processed'
+    data_category = '2-processed'
     class_split = 'by_abnorm'
     #class_split = 'by_region'
 
@@ -24,19 +24,31 @@ def main():
         'data_short_name' : 'C',
         'run' : 1,
         'filepath' :
-        '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/' +
+        '../output/train/MNv2a/2-processed/by_abnorm/data_C/Run_01/' +
         'histories/histories_Run_01.pckl'} )
     histories_paths.append( {'model_short_name' : 'MNv2a',
         'data_short_name' : 'C',
         'run' : 2,
         'filepath' :
-        '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_02/' +
-        'histories/histories_Run_02.pckl'} )
+        '../output/train/MNv2a/2-processed/by_abnorm/data_C/Run_02/' +
+        'histories/histories_Run_0@.pckl'} )
+    histories_paths.append( {'model_short_name' : 'MNv2a',
+        'data_short_name' : 'D',
+        'run' : 1,
+        'filepath' :
+        '../output/train/MNv2a/2-processed/by_abnorm/data_D/Run_01/' +
+        'histories/histories_Run_01.pckl'} )
+    histories_paths.append( {'model_short_name' : 'MNv2a',
+        'data_short_name' : 'E',
+        'run' : 1,
+        'filepath' :
+        '../output/train/MNv2a/2-processed/by_abnorm/data_E/Run_01/' +
+        'histories/histories_Run_01.pckl'} )
     histories_paths.append( {'model_short_name' : 'Xcp_a',
         'data_short_name' : 'C',
         'run' : 1,
         'filepath' :
-        '../output/train/Xcp_a/1-pre-processed/by_abnorm/data_C/Run_01/' +
+        '../output/train/Xcp_a/2-processed/by_abnorm/data_C/Run_01/' +
         'histories/histories_Run_01.pckl'} )
 
 
