@@ -1,0 +1,3 @@
+Score Threshold,False Negatives (FN),False Positives (FP),Confusion Matrix (cm),Precision (PPV),Recall/Sensitivity (TPR),Specificity/Selectivity (TNR),Fallout (FPR),Miss Rate (FNR)
+0.109,0,16,"[[20, 16], [0, 4]]",0.5555555555555556,1.0,0.2,0.8,0.0
+0.5,1,9,"[[19, 9], [1, 11]]",0.6785714285714286,0.95,0.55,0.45,0.05

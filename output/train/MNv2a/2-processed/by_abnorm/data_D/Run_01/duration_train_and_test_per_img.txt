@@ -1,0 +1,6 @@
+Run train-and-test time (average duration per image)
+ = (1732 seconds) / (2000 images)
+ = 0.866 seconds/image.
+
+(2000 images) / (1732 seconds)
+ = 1.1547344110854503 images/second.

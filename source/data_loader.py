@@ -4,19 +4,12 @@
 
 import os
 import glob
-import pickle
 import numpy as np
 import pandas as pd
-import cv2
-import h5py
 from sklearn.utils import shuffle
 
 
-#############
-# Load Data #
-#############
-
-def load_data(path):
+def load_data_2class_abnormality(path):
 
     normalImgFiles   = []
     abnormalImgFiles = []
@@ -36,7 +29,7 @@ def load_data(path):
     dfa['abnormality'] = 1
 
     # Split into train and test sets.
-    # (train will be further split into train and validation using KFold)
+    # (train will be further split into train/learn-validation folds with KFold)
     splitPoint = int(0.8*len(abnormalImgFiles))
     n_train = dfn[:splitPoint]
     n_test  = dfn[splitPoint:]

@@ -21,18 +21,11 @@ from keras.models import Model, model_from_json
 from keras.optimizers import Adam
 from keras.applications.mobilenet_v2 import MobileNetV2
 from keras.applications.xception import Xception
-from keras.layers import Dense, Input, Flatten, \
-                         Dropout, GlobalAveragePooling2D
+from keras.layers import Dense, Input, Flatten, Dropout, GlobalAveragePooling2D
 from keras.layers.normalization import BatchNormalization
 from keras.callbacks import TensorBoard, ModelCheckpoint, \
                             EarlyStopping, ReduceLROnPlateau
 from sklearn import metrics
-import matplotlib
-from matplotlib import pylab, mlab
-from matplotlib import pyplot as plt
-from IPython.core.pylabtools import figsize, getfigs
-import matplotlib.image as mpimg
-from sklearn.utils import shuffle
 
 
 #################
@@ -63,7 +56,7 @@ def mobilenet_v2_a(img_dim):
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_a')
     modelshortname = 'MNv2a'
-    return model, modelshortname
+    return model, modelshortname, base_model.name
 
 # With "fine-tuning" (shallow)
 def mobilenet_v2_b(img_dim):
@@ -90,8 +83,9 @@ def mobilenet_v2_b(img_dim):
     x  = Flatten()(x)                      #
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_b')
-    modelshortname = 'MNv2b'
-    return model, modelshortname
+    model_short_name = 'MNv2b'
+
+    return model, model_short_name, base_model.name
 
 # With "fine-tuning" (deep)
 def mobilenet_v2_c(img_dim):
@@ -119,7 +113,7 @@ def mobilenet_v2_c(img_dim):
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_c')
     modelshortname = 'MNv2c'
-    return model, modelshortname
+    return model, modelshortname, base_model.name
 
 # larger than mobilenet_v2, without "fine-tuning"
 def xception_a(img_dim):
@@ -143,7 +137,7 @@ def xception_a(img_dim):
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='xception_a')
     modelshortname = 'Xcp_a'
-    return model, modelshortname
+    return model, modelshortname, base_model.name
 
 # larger than mobilenet_v2, with "fine-tuning" (shallow)
 def xception_b(img_dim):
@@ -168,7 +162,7 @@ def xception_b(img_dim):
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='xception_a')
     modelshortname = 'Xcp_b'
-    return model, modelshortname
+    return model, modelshortname, base_model.name
 
 
 ################################
@@ -186,7 +180,7 @@ def train_model(input_model, batch_size, epochs, img_size,
     model = input_model
 
     os.makedirs(run_path_+f'chkpts', exist_ok=True)
-    os.makedirs(run_path_+f'tb_logs',exist_ok=True)
+    os.makedirs(run_path_+f'tb_logs', exist_ok=True)
 
     print(f'\n')
     print(f'Training: Run {run_:02d}')
@@ -278,9 +272,9 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         train_steps = len(x_train) / batch_size
         valid_steps = len(x_valid) / batch_size
-        test_steps = len(test) / batch_size
+        test_steps  = len(test) / batch_size
 
-        os.makedirs(run_path_+f'tb_logs/tb_fold_{str(i)}',exist_ok=True)
+        os.makedirs(run_path_+f'tb_logs/tb_fold_{str(i)}', exist_ok=True)
 
         callbacks = [EarlyStopping(monitor='val_loss', patience=3,
                                    verbose=1, min_delta=1e-4),
@@ -289,20 +283,20 @@ def train_model(input_model, batch_size, epochs, img_size,
                                    verbose=1, min_lr=1e-7
                                   ),
                      ModelCheckpoint(filepath =
-                                     run_path_
-                                     +f'chkpts/'
-                                     +f'weights_fold_{str(i)}.hdf5',
+                                     run_path_ +
+                                     f'chkpts/' +
+                                     f'weights_fold_{str(i)}.hdf5',
                                      verbose=1, save_best_only=True,
                                      save_weights_only=True,
                                      mode='auto'
                                     ),
-                     TensorBoard(log_dir = run_path_
-                                           +f'tb_logs/'
-                                           +f'tb_fold_{str(i)}/' )]
+                     TensorBoard(log_dir = run_path_ +
+                                           f'tb_logs/' +
+                                           f'tb_fold_{str(i)}/' )]
 
         model.compile(optimizer=Adam(lr=1e-4),
                       loss='binary_crossentropy',
-                      metrics = ['accuracy'])
+                      metrics=['accuracy'])
 
         # Train and record fold history.
         history = model.fit_generator(train_generator(),
@@ -312,9 +306,9 @@ def train_model(input_model, batch_size, epochs, img_size,
                                       validation_steps=valid_steps)
         histories_.append(history)
 
-        model.load_weights(filepath = run_path_
-                                      +f'chkpts/'
-                                      +f'weights_fold_{str(i)}.hdf5' )
+        model.load_weights(filepath = run_path_ +
+                                      f'chkpts/' +
+                                      f'weights_fold_{str(i)}.hdf5' )
 
         print('Running validation predictions on fold {}'.format(i))
         preds_valid = model.predict_generator(generator=
@@ -335,8 +329,8 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         valid_scores.append(valid_score)
         train_scores.append(train_score)
-        print('Avg Train Score:{0:0.5f}, '
-              +'Val Score:{1:0.5f} after {2:0.5f} folds'.format
+        print('Avg Train Score:{0:0.5f}, ' +
+              'Val Score:{1:0.5f} after {2:0.5f} folds'.format
               (np.mean(train_scores), np.mean(valid_scores), i))
 
         print('Running test predictions with fold {}'.format(i))
@@ -355,17 +349,63 @@ def train_model(input_model, batch_size, epochs, img_size,
 
     # Save
     print('Now saving trained model.')
-    model.save(run_path_+f'chkpts/ModelWhole_trained.hdf5')
-    #model = load_model('my_model.hdf5')
+    model.save(run_path_ + f'chkpts/ModelWhole_trained.hdf5')
+    #model = load_model('my_model.hdf5')        # (to load saved model)
     model_json_string = model.to_json()
-    with open(run_path_+f'chkpts/ModelArch.json', "w") as json_file:
+    with open(run_path_+f'chkpts/ModelArch.json', 'w') as json_file:
         json_file.write(model_json_string)
-    #model = model_from_json(json_string)
-    model.save_weights(run_path_+f'chkpts/ModelWeights_trained.hdf5')
-    #model.load_weights('my_model_weights.h5')
+    #model = model_from_json(json_string)       # (to load architecture)
+    model.save_weights(run_path_ + f'chkpts/ModelWeights_trained.hdf5')
+    #model.load_weights('my_model_weights.h5')  # (to load model weights)
     # compare with last fold weights (should be same)
 
     preds_test /= n_fold
 
     return histories_, preds_test
+
+
+
+###############################
+# Define Inference Procedures #
+###############################
+
+def apply_model(input_model, batch_size, img_size, test, rnd_):
+
+    model = input_model
+
+    print(f'\n')
+    print(f'Inference: Round {rnd_:02d}')
+    print(f'-------------------')
+
+    def test_generator():
+        while True:
+            for start in range(0, len(test), batch_size):
+                x_batch = []
+                end = min(start + batch_size, len(test))
+                test_batch = test[start:end]
+                for filepath in test_batch:
+                    img = cv2.imread(filepath)
+                    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                    img = cv2.resize(img, img_size)
+                    x_batch.append(img)
+                x_batch = np.array(x_batch, np.float32) / 255.
+                yield x_batch
+
+    test_steps  = len(test) / batch_size
+
+    #callbacks = []
+
+    #model.compile(optimizer=Adam(lr=1e-4),
+    #              loss='binary_crossentropy',
+    #              metrics=['accuracy'])
+
+    # Apply model for inference.
+    preds_test = model.predict_generator(generator=
+                                         test_generator(),
+                                         steps=test_steps,
+                                         verbose=1)[:, -1]
+    print('Finished inference!')
+    print('\n')
+
+    return preds_test
 

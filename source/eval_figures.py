@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 # filename: eval_figures.py
 
+import numpy as np
+import pandas as pd
 from matplotlib import pyplot as plt
+from pylab import savefig
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
-from pylab import savefig
-import numpy as np
 import itertools
+import model_evaluation as m_eval
 
 
 def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
@@ -16,7 +18,7 @@ def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
                   ['loss','val_loss','loss','Loss']]
     # [(history key), (history key), (plot label), (filename affix)]
     for plot_this in plot_these:
-        plt.clf()
+        plt.figure()
         for i in range(len(histories)):
             plt.plot(histories[i].history[plot_this[0]],
                      linestyle='solid') # accuracy
@@ -37,8 +39,9 @@ def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
         if plot_this[0]=='loss':
             plt.legend(legend_labels, loc='upper right')
         savefig(eval_fig_path +
-                "{}_{}.png".format(plot_run_name, plot_this[3]),
+                '{}_{}.png'.format(plot_run_name, plot_this[3]),
                 dpi=300, bbox_inches='tight')
+        plt.close()
 
 
 def make_roc_plot(test_set, eval_fig_path, plot_run_name):
@@ -56,10 +59,44 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
     plt.title(f'{plot_run_name} ROC curve')
-    plt.legend(loc="lower right")
+    plt.legend(loc='lower right')
     savefig(eval_fig_path
             +f'{plot_run_name}_ROC_Curve.png',
             dpi=300, bbox_inches='tight')
+    plt.close()
+
+
+def pick_thresh_make_figures(evaluations, test_w_reckoning_choices,
+                             eval_path, eval_fig_path, plot_run_name):
+    # Pick threshold for a specific set of reckonings.
+    # (use thresh=0.5 and another good value, with FN=0 and FP minimized, if
+    #  thresh must be different from 0.5 to achieve that result)
+    thresh = m_eval.pick_threshold(evaluations, eval_path, plot_run_name)
+    evaluations_chosen = \
+        evaluations.loc[evaluations['Score Threshold'] == thresh]
+    test_w_reckonings = test_w_reckoning_choices[['abnormality',
+                                                  'abnormality_pred',
+                                                  f'{thresh:0.3f}']]
+    # CM fig
+    make_eval_metric_figures(test_w_reckonings, thresh,
+                             eval_fig_path, plot_run_name)
+    if thresh != 0.5:
+        # Repeat with thresh=0.5
+        thresh = 0.5
+        evaluations_compare = \
+            evaluations.loc[evaluations['Score Threshold'] == thresh]
+        dataframes = [evaluations_chosen, evaluations_compare]
+        evaluations_chosen = pd.concat(dataframes)
+        test_w_reckonings = test_w_reckoning_choices[['abnormality',
+                                                      'abnormality_pred',
+                                                      f'{thresh:0.3f}']]
+        # CM fig
+        make_eval_metric_figures(test_w_reckonings, thresh,
+                                 eval_fig_path, plot_run_name)
+
+    evaluations_chosen.to_csv(eval_path +
+                              f'{plot_run_name}_eval_' +
+                              f'thresholds_chosen.csv', index=None)
 
 
 def make_eval_metric_figures(test_w_reckonings, thresh,
@@ -68,9 +105,6 @@ def make_eval_metric_figures(test_w_reckonings, thresh,
     # https://scikit-learn.org/
     # stable/auto_examples/model_selection/plot_confusion_matrix.html
     # #sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py
-
-    # Clear current figure
-    plt.clf()
 
     # Should have class_names as input:
     class_names = ['Normal','Abnormal']
@@ -92,7 +126,7 @@ def make_eval_metric_figures(test_w_reckonings, thresh,
     savefig(eval_fig_path
             +f'{plot_run_name}_Confusion_Matrix_T_{thresh:0.3f}.png',
             dpi=150, bbox_inches='tight')
-    plt.clf()
+    plt.close()
 
     # Plot normalized confusion matrix
     plt.figure()
@@ -105,7 +139,7 @@ def make_eval_metric_figures(test_w_reckonings, thresh,
             f'{plot_run_name}_Confusion_Matrix_norm_' +
             f'T_{thresh:0.3f}.png',
             dpi=150, bbox_inches='tight')
-    plt.clf()
+    plt.close()
 
     # Save data file
     test_w_reckonings.to_csv(eval_fig_path +
@@ -134,8 +168,8 @@ def plot_confusion_matrix(cm, classes, normalize=False,
     for i, j in itertools.product(range(cm.shape[0]),
                                   range(cm.shape[1])):
         plt.text(j, i, format(cm[i, j], fmt),
-                 horizontalalignment="center",
-                 color="white" if cm[i, j] > thresh else "black")
+                 horizontalalignment='center',
+                 color='white' if cm[i, j] > thresh else 'black')
 
     plt.ylabel('True label')
     plt.xlabel('Predicted label')

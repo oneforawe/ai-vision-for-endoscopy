@@ -1,0 +1,401 @@
+filepath,abnormality,abnormality_pred
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 13.jpg",1,0.8356857776641846
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0137.jpg,1,0.3876577794551849
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0007.jpg,0,0.011511640390381217
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/2449652 04 Jan 19_1 400.jpg,1,0.0031594021507771685
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0025.jpg,0,0.037232641130685806
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0098.jpg,0,0.6348343849182129
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000007.jpg,0,0.007911098888143897
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000009.jpg,0,0.6817365884780884
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 11.jpg",1,0.8356857776641846
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0059.jpg,1,0.1257090225815773
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000005.jpg,0,0.9917240262031555
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0015.jpg,0,0.05556826684623957
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00012.jpg,1,0.9568041801452637
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0028.jpg,0,0.11917791478335857
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 08.jpg,0,0.3280100852251053
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0062.jpg,0,0.40227630734443665
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/2488865 12 Dec 18_1 0472.jpg,1,0.3846642479300499
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0008.jpg,0,0.6674152553081513
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000007.jpg,0,0.9473818898200989
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0054.jpg,0,0.08202678328379989
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Letter, C Colon AVM (6-13-2018 7-14-27 AM)/Letter, C Colon AVM 35.jpg",1,0.7535768628120423
+../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/4AWmng3300_P1 (11-17-2018 1-24-29 AM)/4AWmng3300_P1 1.jpg,1,0.7533601760864258
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 072.jpg,0,0.2546526715159416
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 032.jpg,1,0.9309332251548768
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 27.jpg,0,0.6576414301991462
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0088.jpg,0,0.5747616529464722
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0037.jpg,0,0.08295551799237728
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 191.jpg",1,0.9095358967781066
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 100.jpg",1,0.8627354383468628
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0029.jpg,0,0.002978850311046699
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 109.jpg",1,0.3729526810348034
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0073.jpg,0,0.03349109059199691
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00025.jpg,1,0.05637573758140206
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/2449652 04 Jan 19_1 022.jpg,1,0.33756807819008827
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 01.jpg",1,0.45015399158000946
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0141.jpg,1,0.7618354916572571
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 23.jpg",1,0.03519276125007309
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000013.jpg,0,0.8582340717315674
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0064.jpg,0,0.09366160407662391
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00011.jpg,1,0.946208143234253
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 01.jpg,0,0.12890085875988005
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0004.jpg,0,0.09148739278316498
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000005.jpg,0,0.8197517037391663
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 073.jpg,1,0.37696569561958315
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 180.jpg",1,0.9095358967781066
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000019.jpg,0,0.09750870428979397
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/2449652 04 Jan 19_1 137.jpg,1,0.022392703383229674
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 21.jpg",1,0.7818951487541199
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0086.jpg,0,0.6097795724868774
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 33.jpg",1,0.8663252770900727
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/ALBU, L Normal IC (4-8-2018 11-18-09 AM)/ALBU, L Normal IC 17.jpg",1,0.1781273279339075
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 106.jpg",1,0.7034889861941338
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/u88MrQ3300___05-48-46___1041854.jpg,1,0.1260098099708557
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000017.jpg,0,0.8535312294960022
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 21.jpg",1,0.03519276125007309
+../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/4AWmng3300_P1 (11-17-2018 1-24-29 AM)/4AWmng3300_P1 10.jpg,1,0.9424196243286133
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 23.jpg,0,0.7055435836315155
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00022.jpg,1,0.37808170169591904
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 22.jpg",1,0.03519276125007309
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 120.jpg",1,0.7014689922332764
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 106.jpg",1,0.47779247611761094
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 25.jpg,0,0.5326231598854065
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/2449652 04 Jan 19_1 020.jpg,1,0.4175132989883423
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0140.jpg,1,0.9749570608139038
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000023.jpg,0,0.38292579650878905
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/2449652 04 Jan 19_1 402.jpg,1,0.009901759761851281
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0011.jpg,0,0.42540269196033476
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000008.jpg,0,0.7883296847343445
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 12.jpg",1,0.02360628587193787
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 17.jpg,0,0.4716160766780376
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000019.jpg,0,0.1620830178260803
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00010.jpg,1,0.6465769827365875
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 052.jpg,1,0.20714332293719054
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 160.jpg",1,0.8991482019424438
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0084.jpg,0,0.7946599245071411
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 042.jpg,0,0.8528057634830475
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 12.jpg",1,0.8356857776641846
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0068.jpg,0,0.08131175041198731
+../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/4AWmng3300_P1 (11-17-2018 1-24-29 AM)/4AWmng3300_P1 7.jpg,1,0.9424196243286133
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 06.jpg,0,0.8983801007270813
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0212.jpg,1,0.05722670922987163
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0079.jpg,0,0.7834518134593964
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/ALBU, L Normal IC (4-8-2018 11-18-09 AM)/ALBU, L Normal IC 01.jpg",1,0.9796378374099731
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0123.jpg,1,0.08943227026611567
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000010.jpg,0,0.9145966291427612
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000014.jpg,0,0.3854221194982529
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00014.jpg,1,0.6168072760105133
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 01.jpg",1,0.02360628587193787
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0077.jpg,0,0.3656822368502617
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000008.jpg,0,0.9913589477539062
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0050.jpg,0,0.11522963158786297
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 16.jpg",1,0.45015399158000946
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000004.jpg,0,0.9736105084419251
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000005.jpg,0,0.34488418102264407
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 62.jpg",1,0.9491114139556884
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0010.jpg,0,0.14642748050391674
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0080.jpg,0,0.1132669359445572
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0126.jpg,1,0.9032354950904846
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Abott, M Cecal (4-7-2018 2-57-55 PM)/Abott, M Cecal 01.jpg",1,0.6609288334846497
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0038.jpg,0,0.023637950606644153
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 067.jpg,1,0.0012925527247716674
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000018.jpg,0,0.04911722857505083
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00017.jpg,1,0.9833043336868286
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0021.jpg,0,0.6795005396008491
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0032.jpg,0,0.017655428685247897
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 170.jpg",1,0.8662935078144074
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0179.jpg,1,0.9774401187896729
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000018.jpg,0,0.3892459750175476
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 43.jpg",1,0.9665676355361938
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 007.jpg,1,0.8438278913497925
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 087.jpg,0,0.8379816889762879
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 07.jpg,0,0.6353561457246542
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/u88MrQ3300___05-49-29___1041941.jpg,1,0.067547707259655
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0089.jpg,0,0.2656085416674614
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0033.jpg,0,0.046377329621464014
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0081.jpg,0,0.03513164091855288
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0027.jpg,0,0.00470833353465423
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000004.jpg,0,0.955374813079834
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0072.jpg,1,0.051748020388185975
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 24.jpg,0,0.45540585070848466
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0093.jpg,0,0.24762392193078994
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0058.jpg,1,0.07200624248944223
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00008.jpg,1,0.13528066575527192
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 047.jpg,0,0.8239904165267944
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros, colon Avm (6-12-2018 10-37-21 PM)/ontiveros, colon Avm 01.jpg",1,0.8897400498390198
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00015.jpg,1,0.8990748167037964
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0003.jpg,0,0.0037451198790222407
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 203.jpg",1,0.9324717402458191
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0041.jpg,0,0.007744556246325374
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0040.jpg,0,0.015600655041635037
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 022.jpg,1,0.7774722397327423
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 04.jpg,0,0.34330707490444184
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 20.jpg",1,0.03519276125007309
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 16.jpg",1,0.02360628587193787
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000012.jpg,0,0.8648958444595337
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 193.jpg",1,0.9324717402458191
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0087.jpg,0,0.006443292436597403
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0018.jpg,0,0.030169896222651003
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 13.jpg",1,0.02360628587193787
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/ALBU, L Normal IC (4-8-2018 11-18-09 AM)/ALBU, L Normal IC 43.jpg",1,0.8705102801322937
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0105.jpg,0,0.5559542030096054
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000015.jpg,0,0.09794008508324623
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0182.jpg,1,0.7674716770648956
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/nguyen,x AVM colon (6-12-2018 7-58-01 PM)/nguyen,x AVM colon 18.jpg",1,0.9781556367874146
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 082.jpg,0,0.7357108771800995
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 164.jpg",1,0.8662935078144074
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000024.jpg,0,0.7164607048034668
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 179.jpg",1,0.9095358967781066
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 140.jpg",1,0.4338966339826584
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/2449652 04 Jan 19_1 136.jpg,1,0.03892508950084448
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000011.jpg,0,0.04092736011371016
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 150.jpg",1,0.8991482019424438
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000018.jpg,0,0.6161451458930969
+../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/4AWmng3300_P2 (11-17-2018 1-24-53 AM)/4AWmng3300_P2 7.jpg,1,0.14997143000364305
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/2449652 04 Jan 19_1 403.jpg,1,0.2583696201443672
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 19.jpg",1,0.7818951487541199
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 127.jpg",1,0.7531471326947212
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00026.jpg,1,0.08680325483437627
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 007.jpg,0,0.4851113338023424
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 12.jpg,0,0.6114233255386352
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00033.jpg,1,0.9771212339401245
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0083.jpg,0,0.18657998740673065
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0103.jpg,0,0.3816733151674271
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 05.jpg,0,0.8770986676216126
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0031.jpg,0,0.009863931185100228
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 077.jpg,0,0.7885767370462418
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0094.jpg,0,0.9181130290031433
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros, colon Avm (6-12-2018 10-37-21 PM)/ontiveros, colon Avm 18.jpg",1,0.9867175817489624
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0181.jpg,1,0.41653993129730227
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000020.jpg,0,0.5222172319889069
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/2488865 12 Dec 18_1 0475.jpg,1,0.7153631925582886
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/2449652 04 Jan 19_1 021.jpg,1,0.06788009570445866
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0034.jpg,0,0.009399089380167425
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0035.jpg,0,0.09128525285050273
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 30.jpg,0,0.679159301519394
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0074.jpg,0,0.27666478157043456
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 110.jpg",1,0.47779247611761094
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 67.jpg",1,0.868247640132904
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0090.jpg,0,0.38510200530290606
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 057.jpg,0,0.7164175748825073
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0030.jpg,0,0.38449146449565885
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0061.jpg,0,0.4570743590593338
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/u88MrQ3300___07-18-41___1052646.jpg,1,0.9709975600242615
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0070.jpg,0,0.5156471252441406
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0102.jpg,1,0.1980679463595152
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00016.jpg,1,0.7926091551780701
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000015.jpg,0,0.35080532133579256
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 02.jpg,0,0.12890085875988005
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/2449652 04 Jan 19_1 399.jpg,1,0.10074049644172192
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 20.jpg",1,0.7818951487541199
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 122.jpg",1,0.4599051132798195
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 15.jpg",1,0.45015399158000946
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 10.jpg,0,0.9715513110160827
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 20.jpg,0,0.4975466638803482
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 13.jpg,0,0.7910317212343216
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00021.jpg,1,0.7831503033638001
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000017.jpg,0,0.4090998530387878
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0095.jpg,0,0.6753905594348908
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 052.jpg,0,0.7599469810724259
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 22.jpg,0,0.7212389171123504
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 022.jpg,0,0.014304943289607764
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000016.jpg,0,0.2729812294244766
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 001.jpg,1,0.966962456703186
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 14.jpg,0,0.479542550444603
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 18.jpg",1,0.7818951487541199
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000002.jpg,0,0.5676453292369843
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00019.jpg,1,0.6966724097728729
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 012.jpg,0,0.28662307783961294
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000001.jpg,0,0.22735806070268155
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0043.jpg,0,0.8230884432792663
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000019.jpg,0,0.5457667291164399
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00024.jpg,1,0.0767799761146307
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0066.jpg,0,0.5078682005405426
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 057.jpg,1,0.8106405377388001
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 11.jpg",1,0.9775987148284913
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 03.jpg,0,0.1032415971159935
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0013.jpg,0,0.003050278147566132
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 17.jpg",1,0.45015399158000946
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Abott, M Cecal (4-7-2018 2-57-55 PM)/Abott, M Cecal 30.jpg",1,0.8020861625671387
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Abott, M Cecal (4-7-2018 2-57-55 PM)/Abott, M Cecal 61.jpg",1,0.8219319939613342
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00023.jpg,1,0.1190625175833702
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000021.jpg,0,0.4050308853387833
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0049.jpg,0,0.2871974170207977
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00027.jpg,1,0.5747306555509567
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0213.jpg,1,0.004240264114923775
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 037.jpg,0,0.8906548380851745
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000009.jpg,0,0.9595576405525208
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Letter, C Colon AVM (6-13-2018 7-14-27 AM)/Letter, C Colon AVM 01.jpg",1,0.3593387812376022
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 110.jpg",1,0.3729526810348034
+../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/4AWmng3300_P2 (11-17-2018 1-24-53 AM)/4AWmng3300_P2 2.jpg,1,0.7524267733097076
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 48.jpg",1,0.8495518088340759
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 26.jpg,0,0.3934351779520512
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00013.jpg,1,0.9903127074241638
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 13.jpg",1,0.9775987148284913
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 135.jpg",1,0.7524436265230179
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000012.jpg,0,0.055072813481092456
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0016.jpg,0,0.5967245846986771
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 037.jpg,1,0.9790001630783081
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00020.jpg,1,0.5510489761829376
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0023.jpg,0,0.007032836577855051
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 25.jpg",1,0.03519276125007309
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0024.jpg,0,0.005159133882261813
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Abott, M Cecal (4-7-2018 2-57-55 PM)/Abott, M Cecal 17.jpg",1,0.985996413230896
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0060.jpg,1,0.1735536687076092
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000013.jpg,0,0.6272226095199585
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0096.jpg,0,0.8057563662528991
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0055.jpg,0,0.04663242218084633
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 012.jpg,1,0.5220717906951904
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0046.jpg,0,0.03628146201372147
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0214.jpg,1,0.4285456657409668
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 017.jpg,0,0.3498127110302448
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/ALBU, L Normal IC (4-8-2018 11-18-09 AM)/ALBU, L Normal IC 30.jpg",1,0.7968609660863877
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000012.jpg,0,0.7130364656448365
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 18.jpg",1,0.03519276125007309
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 135.jpg",1,0.18105823122896253
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000007.jpg,0,0.799797260761261
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0082.jpg,0,0.029070497211068868
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 130.jpg",1,0.4599051132798195
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 027.jpg,1,0.891538655757904
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 29.jpg,0,0.023712589312344788
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0057.jpg,1,0.10515385493636131
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 100.jpg",1,0.7793133020401001
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0056.jpg,1,0.6006516516208649
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0039.jpg,0,0.8026927292346955
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 027.jpg,0,0.026702768355607986
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000003.jpg,0,0.8604405283927917
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 130.jpg",1,0.7531471326947212
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000001.jpg,0,0.9526498556137085
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0139.jpg,1,0.5544185668230057
+../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/4AWmng3300_P1 (11-17-2018 1-24-29 AM)/4AWmng3300_P1 2.jpg,1,0.7533601760864258
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0012.jpg,0,0.11687289774417878
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 11.jpg",1,0.02360628587193787
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000013.jpg,0,0.1150431364774704
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00005.jpg,1,0.0010258929447445552
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0051.jpg,0,0.34773522019386294
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0048.jpg,0,0.038550027180463076
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000022.jpg,0,0.5107417643070221
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0042.jpg,0,0.012495404854416848
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0045.jpg,0,0.2086376816034317
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 01.jpg",1,0.9775987148284913
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 14.jpg",1,0.45015399158000946
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0065.jpg,0,0.5923602402210235
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 17.jpg",1,0.03519276125007309
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0044.jpg,0,0.03898192718625069
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 16.jpg,0,0.606743011623621
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000006.jpg,0,0.8644122660160065
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/2488865 12 Dec 18_1 0471.jpg,1,0.11888714171946049
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00007.jpg,1,0.0013823691004290594
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000009.jpg,0,0.08917916938662529
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/u88MrQ3300___07-28-34___1053833.jpg,1,0.9806914329528809
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000011.jpg,0,0.9282969951629638
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0052.jpg,0,0.13231924623250962
+../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/4AWmng3300_P2 (11-17-2018 1-24-53 AM)/4AWmng3300_P2 10.jpg,1,0.14997143000364305
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0186.jpg,1,0.5983309388160706
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000004.jpg,0,0.13814914375543594
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 18.jpg,0,0.7742298483848572
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0211.jpg,1,0.7579204320907593
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 19.jpg,0,0.8377331078052521
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/2449652 04 Jan 19_1 395.jpg,1,0.35632244646549227
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 24.jpg",1,0.03519276125007309
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0006.jpg,0,0.27892672419548037
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000002.jpg,0,0.9731611013412476
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0104.jpg,0,0.8610373854637146
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000016.jpg,0,0.9010533690452576
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 1 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 1 35.jpg",1,0.7825758635997773
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0009.jpg,0,0.3277625232934952
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 120.jpg",1,0.3729526810348034
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000010.jpg,0,0.5629688382148743
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0078.jpg,0,0.8358910739421844
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000014.jpg,0,0.25786236226558684
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0020.jpg,1,0.03456262378022075
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000008.jpg,0,0.11803516075015068
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000001.jpg,0,0.9037354588508606
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000014.jpg,0,0.1868911162018776
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 042.jpg,1,0.8802651166915894
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00004.jpg,1,0.006492018995777471
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0125.jpg,1,0.5426066666841507
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00006.jpg,1,0.0026835006094188428
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000015.jpg,0,0.45796880722045896
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 13.jpg",1,0.45015399158000946
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00028.jpg,1,0.4455380454659462
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/1376916 20 Dec 18_1 0625.jpg,1,0.03275697454810143
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Letter, C Colon AVM 1 (6-13-2018 7-14-27 AM)/Letter, C Colon AVM 1 01.jpg",1,0.8140996396541595
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00031.jpg,1,0.8012195467948914
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 26.jpg",1,0.03519276125007309
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 11.jpg,0,0.977444052696228
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000002.jpg,0,0.9324290156364441
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 130.jpg",1,0.7014689922332764
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 047.jpg,1,0.711091810464859
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 77.jpg",1,0.5814082220196723
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000010.jpg,0,0.8993635177612305
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 017.jpg,1,0.7956272721290588
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000011.jpg,0,0.8847552537918091
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0076.jpg,0,0.10197240933775902
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0099.jpg,0,0.0006774027162464336
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 097.jpg,1,0.026505054719746114
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/nguyen,x AVM colon (6-12-2018 7-58-01 PM)/nguyen,x AVM colon 01.jpg",1,0.9131766796112061
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 100.jpg",1,0.23948894664645196
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Letter, C Colon AVM 1 (6-13-2018 7-14-27 AM)/Letter, C Colon AVM 1 18.jpg",1,0.918183159828186
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/2488865 12 Dec 18_1 0473.jpg,1,0.9214951634407044
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 1 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 1 23.jpg",1,0.7205836862325669
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0022.jpg,0,0.026433589588850736
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0063.jpg,0,0.23021046295762063
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0184.jpg,1,0.7685105443000794
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0053.jpg,0,0.637332558631897
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0069.jpg,0,0.26779913157224655
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0097.jpg,0,0.34589976668357847
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/HSU TONY (1758456) 28 Jun 18_1/output_000006.jpg,0,0.990772819519043
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 1 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 1 01.jpg",1,0.8294941306114196
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 092.jpg,0,0.8597866475582123
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0014.jpg,0,0.029258530214428903
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0085.jpg,0,0.6228072166442871
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 062.jpg,0,0.3183149993419647
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 085.jpg,1,0.3662956222891808
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0047.jpg,0,0.007196821225807071
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 19.jpg",1,0.03519276125007309
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 21.jpg,0,0.3471685737371445
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00018.jpg,1,0.7296171665191651
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0183.jpg,1,0.07782120853662491
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 079.jpg,1,0.038270959304645656
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0005.jpg,0,0.5618993163108825
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/ontiveros,a colon avm (6-12-2018 10-37-53 PM)/ontiveros,a colon avm 12.jpg",1,0.9775987148284913
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/2488865 12 Dec 18_1 0474.jpg,1,0.9413992643356324
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-13 PM)/HT7lkA3300_P1 091.jpg,1,0.19851267486810684
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 032.jpg,0,0.7787968873977661
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0017.jpg,0,0.38862469643354414
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Alonzo, L ICV (4-8-2018 11-46-48 AM)/Alonzo, L ICV 01.jpg",1,0.8356857776641846
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/HT7lkA3300_P1 (11-16-2018 9-10-56 PM)/HT7lkA3300_P1 067.jpg,0,0.41596118807792665
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 15.jpg",1,0.02360628587193787
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 48.jpg",1,0.8213362872600556
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 135.jpg",1,0.4338966339826584
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 91.jpg",1,0.23948894664645196
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 09.jpg,0,0.5877633392810822
+../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/4AWmng3300_P2 (11-17-2018 1-24-53 AM)/4AWmng3300_P2 1.jpg,1,0.7524267733097076
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00029.jpg,1,0.40685705542564393
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 15.jpg,0,0.7764253497123719
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00030.jpg,1,0.6473789751529694
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000016.jpg,0,0.15178030282258986
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/0sb0uQ3300_P1/output_000003.jpg,0,0.9830016493797302
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Haddad, S Colon AVM 2 (6-13-2018 7-14-27 AM)/Haddad, S Colon AVM 2 11.jpg",1,0.45015399158000946
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 14.jpg",1,0.02360628587193787
+../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/u88MrQ3300___07-18-37___1052639.jpg,1,0.659209543466568
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0180.jpg,1,0.7672426015138626
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0036.jpg,0,0.034572009555995466
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00009.jpg,1,0.05553095564246178
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0178.jpg,1,0.8468179881572724
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000006.jpg,0,0.05194844931829721
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Polypoid/1376916 20 Dec 18_1 0185.jpg,1,0.32524242997169495
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00032.jpg,1,0.7830381631851197
+"../input-data/2-processed/D/Abnormal/Colon/ICV/jpgs/Aguilar,G Cecal (4-7-2018 4-45-22 PM)/Aguilar,G Cecal 27.jpg",1,0.03519276125007309
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0067.jpg,0,0.24214781522750856
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0075.jpg,0,0.5170989543199539
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000017.jpg,0,0.13583734929561614
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0026.jpg,0,0.1539255328476429
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Blood/9092882 02 Jan 19_1 00003.jpg,1,0.05573165686801076
+../input-data/2-processed/D/Normal/Colon/1_15_19/Normal/1376916 20 Dec 18_1 0071.jpg,0,0.11003134325146675
+"../input-data/2-processed/D/Abnormal/Colon/AVM/jpeg/Letter, C Colon AVM (6-13-2018 7-14-27 AM)/Letter, C Colon AVM 25.jpg",1,0.5897468760609627
+../input-data/2-processed/D/Normal/Colon/Normal_v2/jpgs/uVXayA3300_P1/output_000003.jpg,0,0.5463916331529617
+../input-data/2-processed/D/Abnormal/Colon/1_15_19/Mucosal/2449652 04 Jan 19_1 134.jpg,1,0.004435748269315809
+../input-data/2-processed/D/Normal/Colon/Normal/jpgs/misc/u88MrQ3300_P4 28.jpg,0,0.869158947467804
