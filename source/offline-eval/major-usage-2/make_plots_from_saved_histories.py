@@ -31,7 +31,7 @@ def main():
         'run' : 2,
         'filepath' :
         '../output/train/MNv2a/2-processed/by_abnorm/data_C/Run_02/' +
-        'histories/histories_Run_0@.pckl'} )
+        'histories/histories_Run_02.pckl'} )
     histories_paths.append( {'model_short_name' : 'MNv2a',
         'data_short_name' : 'D',
         'run' : 1,

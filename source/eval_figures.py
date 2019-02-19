@@ -18,7 +18,7 @@ def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
                   ['loss','val_loss','loss','Loss']]
     # [(history key), (history key), (plot label), (filename affix)]
     for plot_this in plot_these:
-        plt.clf()
+        plt.figure()
         for i in range(len(histories)):
             plt.plot(histories[i].history[plot_this[0]],
                      linestyle='solid') # accuracy
@@ -41,6 +41,7 @@ def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
         savefig(eval_fig_path +
                 '{}_{}.png'.format(plot_run_name, plot_this[3]),
                 dpi=300, bbox_inches='tight')
+        plt.close()
 
 
 def make_roc_plot(test_set, eval_fig_path, plot_run_name):
@@ -62,6 +63,7 @@ def make_roc_plot(test_set, eval_fig_path, plot_run_name):
     savefig(eval_fig_path
             +f'{plot_run_name}_ROC_Curve.png',
             dpi=300, bbox_inches='tight')
+    plt.close()
 
 
 def pick_thresh_make_figures(evaluations, test_w_reckoning_choices,
@@ -104,9 +106,6 @@ def make_eval_metric_figures(test_w_reckonings, thresh,
     # stable/auto_examples/model_selection/plot_confusion_matrix.html
     # #sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py
 
-    # Clear current figure
-    plt.clf()
-
     # Should have class_names as input:
     class_names = ['Normal','Abnormal']
 
@@ -127,7 +126,7 @@ def make_eval_metric_figures(test_w_reckonings, thresh,
     savefig(eval_fig_path
             +f'{plot_run_name}_Confusion_Matrix_T_{thresh:0.3f}.png',
             dpi=150, bbox_inches='tight')
-    plt.clf()
+    plt.close()
 
     # Plot normalized confusion matrix
     plt.figure()
@@ -140,7 +139,7 @@ def make_eval_metric_figures(test_w_reckonings, thresh,
             f'{plot_run_name}_Confusion_Matrix_norm_' +
             f'T_{thresh:0.3f}.png',
             dpi=150, bbox_inches='tight')
-    plt.clf()
+    plt.close()
 
     # Save data file
     test_w_reckonings.to_csv(eval_fig_path +

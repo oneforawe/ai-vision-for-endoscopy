@@ -12,8 +12,8 @@ import eval_figures as eval_figs
 def main():
     # Output location (root):
     eval_root = '../output/offline-eval/'
-    data_category = '1-pre-processed'
-    #data_category = '2-processed'
+    #data_category = '1-pre-processed'
+    data_category = '2-processed'
     class_split = 'by_abnorm'
     #class_split = 'by_region'
 
