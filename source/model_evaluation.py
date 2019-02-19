@@ -91,8 +91,9 @@ def make_eval_data(test_set, eval_path, plot_run_name):
     # Save to csv
     evaluations.to_csv(eval_path
                        +f'{plot_run_name}_eval_metrics.csv', index=None)
-    test_w_reckoning_choices.to_csv(eval_path +
-        f'{plot_run_name}_test_w_reckoning_choices.csv', index=None)
+    # A bit excessive to save (can re-enable when wanted):
+    #test_w_reckoning_choices.to_csv(eval_path +
+    #    f'{plot_run_name}_test_w_reckoning_choices.csv', index=None)
 
     return test_w_reckoning_choices, evaluations
 
