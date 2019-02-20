@@ -1,0 +1,3 @@
+
+I placed this file here by hand to prevent over-writing this (currently) partial training run.
+
