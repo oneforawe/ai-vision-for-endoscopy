@@ -32,17 +32,17 @@ def main():
     #data_name = 'data_B'
     #data_short_name = 'B'
     # C: 200 images. (Abnormal=Blood)
-    data_path = data_base+'C'
-    data_name = 'data_C'
-    data_short_name = 'C'
+    #data_path = data_base+'C'
+    #data_name = 'data_C'
+    #data_short_name = 'C'
     # D: 2000 images.
     #data_path = data_base+'D'
     #data_name = 'data_D'
     #data_short_name = 'D'
     # E: 10000 images.
-    #data_path = data_base+'E'
-    #data_name = 'data_E'
-    #data_short_name = 'E'
+    data_path = data_base+'E'
+    data_name = 'data_E'
+    data_short_name = 'E'
     # F: 138062 images. Full data (minus vids) set in modified file structure.
     #data_path = data_base+'F'
     #data_name = 'data_F'
@@ -81,11 +81,12 @@ def main():
 
     # Load saved (trained) model from a particular source (run)
     source_run_path = \
-        '../output/train/MNv2a/2-processed/by_abnorm/data_C/Run_01/'
+        '../output/train/MNv2a/2-processed/by_abnorm/data_E/Run_01/'
     #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
     #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_D/Run_01/' #maybe
     #   '../output/train/MNv2a/2-processed/by_abnorm/data_C/Run_01/'
     #   '../output/train/MNv2a/2-processed/by_abnorm/data_D/Run_01/'
+    #   '../output/train/MNv2a/2-processed/by_abnorm/data_E/Run_01/'
     #   '../output/'
     #   '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
     model_short_name = \
@@ -106,9 +107,10 @@ def main():
                                 f'{data_category}/{class_split}/{data_name}/'
 
     # Prepare for inference (done in batches)
-    batch_size = 4  # C
+    #batch_size = 4  # C
     #batch_size = 20 # D (mobilenet)
     #batch_size = 10 # D (xception) #Got error (fixed by reducing to 10)
+    batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
     #batch_size = 50 # F
 
     # Find this round's number ("inference round #..")

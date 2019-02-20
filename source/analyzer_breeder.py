@@ -2,7 +2,6 @@
 # filename: analyzer_breeder.py
 
 import os
-import pickle
 import cv2
 import data_loader as dl
 import analyzers_2_categories as a2c
@@ -11,6 +10,7 @@ import model_evaluation as m_eval
 import eval_figures as eval_figs
 import datetime
 import timer
+import pickle
 
 
 def main():
