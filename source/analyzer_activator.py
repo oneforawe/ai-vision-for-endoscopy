@@ -128,8 +128,8 @@ def main():
     # Record source reference
     source_ref_file_path = rnd_path + f'source_of_trained_model.txt'
     file = open(source_ref_file_path, 'w')
-        file.write(f'Source of trained model (source_run_file_path) = ' + \
-                   f'{source_run_file_path}\n')
+    file.write(f'Source of trained model (source_run_file_path) = ' + \
+               f'{source_run_file_path}\n')
     file.close()
 
     # Apply trained model: infer
