@@ -1,0 +1,3 @@
+Score Threshold,Measurements (M),Confusion Matrix (cm),True Pos.s (TP),True Neg.s (TN),False Pos.s (FP),*False Neg.s* (FN),Positives (P),Negatives (N),Meas.Pos.s (MP),Meas.Neg.s (MN),Correct Meas.s (CM),Incorrect Meas.s (IM),Accuracy (ACC),Precision (PPV),Recall/Sensitivity (TPR),Specificity/Selectivity (TNR),Fallout (FPR),Miss Rate (FNR),F1 Score (F1)
+0.0,2910,"[[887, 2023], [0, 0]]",887,0,2023,0,887,2023,2910,0,887,2023,0.3048109965635739,0.3048109965635739,1.0,0.0,1.0,0.0,0.4672109560179089
+0.5,2910,"[[368, 743], [519, 1280]]",368,519,743,519,887,2023,1111,1799,1648,1262,0.5663230240549828,0.33123312331233123,0.41488162344983087,0.6327236777063767,0.36727632229362334,0.5851183765501691,0.3683683683683684

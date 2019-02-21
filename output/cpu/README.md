@@ -1,0 +1,1 @@
+This folder is mainly for comparisons of training and inference times (durations) between the cases of being run on a cpu (my laptop) versus a gpu (the AWS EC2 instance, which is the default for the other folders).
