@@ -36,13 +36,13 @@ def main():
     #data_name = 'data_C'
     #data_short_name = 'C'
     # D: 2000 images.
-    #data_path = data_base+'D'
-    #data_name = 'data_D'
-    #data_short_name = 'D'
+    data_path = data_base+'D'
+    data_name = 'data_D'
+    data_short_name = 'D'
     # E: 10000 images.
-    data_path = data_base+'E'
-    data_name = 'data_E'
-    data_short_name = 'E'
+    #data_path = data_base+'E'
+    #data_name = 'data_E'
+    #data_short_name = 'E'
     # F: 138062 images. Full data (minus vids) set in modified file structure.
     #data_path = data_base+'F'
     #data_name = 'data_F'
@@ -81,7 +81,7 @@ def main():
 
     # Load saved (trained) model from a particular source (run)
     source_run_path = \
-        '../output/train/Xcp_a/2-processed/by_abnorm/data_E/Run_02/'
+        '../output/train/Xcp_a/2-processed/by_abnorm/data_D/Run_01/'
     #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
     #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_D/Run_01/' #maybe
     #   '../output/train/MNv2a/2-processed/by_abnorm/data_C/Run_01/'
@@ -113,8 +113,8 @@ def main():
     # Prepare for inference (done in batches)
     #batch_size = 4  # C
     #batch_size = 20 # D (mobilenet)
-    #batch_size = 10 # D (xception) #Got error (fixed by reducing to 10)
-    batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
+    batch_size = 10 # D (xception) #Got error (fixed by reducing to 10)
+    #batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
     #batch_size = 50 # F
 
     # Find this round's number ("inference round #..")
@@ -124,6 +124,13 @@ def main():
         rnd += 1
     rnd_path = output_base + f'Round_{rnd:02d}/'
     os.makedirs(rnd_path, exist_ok=True)
+
+    # Record source reference
+    source_ref_file_path = rnd_path + f'source_of_trained_model.txt'
+    file = open(source_ref_file_path, 'w')
+        file.write(f'Source of trained model (source_run_file_path) = ' + \
+                   f'{source_run_file_path}\n')
+    file.close()
 
     # Apply trained model: infer
     inf_start_time = datetime.datetime.now()
@@ -150,7 +157,6 @@ def main():
                f'({tot_num_imgs} images) / ({inf_tot_sec} seconds)\n = ' +
                f'{inf_imgs_per_sec} images/second.\n')
     file.close()
-
 
 
     #############################
