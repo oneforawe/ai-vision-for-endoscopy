@@ -140,12 +140,18 @@ input-data/2-processed/F/
 input-data/2-processed/test/
 input-data/2-processed/test_control/
 output/z_old
-output/mobilenet_v2_b/breeder_01/data_D/Run_01_Fail/
 source/configs/
 source/build/examples/
 source/img-processing/Test_cropper.ipynb
 source/img-processing/Test/
 source/img-processing/1376916 20 Dec 18_1 0088.jpg
+source/img-processing/1376916 20 Dec 18_1 001.jpg
+source/img-processing/img_crop_n_mask_example.py
+source/img-processing/example_orig.jpg
+source/img-processing/example.jpg
+source/img-processing/example_cropped.jpg
+source/img-processing/example_crop_n_masked_green.jpg
+source/img-processing/example_crop_n_masked_black.jpg
 source/img-processing/img_cropper_old1.py
 source/img-processing/img_cropper_old2.py
 tests

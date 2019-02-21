@@ -2,7 +2,6 @@
 # filename: analyzer_breeder.py
 
 import os
-import pickle
 import cv2
 import data_loader as dl
 import analyzers_2_categories as a2c
@@ -11,6 +10,7 @@ import model_evaluation as m_eval
 import eval_figures as eval_figs
 import datetime
 import timer
+import pickle
 
 
 def main():
@@ -37,13 +37,13 @@ def main():
     #data_name = 'data_C'
     #data_short_name = 'C'
     # D: 2000 images.
-    data_path = data_base+'D'
-    data_name = 'data_D'
-    data_short_name = 'D'
+    #data_path = data_base+'D'
+    #data_name = 'data_D'
+    #data_short_name = 'D'
     # E: 10000 images.
-    #data_path = data_base+'E'
-    #data_name = 'data_E'
-    #data_short_name = 'E'
+    data_path = data_base+'E'
+    data_name = 'data_E'
+    data_short_name = 'E'
     # F: 138062 images. Full data (minus vids) set in modified file structure.
     #data_path = data_base+'F'
     #data_name = 'data_F'
@@ -100,8 +100,8 @@ def main():
     # Prepare for training
     #batch_size = 4  # C
     #batch_size = 20 # D (mobilenet)
-    batch_size = 10 # D (xception) #Got error (fixed by reducing to 10)
-    #batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
+    #batch_size = 10 # D (xception) #Got error (fixed by reducing to 10)
+    batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
     #batch_size = 100 # F
     epochs = 50
     #n_fold = 4 # C
