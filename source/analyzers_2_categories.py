@@ -139,7 +139,9 @@ def mobilenet_v2_d(img_dim):
     x  = Flatten()(x)                      #
     #x  = Dense(7, kernel_regularizer=regularizers.l2(0.01),
     #              activity_regularizer=regularizers.l1(0.01))(x)
-    x  = Dense( 7, kernel_regularizer=regularizers.l1_l2(l1=0.01, l2=0.01) )(x)
+    #x  = Dense( 7, kernel_regularizer=regularizers.l1_l2(l1=0.01, l2=0.01) )(x)
+    x  = Dense(7, kernel_regularizer=regularizers.l1_l2(l1=0.01, l2=0.01),
+                  activity_regularizer=regularizers.l1_l2(l1=0.01, l2=0.01))(x)
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_a')
     modelshortname = 'MNv2d'
