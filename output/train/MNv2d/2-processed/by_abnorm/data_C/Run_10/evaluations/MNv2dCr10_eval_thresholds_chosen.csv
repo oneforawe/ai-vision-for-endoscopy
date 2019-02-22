@@ -1,0 +1,2 @@
+Score Threshold,Measurements (M),Confusion Matrix (cm),True Pos.s (TP),True Neg.s (TN),False Pos.s (FP),*False Neg.s* (FN),Positives (P),Negatives (N),Meas.Pos.s (MP),Meas.Neg.s (MN),Correct Meas.s (CM),Incorrect Meas.s (IM),Accuracy (ACC),Precision (PPV),Recall/Sensitivity (TPR),Specificity/Selectivity (TNR),Fallout (FPR),Miss Rate (FNR),F1 Score (F1)
+0.5,40,"[[20, 2], [0, 18]]",20,0,2,0,20,20,22,18,38,2,0.95,0.9090909090909091,1.0,0.9,0.1,0.0,0.9523809523809523
