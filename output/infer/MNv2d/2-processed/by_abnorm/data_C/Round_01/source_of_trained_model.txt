@@ -1,0 +1,1 @@
+Source of trained model (source_run_file_path) = ../output/train/MNv2d/2-processed/by_abnorm/data_C/Run_01/chkpts/ModelWhole_trained.hdf5

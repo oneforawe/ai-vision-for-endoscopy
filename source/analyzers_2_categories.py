@@ -17,6 +17,7 @@ import cv2
 import h5py
 import tensorflow as tf
 import keras
+from keras import regularizers
 from keras.models import Model, model_from_json
 from keras.optimizers import Adam
 from keras.applications.mobilenet_v2 import MobileNetV2
@@ -113,6 +114,34 @@ def mobilenet_v2_c(img_dim):
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_c')
     modelshortname = 'MNv2c'
+    return model, modelshortname, base_model.name
+
+# Without "fine-tuning". Experimental network using l1, l2 regularization.
+def mobilenet_v2_d(img_dim):
+    # base network to be built around:
+    base_model = MobileNetV2(input_shape=None,
+                             #input_shape=img_dim,
+                             alpha=1.0,
+                             depth_multiplier=1,
+                             include_top=False,
+                             weights='imagenet',
+                             input_tensor=None,
+                             pooling=None
+                             #classes=1000
+                            )
+    for layer in base_model.layers:
+        layer.trainable = False
+
+    xi = Input(shape=img_dim)              # input tensor
+    x  = BatchNormalization()(xi)          # next layer
+    x  = base_model(x)                     # Each x on right refers to
+    x  = Dropout(0.5)(x)                   #  previous x on the left.
+    x  = Flatten()(x)                      #
+    x  = Dense(50, kernel_regularizer=regularizers.l2(0.01),
+                   activity_regularizer=regularizers.l1(0.01))(x)
+    xo = Dense(1, activation='sigmoid')(x) # output tensor
+    model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_a')
+    modelshortname = 'MNv2d'
     return model, modelshortname, base_model.name
 
 # larger than mobilenet_v2, without "fine-tuning"
