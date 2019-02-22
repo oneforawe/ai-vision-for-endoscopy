@@ -1,0 +1,2 @@
+x  = Dense(7, kernel_regularizer=regularizers.l2(0.01),
+              activity_regularizer=regularizers.l1(0.01))(x)

@@ -137,8 +137,8 @@ def mobilenet_v2_d(img_dim):
     x  = base_model(x)                     # Each x on right refers to
     x  = Dropout(0.5)(x)                   #  previous x on the left.
     x  = Flatten()(x)                      #
-    x  = Dense(7, kernel_regularizer=regularizers.l2(0.002),
-                  activity_regularizer=regularizers.l1(0.05))(x)
+    x  = Dense(7, kernel_regularizer=regularizers.l2(0.05),
+                  activity_regularizer=regularizers.l1(0.002))(x)
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_a')
     modelshortname = 'MNv2d'
@@ -358,9 +358,10 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         valid_scores.append(valid_score)
         train_scores.append(train_score)
-        print('Avg Train Score:{0:0.5f}, ' +
-              'Val Score:{1:0.5f} after {2:0.5f} folds'.format
-              (np.mean(train_scores), np.mean(valid_scores), i))
+        print('Avg Train Score:{0:0.5f}, '.format
+              (np.mean(train_scores)) +
+              'Val Score:{0:0.5f} after {1:0.5f} folds'.format
+              (np.mean(valid_scores), i))
 
         print('Running test predictions with fold {}'.format(i))
 
