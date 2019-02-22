@@ -138,10 +138,10 @@ def mobilenet_v2_d(img_dim):
     x  = Dropout(0.5)(x)                   #  previous x on the left.
     x  = Flatten()(x)                      #
     x  = Dense(10, kernel_regularizer=regularizers.l2(0.01),
-                   activity_regularizer=regularizers.l1(0.01)))
+                   activity_regularizer=regularizers.l1(0.01))(x)
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_a')
-    modelshortname = 'MNv2a'
+    modelshortname = 'MNv2d'
     return model, modelshortname, base_model.name
 
 # larger than mobilenet_v2, without "fine-tuning"
