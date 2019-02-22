@@ -142,7 +142,7 @@ def mobilenet_v2_d(img_dim):
     #x  = Dense( 7, kernel_regularizer=regularizers.l1_l2(l1=0.01, l2=0.01) )(x)
     #x  = Dense(7, kernel_regularizer=regularizers.l1_l2(l1=0.01, l2=0.01),
     #              activity_regularizer=regularizers.l1_l2(l1=0.01, l2=0.01))(x)
-    x  = Dense(5, kernel_regularizer=regularizers.l1_l2(l2=0.01),
+    x  = Dense(5, kernel_regularizer=regularizers.l2(0.01),
                   activity_regularizer=regularizers.l1(0.01))(x)
     xo = Dense(1, activation='sigmoid')(x) # output tensor
     model = Model(inputs=xi, outputs=xo, name='mobilenet_v2_d')
@@ -217,8 +217,8 @@ def train_model(input_model, batch_size, epochs, img_size,
     os.makedirs(run_path_+f'tb_logs', exist_ok=True)
 
     print(f'\n')
-    print(f'Training: Run {run_:02d}')
-    print(f'----------------\n\n')
+    print(f'Training Run {run_:02d}')
+    print(f'---------------\n\n')
 
     # "Fold" counter
     i = 0
@@ -358,14 +358,14 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         valid_score = roc_auc(y_valid, preds_valid)
         train_score = roc_auc(y_train, preds_train)
-        print('Val Score:   {} for fold {}'.format(valid_score, i))
-        print('Train Score: {} for fold {}'.format(train_score, i))
+        print('Val Score:   {0:0.5f} for fold {1}'.format(valid_score, i))
+        print('Train Score: {0:0.5f} for fold {1}'.format(train_score, i))
 
         valid_scores.append(valid_score)
         train_scores.append(train_score)
-        print('Avg Train Score:{0:0.5f}, '.format
+        print('Avg Train Score: {0:0.5f}, '.format
               (np.mean(train_scores)) +
-              'Val Score:{0:0.5f} after {1:d} folds'.format
+              'Val Score: {0:0.5f} after {1:d} folds'.format
               (np.mean(valid_scores), i))
 
         print('Running test predictions with fold {}'.format(i))
@@ -379,7 +379,7 @@ def train_model(input_model, batch_size, epochs, img_size,
 
         print('\n\n')
 
-    print(f'Finished training for Run {run_:02d}!')
+    print(f'Finished training run {run_:02d}!')
     print('\n')
 
     # Save
