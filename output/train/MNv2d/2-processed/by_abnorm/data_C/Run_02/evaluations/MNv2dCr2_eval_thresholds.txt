@@ -1,0 +1,2 @@
+Good thresholds are in the interval:
+  [0.367, 0.56]
