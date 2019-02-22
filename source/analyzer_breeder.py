@@ -105,8 +105,8 @@ def main():
     #batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
     #batch_size = 100 # F
     epochs = 50
-    #n_fold = 4 # C
-    n_fold = 5 # D,E,F
+    n_fold = 4 # C  (D MNv2d run 2+)
+    #n_fold = 5 # D,E,F
     histories = []
 
     # Find this run's number ("train-and-test run #..")
