@@ -1,0 +1,401 @@
+filepath,abnormality,abnormality_pred
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2864.jpg,1,0.93107873
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 007.jpg,0,0.0014442956
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 02.jpg,0,0.12516528
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Lopez, C Stomach Erythema (6-13-2018 8-32-11 AM)/Lopez, C Stomach Erythema 10.jpg",1,0.7517959
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 05.jpg,1,0.86701393
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0010.jpg",0,0.56140476
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 09.jpg,0,0.56945735
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 006.jpg,1,0.73095125
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0016.jpg,1,0.26969066
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2854.jpg,1,0.9422714
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2861.jpg,1,0.91445404
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2853.jpg,1,0.92541516
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 10.jpg",1,0.9437889
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 047.jpg,1,0.25798318
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 28.jpg,1,0.8321145
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 004.jpg,0,0.004867526
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 01.jpg",1,0.9958793
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0015.jpg,1,0.06513755
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 29.jpg,0,0.050697386
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 037.jpg,1,0.7146147
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 08.jpg,0,0.72313833
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1564.jpg,0,0.14104488
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 025.jpg",0,0.1021441
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0010.jpg",0,0.23329872
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 22.jpg,0,0.06594859
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 100.jpg,1,0.38035053
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/1376916 20 Dec 18_1 405.jpg,1,0.30248877
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 111.jpg,0,0.36674574
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 16.jpg,1,0.9784721
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2863.jpg,1,0.9905566
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 077.jpg,0,0.4679509
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 16.jpg",1,0.9950595
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0021.jpg",0,0.9723608
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 30.jpg,0,0.007073776
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 08.jpg",1,0.9783719
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/1376916 20 Dec 18_1 380.jpg,1,0.9562389
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 128.jpg,1,0.9700941
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 011.jpg,0,0.0054220273
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0036.jpg,0,0.7608518
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 161.jpg,1,0.55534786
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0001.jpg,0,0.855823
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 072.jpg,1,0.1316882
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Lopez, C Stomach Erythema (6-13-2018 8-32-11 AM)/Lopez, C Stomach Erythema 6.jpg",1,0.27588755
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 031.jpg",0,0.23697563
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 001.jpg,1,0.51556563
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0003.jpg,1,0.71530366
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 08.jpg",1,0.48518196
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 008.jpg,1,0.74040884
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 07.jpg,1,0.9716204
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 10.jpg,0,0.82047254
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0001.jpg",0,0.4505671
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 165.jpg,1,0.5300657
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0030.jpg,0,0.75068563
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 20.jpg",1,0.9289364
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 001.jpg",0,0.014109022
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 020.jpg",0,0.16550837
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 128.jpg,0,0.5605388
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 097.jpg,1,0.84815717
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 31.jpg,1,0.8645522
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 20.jpg,1,0.74745625
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0016.jpg",0,0.54856366
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 21.jpg,0,0.51816
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 027.jpg,1,0.82973856
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0030.jpg",0,0.98094535
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0053.jpg,1,0.909602
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0033.jpg",0,0.7849019
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 18.jpg",1,0.4313926
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 10.jpg",1,0.5403032
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 061.jpg,0,0.039882813
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2862.jpg,1,0.99885094
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 17.jpg,0,0.7804754
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/6nN7zg3300_P1 (6-13-2018 1-33-01 AM)/6nN7zg3300_P1 5.jpg,1,0.9348465
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 18.jpg,0,0.31068683
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 15.jpg",1,0.95868105
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 35.jpg",1,0.9695644
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0008.jpg",0,0.81518817
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 148.jpg,1,0.5219276
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0005.jpg,1,0.0013917271
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 073.jpg,0,0.0042758915
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 028.jpg,1,0.8145463
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Lopez, C Stomach Erythema (6-13-2018 8-32-11 AM)/Lopez, C Stomach Erythema 5.jpg",1,0.17305699
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 010.jpg,1,0.99213517
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 01.jpg,1,0.20478489
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 27.jpg,0,0.06255841
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 117.jpg,1,0.8850368
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0015.jpg",0,0.9534178
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 03.jpg,0,0.56643164
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1576.jpg,0,0.6569779
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0013.jpg,0,0.32934043
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 072.jpg,0,0.9935149
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 30.jpg,1,0.14429395
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 088.jpg,1,0.680333
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 5.jpg",1,0.9993123
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0025.jpg,0,0.24604018
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 06.jpg",1,0.9770576
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 3.jpg",1,0.5403032
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0010.jpg,0,0.414433
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 10.jpg,1,0.99288565
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0005.jpg",0,0.8910663
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 005.jpg",0,0.12557134
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 05.jpg",1,0.9928637
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 013.jpg,1,0.98884004
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 070.jpg,0,0.81297374
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0008.jpg,0,0.9944406
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 016.jpg",0,0.006419107
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 6.jpg",1,0.96980023
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 062.jpg,1,0.7824037
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0008.jpg,0,0.7948004
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 30.jpg",1,0.8579744
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 28.jpg,0,0.21999145
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 116.jpg,0,0.4710001
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 06.jpg,1,0.92690676
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/cvTAhw3300_P1 (6-13-2018 12-51-23 AM)/cvTAhw3300_P1 1.jpg,1,0.63715935
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2867.jpg,1,0.96217453
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 049.jpg,0,0.052311547
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2865.jpg,1,0.939891
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 26.jpg,0,0.025261546
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0026.jpg",0,0.8483835
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 166.jpg,1,0.424927
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 50.jpg,1,0.02921105
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 04.jpg,1,0.7756538
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Alataua,I Gastric erythema (4-7-2018 4-58-57 PM)/Alataua,I Gastric erythema 6.jpg",1,0.6485903
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0026.jpg,0,0.06651403
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 006.jpg,1,0.2786467
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 006.jpg,0,0.009092183
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 05.jpg",1,0.25980544
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0028.jpg,0,0.6047144
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/cvTAhw3300_P1 (6-13-2018 12-51-23 AM)/cvTAhw3300_P1 5.jpg,1,0.60492563
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2869.jpg,1,0.4227489
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0054.jpg,1,0.9759805
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2873.jpg,1,0.14765161
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Lopez, C Stomach Erythema (6-13-2018 8-32-11 AM)/Lopez, C Stomach Erythema 8.jpg",1,0.9879303
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1588.jpg,0,0.11974819
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0028.jpg",0,0.704209
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Lopez, C Stomach Erythema (6-13-2018 8-32-11 AM)/Lopez, C Stomach Erythema 11.jpg",1,0.10823624
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 08.jpg,1,0.69109017
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 038.jpg,1,0.99515224
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 129.jpg,0,0.36696208
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 052.jpg,1,0.4104281
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0020.jpg,0,0.816163
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2872.jpg,1,0.24325064
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/kX1s5Q3300_P1 (3-18-2018 11-37-53 AM)/kX1s5Q3300_P1 5.jpg,0,0.058693465
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1603.jpg,0,0.5445732
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 107.jpg,0,0.11270159
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 11.jpg",1,0.81765324
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 026.jpg",0,0.11449609
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 101.jpg,0,0.047292944
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 058.jpg,0,0.001794704
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 13.jpg,0,0.19055302
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 06.jpg,1,0.8235334
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 18.jpg,1,0.9995004
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0031.jpg,0,0.96108276
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0030.jpg,0,0.41238436
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/1376916 20 Dec 18_1 396.jpg,1,0.23494995
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 038.jpg,0,0.25127813
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 015.jpg",0,0.013196654
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1589.jpg,0,0.048613768
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 12.jpg,0,0.6755714
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0035.jpg,0,0.029474666
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 25.jpg,0,0.3915315
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 122.jpg,1,0.84881896
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0006.jpg,0,0.78156376
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 20.jpg,0,0.031730387
+"../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/Egan, T SB Bulge 2 (6-13-2018 8-23-23 AM)/Egan, T SB Bulge 2 1.jpg",1,0.9699906
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 011.jpg,1,0.9855419
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 163.jpg,1,0.775149
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/kX1s5Q3300_P1 (3-18-2018 11-37-53 AM)/kX1s5Q3300_P1 8.jpg,0,0.37380016
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0025.jpg,0,0.4820017
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2859.jpg,1,0.96287596
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 105.jpg,0,0.9443104
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 106.jpg,0,0.10168862
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 013.jpg",0,0.02021119
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 171.jpg,1,0.5454168
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 032.jpg,1,0.86185414
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 08.jpg,1,0.8223328
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 139.jpg,0,0.9103139
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2860.jpg,1,0.9824922
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 01.jpg,1,0.99342257
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 103.jpg,0,0.009089933
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 039.jpg,0,0.026724966
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 23.jpg,1,0.8542596
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1606.jpg,0,0.6241101
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2857.jpg,1,0.98326474
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0041.jpg,0,0.2330084
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 005.jpg,0,0.003987486
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 170.jpg,1,0.2694349
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0015.jpg,0,0.02927107
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 067.jpg,0,0.010827429
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0011.jpg,0,0.0684941
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0024.jpg,1,0.9450933
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0033.jpg,0,0.26517576
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 063.jpg,1,0.33476117
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 40.jpg,1,0.46804044
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0006.jpg,0,0.95674247
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 25.jpg,1,0.87460995
+../input-data/2-processed/D/Abnormal/Stomach/AVM/jpgs/rhodes avm (6-13-2018 1-14-20 AM)/rhodes avm 6.jpg,1,0.17553055
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 074.jpg,0,0.83403707
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0020.jpg,0,0.56594497
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0023.jpg,0,0.34842184
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 048.jpg,1,0.94394904
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 07.jpg,0,0.2932661
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 40.jpg",1,0.97339725
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 092.jpg,1,0.2998889
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0028.jpg,0,0.692228
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0005.jpg,0,0.51839
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0008.jpg",0,0.8905974
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 005.jpg,1,0.8633307
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 082.jpg,1,0.8387382
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 33.jpg,1,0.9005957
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 102.jpg,0,0.004662816
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 060.jpg,0,0.35502827
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 25.jpg",1,0.9753308
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 127.jpg,1,0.36963078
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 11.jpg",1,0.90110517
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0018.jpg,0,0.17356224
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 087.jpg,1,0.059986416
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0018.jpg,0,0.9045395
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0005.jpg",0,0.3588379
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 001.jpg,1,0.95818514
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2870.jpg,1,0.7042212
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2856.jpg,1,0.58764774
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 112.jpg,1,0.8524795
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 26.jpg,1,0.6273341
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2858.jpg,1,0.9982345
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 066.jpg,0,0.16529568
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 076.jpg,1,0.96320087
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 012.jpg,1,0.29654694
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0018.jpg,1,0.21685475
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0004.jpg,1,0.08284845
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0013.jpg,0,0.025065057
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 06.jpg,0,0.0047555454
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0025.jpg",0,0.95158595
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2868.jpg,1,0.950996
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2855.jpg,1,0.98572946
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0023.jpg",0,0.29910764
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 016.jpg,1,0.93828964
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 2.jpg",1,0.18484375
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0038.jpg",0,0.88596356
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0011.jpg",0,0.88701224
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 006.jpg",0,0.008282624
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 11.jpg,0,0.9924482
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 076.jpg,0,0.025633702
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 017.jpg,1,0.21984106
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 088.jpg,0,0.9470509
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 048.jpg,0,0.0030447561
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 102.jpg,1,0.35493785
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1601.jpg,0,0.044040997
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/cvTAhw3300_P1 (6-13-2018 12-51-23 AM)/cvTAhw3300_P1 6.jpg,1,0.78906083
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2866.jpg,1,0.9963715
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 115.jpg,0,0.6026983
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0010.jpg,0,0.29780552
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 012.jpg,0,0.008582941
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 113.jpg,0,0.7951945
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0021.jpg,0,0.77989197
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 100.jpg,0,0.08958309
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 007.jpg,1,0.3943413
+"../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/Alonzo, L Erosion 3 (4-8-2018 11-44-49 AM)/Alonzo, L Erosion 3 1.jpg",1,0.11801067
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0026.jpg,0,0.7394337
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0021.jpg,0,0.9486038
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 36.jpg",1,0.9746952
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 116.jpg,1,0.9011988
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0023.jpg,0,0.31450132
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Lopez, C Stomach Erythema (6-13-2018 8-32-11 AM)/Lopez, C Stomach Erythema 2.jpg",1,0.034746792
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0019.jpg,1,0.9329199
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 13.jpg",1,0.42759228
+../input-data/2-processed/D/Abnormal/Stomach/AVM/jpgs/rhodes avm (6-13-2018 1-14-20 AM)/rhodes avm 5.jpg,1,0.23003247
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/kX1s5Q3300_P1 (3-18-2018 11-37-53 AM)/kX1s5Q3300_P1 6.jpg,0,0.30708966
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 015.jpg,1,0.9934255
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1600.jpg,0,0.7828153
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 05.jpg,1,0.36925504
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 021.jpg",0,0.13587676
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0006.jpg",0,0.06874879
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 098.jpg,0,0.9214002
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0017.jpg,1,0.20947433
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 05.jpg,0,0.24272065
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Alataua,I Gastric erythema (4-7-2018 4-58-57 PM)/Alataua,I Gastric erythema 1.jpg",1,0.9427165
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0015.jpg",0,0.21804442
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0011.jpg",0,0.7134063
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 38.jpg,1,0.19890045
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 16.jpg,0,0.80057263
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 43.jpg,1,0.92849237
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 13.jpg",1,0.77615064
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 138.jpg,0,0.22514002
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 1.jpg",1,0.9685749
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0055.jpg,1,0.9929765
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 005.jpg,1,0.093686976
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 16.jpg",1,0.9192723
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 011.jpg",0,0.011458973
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 173.jpg,1,0.8384042
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2851.jpg,1,0.9972933
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0031.jpg",0,0.9577272
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 46.jpg,1,0.704762
+../input-data/2-processed/D/Abnormal/Stomach/AVM/jpgs/rhodes avm (6-13-2018 1-14-20 AM)/rhodes avm 4.jpg,1,0.07490212
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 31.jpg,0,0.06758361
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 21.jpg,1,0.5299258
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 059.jpg,0,0.56742525
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 06.jpg",1,0.877051
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0023.jpg",0,0.4351502
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0016.jpg,0,0.5138524
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 02.jpg,1,0.20478489
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0016.jpg,0,0.108308904
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 01.jpg,0,0.12516528
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 24.jpg,0,0.10977852
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 32.jpg,0,0.45560715
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 19.jpg,0,0.014017071
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 099.jpg,0,0.97577626
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0021.jpg",0,0.9793888
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 23.jpg,0,0.0023970637
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 14.jpg,0,0.32278204
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 023.jpg",0,0.5154592
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0038.jpg,0,0.5164551
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 022.jpg,1,0.68040085
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 013.jpg,0,0.37118572
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 071.jpg,0,0.43386096
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 31.jpg",1,0.42900598
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 15.jpg,1,0.82486093
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 057.jpg,1,0.19972387
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 018.jpg",0,0.071590185
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 26.jpg",1,0.8796148
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0008.jpg,1,0.74206376
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 01.jpg",1,0.18484375
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 13.jpg,1,0.4793978
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1577.jpg,0,0.06348559
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1575.jpg,0,0.13232781
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 062.jpg,0,0.40747777
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 137.jpg,1,0.69257087
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0006.jpg",0,0.008665088
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 18.jpg",1,0.96817464
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 075.jpg,0,0.3906773
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0025.jpg",0,0.65144986
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 008.jpg",0,0.07150137
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 38.jpg",1,0.8605448
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 107.jpg,1,0.9921967
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Lopez, C Stomach Erythema (6-13-2018 8-32-11 AM)/Lopez, C Stomach Erythema 1.jpg",1,0.034746792
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 175.jpg,1,0.67522836
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 23.jpg",1,0.68774474
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0001.jpg",0,0.9053987
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0031.jpg,0,0.36767003
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Polypoid/2488865 12 Dec 18_1 0006.jpg,1,0.1634709
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Alataua,I Gastric erythema (4-7-2018 4-58-57 PM)/Alataua,I Gastric erythema 5.jpg",1,0.68968517
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 48.jpg,1,0.4588358
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 114.jpg,0,0.74387753
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0005.jpg,0,0.63541466
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 158.jpg,1,0.7361862
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 077.jpg,1,0.41130602
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 010.jpg",0,0.03208796
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 103.jpg,1,0.8926011
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 04.jpg,0,0.051562387
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 11.jpg,1,0.15638217
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 1.jpg",1,0.18484375
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 112.jpg,0,0.76274276
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 45.jpg,1,0.893999
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0013.jpg",0,0.5715409
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 001.jpg,1,0.20478489
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0040.jpg,0,0.65074146
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 067.jpg,1,0.49298164
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1574.jpg,0,0.38961843
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0015.jpg,0,0.4000232
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1570.jpg,0,0.67420393
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 065.jpg,0,0.016438752
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 110.jpg,0,0.93092656
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 35.jpg,1,0.9474328
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 176.jpg,1,0.38397843
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 41.jpg,1,0.8618875
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 028.jpg",0,0.22413099
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0020.jpg",0,0.77205694
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0011.jpg,0,0.50370294
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0018.jpg",0,0.8456778
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2871.jpg,1,0.43986788
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/11043364 28 Nov 18_1 1602.jpg,0,0.9602866
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/jpgs2/YnAFmw3300_P1 15.jpg,0,0.5433783
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 010.jpg,0,0.013736614
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 104.jpg,0,0.008800039
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 042.jpg,1,0.6556244
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Alonzo, L Normal Stomach (4-8-2018 11-42-23 AM)/Alonzo, L Normal Stomach 030.jpg",0,0.048952706
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 064.jpg,0,0.14961547
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/nieto normal stomach (6-12-2018 8-38-29 PM)/nieto normal stomach 0033.jpg,0,0.6699498
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 33.jpg",1,0.70935017
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0035.jpg",0,0.83104986
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 089.jpg,0,0.36198428
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 28.jpg",1,0.5194331
+../input-data/2-processed/D/Abnormal/Stomach/Ulcer or erosion/jpgs/4Dc9Tg3300_P1 (11-17-2018 2-48-58 AM)/4Dc9Tg3300_P1 132.jpg,1,0.9690066
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/cvTAhw3300_P1 (6-13-2018 12-51-23 AM)/cvTAhw3300_P1 8.jpg,1,0.6582623
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 063.jpg,0,0.0014237338
+../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/B1KbUg3300_P1 (11-17-2018 1-41-57 AM)/B1KbUg3300_P1 36.jpg,1,0.20079894
+../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/VXwQFA3300_P1 (6-13-2018 2-13-47 AM)/VXwQFA3300_P1 03.jpg,1,0.96129286
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 15.jpg",1,0.08617868
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/kX1s5Q3300_P1 (3-18-2018 11-37-53 AM)/kX1s5Q3300_P1 1.jpg,0,0.07561312
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0016.jpg",0,0.34700188
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0013.jpg",0,0.635219
+../input-data/2-processed/D/Abnormal/Stomach/1_15_19/Mucosal/2488865 12 Dec 18_1 2850.jpg,1,0.9907312
+../input-data/2-processed/D/Normal/Stomach/1_15_19/Normal/1376916 20 Dec 18_1 117.jpg,0,0.2577239
+../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Racette stomach nl (6-13-2018 8-33-12 AM)/Racette stomach nl 0001.jpg,0,0.37327203
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0018.jpg",0,0.5730842
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/Nguyen,X nl stomach (6-12-2018 7-47-35 PM)/Nguyen,X nl stomach 0020.jpg",0,0.027444722
+"../input-data/2-processed/D/Normal/Stomach/Normal/jpgs/oliva,m nl stomach (6-12-2018 9-26-40 PM)/oliva,m nl stomach 0036.jpg",0,0.9072332
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/deleon bulge (6-13-2018 12-56-21 AM)/deleon bulge 160.jpg,1,0.9696583
+"../input-data/2-processed/D/Abnormal/Stomach/Polyp/jpgs/Levenstone, L Stomach Polyp 3 (6-13-2018 8-33-52 AM)/Levenstone, L Stomach Polyp 3 21.jpg",1,0.96266633
+../input-data/2-processed/D/Abnormal/Small bowel/Bulge/jpgs/6nN7zg3300_P1 (6-13-2018 1-33-01 AM)/6nN7zg3300_P1 1.jpg,1,0.9866326
+"../input-data/2-processed/D/Abnormal/Stomach/Erythema/jpgs/Martin, W Stomach Erythema (6-13-2018 8-32-11 AM)/Martin, W Stomach Erythema 4.jpg",1,0.4313926

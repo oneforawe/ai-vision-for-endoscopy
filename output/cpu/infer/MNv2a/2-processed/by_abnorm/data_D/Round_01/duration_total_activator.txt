@@ -1,0 +1,2 @@
+Total activator (load-infer-evaluate-etc) time (duration)
+ = 0 days, 0 hours, 2 minutes, 53 seconds, 383167 microseconds.
