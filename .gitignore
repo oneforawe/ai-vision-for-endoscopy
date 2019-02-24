@@ -139,14 +139,8 @@ input-data/2-processed/E_processed.zip
 input-data/2-processed/F/
 input-data/2-processed/test/
 input-data/2-processed/test_control/
-output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/chkpts/ModelArch.json
-output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/chkpts/ModelWeights_trained.hdf5
-output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/chkpts/ModelWhole_trained.hdf5
-output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/chkpts/weights_fold_1.hdf5
-output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/chkpts/weights_fold_2.hdf5
-output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/chkpts/weights_fold_3.hdf5
-output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/chkpts/weights_fold_4.hdf5
-output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/histories/histories_Run_02.pckl
+output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/chkpts
+output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/histories
 output/z_old
 source/configs/
 source/build/examples/
