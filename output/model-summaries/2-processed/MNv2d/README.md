@@ -1,0 +1,2 @@
+This model was actually an experimental model, where some of the parameters were changed from run to run.  Specifically, the parameters changed were 1) the drop-out rate in the Dropout layer immediately after the base model, 2) the number of nodes in the (newly-inserted) dense layer before the output layer, 3) and the kind and magnitude of regularizers placed in that dense layer (including l1, l2, and l1+l2 for both "kernel"/weights and activations).
+

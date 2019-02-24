@@ -82,7 +82,7 @@ def main():
 
     # Initialize model
     model, model_short_name, base_model_name \
-        = a2c.mobilenet_v2_d(img_shape)  # with deep "fine-tuning"
+        = a2c.mobilenet_v2_a(img_shape)  # without "fine-tuning"
     # Options:
     #   = a2c.mobilenet_v2_a(img_shape)  # without "fine-tuning"
     #   = a2c.mobilenet_v2_b(img_shape)  # with shallow "fine-tuning"
@@ -105,7 +105,7 @@ def main():
     batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
     #batch_size = 100 # F
     epochs = 50
-    n_fold = 4 # C  (MNv2d E, D run 2+)
+    n_fold = 4 # C  (MNv2d E, D run 2+; MNv2a E run 2+)
     #n_fold = 5 # D,E,F
     histories = []
 

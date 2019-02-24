@@ -20,6 +20,7 @@ def main():
     model_funcs = [a2c.mobilenet_v2_a,
                    a2c.mobilenet_v2_b,
                    a2c.mobilenet_v2_c,
+                   a2c.mobilenet_v2_d,
                    a2c.xception_a,
                    a2c.xception_b]
 
