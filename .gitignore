@@ -141,6 +141,8 @@ input-data/2-processed/test/
 input-data/2-processed/test_control/
 output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/chkpts
 output/train/MNv2d/2-processed/by_abnorm/data_D/Run_02/histories
+output/train/MNv2d/2-processed/by_abnorm/data_E/Run_01/chkpts
+output/train/MNv2d/2-processed/by_abnorm/data_E/Run_01/histories
 output/z_old
 source/configs/
 source/build/examples/
