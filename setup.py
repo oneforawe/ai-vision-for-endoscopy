@@ -15,6 +15,7 @@ setup(
     packages=['ai_vision_for_endoscopy'],
     install_requires=['keras',
                       'tensorflow',
+                      'tensorflow-gpu',
                       'numpy',
                       'pandas',
                       'sklearn.model_selection.KFold',
