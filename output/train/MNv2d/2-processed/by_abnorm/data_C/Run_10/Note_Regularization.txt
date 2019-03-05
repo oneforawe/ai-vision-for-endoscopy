@@ -1,0 +1,6 @@
+x  = Dense(7, kernel_regularizer=regularizers.l1_l2(l1=0.005, l2=0.01),
+              activity_regularizer=regularizers.l1(0.01))(x)
+
+
+Also:
+x  = Dropout(0.4)(x)

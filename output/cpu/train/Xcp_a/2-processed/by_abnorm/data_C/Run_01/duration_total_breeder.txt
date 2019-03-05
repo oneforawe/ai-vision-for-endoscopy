@@ -1,0 +1,2 @@
+Total breeder (train-test-evaluate-etc) time (duration)
+ = 0 days, 2 hours, 5 minutes, 57 seconds, 506724 microseconds.

@@ -1,0 +1,1 @@
+x  = Dense( 7, kernel_regularizer=regularizers.l1_l2(l1=0.01, l2=0.01) )(x)

@@ -1,0 +1,7 @@
+filepath,abnormality,abnormality_pred
+../input-data/2-processed/B/Normal/08.jpg,0,0.2544361368054524
+../input-data/2-processed/B/Abnormal/04.jpg,1,0.6747343316674232
+../input-data/2-processed/B/Normal/09.jpg,0,0.10232894367072731
+../input-data/2-processed/B/Abnormal/08.jpg,1,0.576471034437418
+../input-data/2-processed/B/Normal/04.jpg,0,0.10418975353240967
+../input-data/2-processed/B/Abnormal/09.jpg,1,0.12608701409772038
