@@ -46,7 +46,7 @@ def make_acc_loss_plots(histories, eval_fig_path, plot_run_name):
 
 def make_roc_plot(test_set, eval_fig_path, plot_run_name):
     roc_data = metrics.roc_curve(test_set['abnormality'],
-                                        test_set['abnormality_pred'])
+                                 test_set['abnormality_pred'])
     fpr, tpr, thrsh = roc_data
     roc_auc = metrics.auc(fpr, tpr)
     plt.figure()

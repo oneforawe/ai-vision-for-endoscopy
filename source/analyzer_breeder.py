@@ -29,9 +29,9 @@ def main():
     #data_name = 'data_A'
     #data_short_name = 'A'
     # B: 26 images.
-    #data_path = data_base+'B'
-    #data_name = 'data_B'
-    #data_short_name = 'B'
+    data_path = data_base+'B'
+    data_name = 'data_B'
+    data_short_name = 'B'
     # C: 200 images. (Abnormal=Blood)
     #data_path = data_base+'C'
     #data_name = 'data_C'
@@ -41,9 +41,9 @@ def main():
     #data_name = 'data_D'
     #data_short_name = 'D'
     # E: 10000 images.
-    data_path = data_base+'E'
-    data_name = 'data_E'
-    data_short_name = 'E'
+    #data_path = data_base+'E'
+    #data_name = 'data_E'
+    #data_short_name = 'E'
     # F: 138062 images. Full data (minus vids) set in modified file structure.
     #data_path = data_base+'F'
     #data_name = 'data_F'
@@ -93,19 +93,20 @@ def main():
 
     # Output location
     #output_root = '../output/test/train/'
-    #output_root = '../output/cpu/train/'
-    output_root = '../output/train/'
+    output_root = '../output/cpu/train/'
+    #output_root = '../output/train/'
     output_base = output_root + f'{model_short_name}/' + \
                                 f'{data_category}/{class_split}/{data_name}/'
 
     # Prepare for training
+    batch_size = 2  # B
     #batch_size = 4  # C
     #batch_size = 20 # D (mobilenet)
     #batch_size = 10 # D (xception) #Got error (fixed by reducing to 10)
-    batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
+    #batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
     #batch_size = 100 # F
     epochs = 50
-    n_fold = 4 # C  (MNv2d E, D run 2+; MNv2a E run 2+)
+    n_fold = 4 # B,C  (MNv2d E, D run 2+; MNv2a E run 2+)
     #n_fold = 5 # D,E,F
     histories = []
 
