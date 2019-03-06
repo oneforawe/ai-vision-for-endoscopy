@@ -1,0 +1,12 @@
+keras
+tensorflow
+tensorflow-gpu
+numpy
+pandas
+sklearn
+opencv-python
+h5py
+matplotlib
+os
+glob
+datetime
