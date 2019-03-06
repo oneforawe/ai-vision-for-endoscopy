@@ -1,2 +1,1 @@
-The `environment.yml` YAML file was generated from `conda env export > environment.yml` and updated with `conda env update -f environment.yml`.  The `spec-file.txt` text file was generated from `conda list --explicit > spec-file.txt`.
-
+These environment files are probably quite excessive, so the minimal requirements are placed in the root folder with the `requirements.txt` file there.  Here, the `environment.yml` YAML file was generated from `conda env export > environment.yml` and updated with `conda env update -f environment.yml`.  The `spec-file.txt` text file was generated from `conda list --explicit > spec-file.txt`.  And the `requirements.txt` file was generated from `pip freeze > requirements.txt`.

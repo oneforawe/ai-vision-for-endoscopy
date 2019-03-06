@@ -4,6 +4,9 @@ from setuptools import setup
 # https://python-packaging.readthedocs.io/en/latest/minimal.html
 # https://uoftcoders.github.io/studyGroup/lessons/python/packages/lesson/
 
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
+
 setup(
     name='ai_vision_for_endoscopy',
     version='0.1',
@@ -13,19 +16,7 @@ setup(
     author_email='Andrew@Andrew-Forrester.com',
     license='MIT',
     packages=['ai_vision_for_endoscopy'],
-    install_requires=['keras',
-                      'tensorflow',
-                      'tensorflow-gpu',
-                      'numpy',
-                      'pandas',
-                      'sklearn', # for .model_selection.KFold and .metrics
-                      'opencv-python', # for cv2
-                      'h5py',
-                      'matplotlib', # for .pyplot and 'pylab', # for .savefig
-                      'itertools',
-                      'os',
-                      'glob',
-                      'datetime'],
+    install_requires=requirements,
     # long_description=open('README.md').read(),
     #zip_safe=False
 )
