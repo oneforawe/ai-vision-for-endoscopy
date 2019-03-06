@@ -21,7 +21,6 @@ setup(
                       'sklearn', # for .model_selection.KFold and .metrics
                       'opencv-python', # for cv2
                       'h5py',
-                      'pickle',
                       'matplotlib', # for .pyplot
                       'pylab', # for .savefig
                       'itertools',
