@@ -18,9 +18,8 @@ setup(
                       'tensorflow-gpu',
                       'numpy',
                       'pandas',
-                      'sklearn', # for .model_selection.KFold
-                      'sklearn', # for .metrics
-                      'cv2',
+                      'sklearn', # for .model_selection.KFold and .metrics
+                      'opencv-python', # for cv2
                       'h5py',
                       'pickle',
                       'matplotlib', # for .pyplot
