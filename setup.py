@@ -18,13 +18,13 @@ setup(
                       'tensorflow-gpu',
                       'numpy',
                       'pandas',
-                      'sklearn.model_selection.KFold',
-                      'sklearn.metrics',
+                      'sklearn', # for .model_selection.KFold
+                      'sklearn', # for .metrics
                       'cv2',
                       'h5py',
                       'pickle',
-                      'matplotlib.pyplot',
-                      'pylab.savefig',
+                      'matplotlib', # for .pyplot
+                      'pylab', # for .savefig
                       'itertools',
                       'os',
                       'glob',
