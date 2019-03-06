@@ -7,5 +7,4 @@ sklearn
 opencv-python
 h5py
 matplotlib
-glob
-datetime
+glob2
