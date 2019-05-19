@@ -1,4 +1,4 @@
-Recommendaation: Go to `presentations` first.
+Recommendation: Go to `presentations` first.
 
 Here you can find material that explains the project and investigates the input and output (mostly in the form of Jupyter notebooks).
 
