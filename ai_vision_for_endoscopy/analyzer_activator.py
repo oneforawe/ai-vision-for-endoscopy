@@ -28,13 +28,13 @@ def main():
     #data_name = 'data_A'
     #data_short_name = 'A'
     # B: 26 images.
-    #data_path = data_base+'B'
-    #data_name = 'data_B'
-    #data_short_name = 'B'
+    data_path = data_base+'B'
+    data_name = 'data_B'
+    data_short_name = 'B'
     # C: 200 images. (Abnormal=Blood)
-    data_path = data_base+'C'
-    data_name = 'data_C'
-    data_short_name = 'C'
+    #data_path = data_base+'C'
+    #data_name = 'data_C'
+    #data_short_name = 'C'
     # D: 2000 images.
     #data_path = data_base+'D'
     #data_name = 'data_D'
@@ -81,7 +81,7 @@ def main():
 
     # Load saved (trained) model from a particular source (run)
     source_run_path = \
-        '../output/train/MNv2d/2-processed/by_abnorm/data_C/Run_01/'
+        '../output/train/MNv2a/2-processed/by_abnorm/data_B/Run_01/'
     #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
     #   '../output/train/MNv2a/1-pre-processed/by_abnorm/data_D/Run_01/' #maybe
     #   '../output/train/MNv2a/2-processed/by_abnorm/data_C/Run_01/'
@@ -93,8 +93,9 @@ def main():
     #   '../output/train/Xcp_a/2-processed/by_abnorm/data_E/Run_02/'
     #   '../output/'
     #   '../output/cpu/train/MNv2a/1-pre-processed/by_abnorm/data_C/Run_01/'
+    #   '../output/cpu/train/MNv2a/2-processed/by_abnorm/data_B/Run_01/'
     model_short_name = \
-        'MNv2d'
+        'MNv2a'
     #   'MNv2a'
     #   'MNv2b'
     #   'MNv2c'
@@ -113,7 +114,7 @@ def main():
                                 f'{data_category}/{class_split}/{data_name}/'
 
     # Prepare for inference (done in batches)
-    batch_size = 4  # C
+    batch_size = 4  # C, B
     #batch_size = 20 # D (mobilenet)
     #batch_size = 10 # D (xception) #Got error (fixed by reducing to 10)
     #batch_size = 10 #E (mobilenet) #Got error at 40, reducing to 10
