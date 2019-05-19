@@ -1,4 +1,7 @@
-In this folder are the source-code files for the project.  The main files:
+In this folder are the source-code files for the project.
+
+## Model Control
+The main files:
 
 |  file                       | purpose |
 | --------------------------- | ------- |
@@ -10,6 +13,7 @@ The models are binary image classifiers, putting each image into one of two cate
 
 Edit the code to select the desired model or define new models, tune parameters for training, reset the output base-directory, or otherwise change the behavior of the code.
 
+## Model Evaluation
 The main files for automatic model evaluation:
 
 |  file                 | purpose |
