@@ -1,0 +1,6 @@
+Round inference time (average duration per image)
+ = (2 seconds) / (6 images)
+ = 0.3333333333333333 seconds/image.
+
+(6 images) / (2 seconds)
+ = 3.0 images/second.
