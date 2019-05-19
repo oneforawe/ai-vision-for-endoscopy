@@ -30,6 +30,8 @@ See the file `ai_vision_for_endoscopy/build/recommended_machine.txt` for a recom
 
 Check that the results (in the folder `output/infer/MNv2a/2-processed/by_abnorm/data_B/Round_03`) are similar to previously calculated results in the `Round_01` and `Round_02` folders.  In particular, examine the files in the `evaluations/figures/` folder and the `results/output_scores.csv` file.
 
+If this test works, then the source code should work for you.  See the `README` in the `ai_vision_for_endoscopy` folder for guidance on the code.
+
 
 ## Further Context
 
