@@ -1,7 +1,7 @@
 # AI Vision for Endoscopy
 [Insight AI Fellowship Project] This project demonstrates computer vision technology that can help doctors catch more gastrointestinal problems in patients in order to intervene and, for instance, prevent lethal colon cancers from developing.  I developed this project in consultation with the company Docbot over the course of five weeks while in the Insight Data Science AI Fellows program.
 
-This repository contains python code that helps to partially automate analysis of gastrointestinal endoscopy images.  Approximately 140,000 private images were provided by Docbot via "pill-cams" (capsule endoscopy) for this project, only about 30 of which are publicly available in this repo.  The software here uses machine learning (convolutional neural networks for computer vision image classification) to classify the images.  It classifies images as being "normal" or "abnormal" (that is, containing a gastrointestinal abnormality such as blood, a polyp, or a lesion).  This flags a subset of the endoscopy images for a gastrointestinal doctor to examine further, reducing the amount of images the doctor has to view and the time it takes to process the images, and helping increase the detection of abnormalities and intervention in cases that may lead to cancer and other problems.
+This repository contains python code that helps to partially automate analysis of gastrointestinal endoscopy images.  Approximately 140,000 private images were provided by Docbot via "pill-cams" (capsule endoscopy) for this project, only about 30 of which are publicly available in this repo.  The software here uses machine learning (convolutional neural networks for computer vision image classification) to classify the images.  It classifies images as being "normal" or "abnormal" (that is, containing a gastrointestinal abnormality such as blood, a polyp, or a lesion).  This flags a subset of the endoscopy images for a gastrointestinal doctor to examine further, reducing the amount of images the doctor has to view and the time it takes to process the images, and increasing the detection of abnormalities and the intervention in cases that may lead to cancer and other problems.
 
 
 ## Contents of this Repo
@@ -29,6 +29,8 @@ See the file `ai_vision_for_endoscopy/build/recommended_machine.txt` for a recom
    `python analyzer_activator.py`
 
 Check that the results (in the folder `output/infer/MNv2a/2-processed/by_abnorm/data_B/Round_03`) are similar to previously calculated results in the `Round_01` and `Round_02` folders.  In particular, examine the files in the `evaluations/figures/` folder and the `results/output_scores.csv` file.
+
+If this test works, then the source code should work for you.  See the `README` in the `ai_vision_for_endoscopy` folder for guidance on the code.
 
 
 ## Further Context
