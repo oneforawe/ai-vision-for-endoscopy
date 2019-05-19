@@ -1,4 +1,4 @@
-Output from running the main source code file in the `source` folder.
+Output from running the source code files in the `ai_vision_for_endoscopy` folder.
 
 |  folder           | content |
 | ----------------- | ------- |
