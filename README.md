@@ -14,7 +14,7 @@ This repository contains python code that helps to partially automate analysis o
 
 
 ## Running this Code
-See the file `ai_vision_for_endoscopy/build/recommended_machine.txt` for a recommended machine and pre-configured environment to run the project's code.  With an appropriate machine and pre-configured environment, take the following steps in the shell terminal:
+See the file `ai_vision_for_endoscopy/build/recommended_machine.md` for a recommended machine and pre-configured environment to run the project's code.  With an appropriate machine and pre-configured environment, take the following steps in the shell terminal:
 
 1. Clone this repo into your local machine and enter the repo:  
    `git clone https://github.com/oneforawe/ai-vision-for-endoscopy`  
